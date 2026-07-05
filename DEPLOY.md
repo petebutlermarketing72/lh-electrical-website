@@ -1,6 +1,20 @@
 # Deploy guide — GitHub + Netlify
 
-Neither account can be created on your behalf (they need your email/verification), but each takes about 5 minutes. Do this once; every future update after that is just a `git push`.
+There are two paths here: a fast one to see the site live in the next 2 minutes with zero Terminal or GitHub, and the permanent one that makes future updates automatic. Do the fast one first, then set up the permanent one whenever you've got a spare 10 minutes.
+
+## Option A — Quick preview now (no GitHub, no Terminal)
+Netlify has a "drag and drop" deploy mode that doesn't need Git at all — good for previewing this initial build.
+
+1. Log in at https://app.netlify.com
+2. Go to https://app.netlify.com/drop
+3. In Finder, open this `site` folder and find the **`dist`** folder inside it (that's the finished, built website — already generated).
+4. Drag the `dist` folder onto the Netlify Drop page in your browser.
+5. Netlify publishes it instantly and gives you a URL like `random-name-123.netlify.app`.
+
+Caveat: this snapshot won't update itself when files change — you'd have to re-drag the `dist` folder each time. That's fine for reviewing the initial build, but not how you'll want to work day-to-day. For that, set up Option B below (you can do this later — it doesn't undo or conflict with the preview above).
+
+## Option B — Permanent setup via GitHub (auto-deploys on every future change)
+Do this when you're ready for the real workflow. Every future update after that is just a `git push`.
 
 ## 1. Create a GitHub account (skip if you already have one)
 1. Go to https://github.com/join
