@@ -7,6 +7,9 @@
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
   <link rel="icon" href="https://lhelectrical.co.uk/wp-content/uploads/2025/04/cropped-LH-Electrical-Favicon-270x270.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/main.css">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
@@ -20,14 +23,19 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="logo" href="/"><img src="https://lhelectrical.co.uk/wp-content/uploads/2025/03/LH-Electrical-Logo-white.png" alt="{{ site.companyName }}" height="40" style="display:block"></a>
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav">
         <ul>
           {% for item in site.nav %}
           <li><a href="{{ item.url }}">{{ item.label }}</a></li>
           {% endfor %}
         </ul>
       </nav>
-      <a class="btn btn-call" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+      <div class="header-actions">
+        <a class="btn btn-call" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -86,5 +94,6 @@
       <p>&copy; {{ "" | year }} {{ site.companyName }}. All rights reserved. Design by Summit Up Digital.</p>
     </div>
   </footer>
+  <script src="/scripts/nav.js" defer></script>
 </body>
 </html>
