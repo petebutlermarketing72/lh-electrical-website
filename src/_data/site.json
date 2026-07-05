@@ -1,0 +1,38 @@
+{
+  "companyName": "LH Electrical (South East) Ltd",
+  "phone": "01273 443324",
+  "phoneHref": "tel:01273443324",
+  "email": "info@lhelectrical.co.uk",
+  "hours": "Mon - Fri 08.00 - 17.00",
+  "address": "Cowlease Farm, North End Lane, Lewes, East Sussex, BN8 5TE",
+  "domain": "https://lhelectrical.co.uk",
+  "reviewCount": 22,
+  "reviewRating": "5.0",
+  "reviewLink": "https://tinyurl.com/ye2x5ft2",
+  "credentials": ["NAPIT-registered", "MCS-certified (EV chargers + solar)", "15+ years' experience", "REC certified"],
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Services", "url": "/services/" },
+    { "label": "Locations", "url": "/locations/" },
+    { "label": "Reviews", "url": "/reviews/" },
+    { "label": "Contact", "url": "/contact/" }
+  ],
+  "services": [
+    { "label": "Domestic", "url": "/services/domestic/" },
+    { "label": "Commercial", "url": "/services/commercial-electrician/" },
+    { "label": "Landlords & EICR", "url": "/services/landlords/" },
+    { "label": "House Rewire", "url": "/services/house-rewire/" },
+    { "label": "Fuse Board Upgrades", "url": "/services/fuse-board-upgrades/" },
+    { "label": "EV Chargers", "url": "/services/ev-chargers/" },
+    { "label": "Solar Panels", "url": "/services/solar-panels/" }
+  ],
+  "locations": [
+    { "label": "Lewes", "url": "/locations/electrician-lewes/" },
+    { "label": "Ringmer", "url": "/locations/electrician-ringmer/" },
+    { "label": "Uckfield", "url": "/locations/electrician-uckfield/" },
+    { "label": "Hailsham", "url": "/locations/electrician-hailsham/" },
+    { "label": "Peacehaven", "url": "/locations/electrician-peacehaven/" },
+    { "label": "Seaford", "url": "/locations/electrician-seaford/" }
+  ]
+}

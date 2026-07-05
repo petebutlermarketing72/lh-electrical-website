@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
+  <link rel="icon" href="https://lhelectrical.co.uk/wp-content/uploads/2025/04/cropped-LH-Electrical-Favicon-270x270.png">
+  <link rel="stylesheet" href="/styles/main.css">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.domain }}{{ page.url }}">
+  {% if schema %}
+  <script type="application/ld+json">{{ schema | dump | safe }}</script>
+  {% endif %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="/"><img src="https://lhelectrical.co.uk/wp-content/uploads/2025/03/LH-Electrical-Logo-white.png" alt="{{ site.companyName }}" height="40" style="display:block"></a>
+      <nav class="main-nav">
+        <ul>
+          {% for item in site.nav %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <a class="btn btn-call" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <section class="cta-band">
+    <div class="wrap cta-inner">
+      <div>
+        <h2>Need an electrician you can rely on?</h2>
+        <p>Fixed written quotes, no hidden costs. Call us or request a quote online.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact/">Get your free no-obligation quote</a>
+        <a class="btn btn-outline" href="{{ site.phoneHref }}">{{ site.phone }}</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>{{ site.companyName }}</h3>
+        <p>{{ site.address }}</p>
+        <p><a href="{{ site.phoneHref }}">{{ site.phone }}</a></p>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        <p>{{ site.hours }}</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          {% for s in site.services %}
+          <li><a href="{{ s.url }}">{{ s.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul>
+          {% for l in site.locations %}
+          <li><a href="{{ l.url }}">{{ l.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Credentials</h4>
+        <ul class="credentials-list">
+          {% for c in site.credentials %}
+          <li>{{ c }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>&copy; {{ "" | year }} {{ site.companyName }}. All rights reserved. Design by Summit Up Digital.</p>
+    </div>
+  </footer>
+</body>
+</html>
