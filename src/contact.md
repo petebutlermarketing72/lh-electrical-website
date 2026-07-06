@@ -37,6 +37,13 @@ permalink: /contact/index.html
             <input type="text" id="postcode" name="postcode">
           </div>
           <div>
+            <label for="service">Service needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              {% for s in site.services %}<option value="{{ s.label }}">{{ s.label }}</option>{% endfor %}
+            </select>
+          </div>
+          <div>
             <label for="message">Tell us about the job</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
@@ -54,3 +61,19 @@ permalink: /contact/index.html
     </div>
   </div>
 </section>
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var service = params.get("service");
+  var postcode = params.get("postcode");
+  if (service) {
+    var serviceField = document.getElementById("service");
+    if (serviceField) serviceField.value = service;
+  }
+  if (postcode) {
+    var postcodeField = document.getElementById("postcode");
+    if (postcodeField) postcodeField.value = postcode;
+  }
+})();
+</script>

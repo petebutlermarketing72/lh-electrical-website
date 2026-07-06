@@ -9,6 +9,9 @@
   "reviewCount": 22,
   "reviewRating": "5.0",
   "reviewLink": "https://tinyurl.com/ye2x5ft2",
+  "trustpilotRating": "4.7",
+  "trustpilotCount": 31,
+  "trustpilotLink": "https://www.trustpilot.com/review/lhelectrical.co.uk",
   "credentials": ["NAPIT-registered", "MCS-certified (EV chargers + solar)", "15+ years' experience", "REC certified"],
   "nav": [
     { "label": "Home", "url": "/" },

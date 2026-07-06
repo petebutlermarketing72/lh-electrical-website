@@ -4,11 +4,41 @@ title: Electrician Lewes East Sussex | 15 Yrs Exp. | LH Electrical
 description: NAPIT-certified electrician in Lewes, East Sussex with 15 years' experience. Trusted for solar, EV chargers, lighting, testing and more. Get your free no-obligation quote today.
 ---
 
-<section class="hero">
+<section class="hero hero-home">
+  <div class="hero-bg" aria-hidden="true">
+    <img src="/images/hero/electrician-at-work.jpg" alt="" loading="eager">
+  </div>
   <div class="wrap">
-    <h1>Your Trusted Electrician in Lewes</h1>
+    <div class="hero-badges">
+      <span class="hero-badge"><span class="hero-badge-dot"></span>NAPIT-Registered</span>
+      <span class="hero-badge"><span class="hero-badge-dot"></span>15+ Years' Experience</span>
+      <a class="hero-badge hero-badge-link" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener">
+        <span class="stars">&#9733;</span>{{ site.trustpilotRating }} Trustpilot &middot; {{ site.trustpilotCount }} reviews
+      </a>
+    </div>
+    <h1>Your Trusted Electrician <span class="highlight">in Lewes</span></h1>
+    <div class="hero-stripe"></div>
     <p>LH Electrical (South East) Ltd is a trusted electrician in Lewes with 15+ years of experience in domestic, commercial, solar, and EV installations across East Sussex.</p>
-    <a class="btn btn-primary" href="/contact/">Get your free no-obligation quote</a>
+    <form class="quote-bar" action="/contact/" method="GET">
+      <select name="service" aria-label="I need help with">
+        <option value="">I need help with...</option>
+        {% for s in site.services %}<option value="{{ s.label }}">{{ s.label }}</option>{% endfor %}
+      </select>
+      <input type="text" name="postcode" placeholder="Enter your postcode" aria-label="Postcode">
+      <button class="btn btn-primary" type="submit">Get in Touch</button>
+    </form>
+    <p class="quote-bar-note"><span id="quote-typewriter"></span><span class="typewriter-cursor">&#124;</span></p>
+  </div>
+</section>
+
+<section class="stats-band">
+  <div class="wrap">
+    <ul class="stats-strip">
+      <li><span class="stat-num">15+</span><span class="stat-label">Years Trading</span></li>
+      <li><span class="stat-num">{{ site.reviewRating }}&#9733;</span><span class="stat-label">Google Rating</span></li>
+      <li><span class="stat-num">{{ site.reviewCount }}</span><span class="stat-label">Reviews</span></li>
+      <li><span class="stat-num">NAPIT</span><span class="stat-label">Registered</span></li>
+    </ul>
   </div>
 </section>
 
