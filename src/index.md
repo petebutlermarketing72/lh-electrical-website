@@ -4,41 +4,70 @@ title: Electrician Lewes East Sussex | 15 Yrs Exp. | LH Electrical
 description: NAPIT-certified electrician in Lewes, East Sussex with 15 years' experience. Trusted for solar, EV chargers, lighting, testing and more. Get your free no-obligation quote today.
 ---
 
-<section class="hero hero-home">
-  <div class="hero-bg" aria-hidden="true">
-    <img src="/images/hero/electrician-at-work.jpg" alt="" loading="eager">
-  </div>
+<section class="hero-infographic">
   <div class="wrap">
-    <div class="hero-badges">
-      <span class="hero-badge"><span class="hero-badge-dot"></span>NAPIT-Registered</span>
-      <span class="hero-badge"><span class="hero-badge-dot"></span>15+ Years' Experience</span>
-      <a class="hero-badge hero-badge-link" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener">
-        <span class="stars">&#9733;</span>{{ site.trustpilotRating }} Trustpilot &middot; {{ site.trustpilotCount }} reviews
-      </a>
+    <div>
+      <div class="infographic-tags">
+        <span class="infographic-tag">NAPIT-Registered</span>
+        <span class="infographic-tag">15+ Years' Experience</span>
+        <a class="infographic-tag" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener"><span class="stars">&#9733;</span>{{ site.trustpilotRating }} Trustpilot</a>
+      </div>
+      <h1>Your Trusted Electrician <span class="highlight">in Lewes</span></h1>
+      <p>LH Electrical (South East) Ltd is a trusted electrician in Lewes with 15+ years of experience in domestic, commercial, solar, and EV installations across East Sussex.</p>
+      <form class="quote-bar" action="/contact/" method="GET">
+        <div class="service-picker" id="service-picker">
+          <button type="button" class="service-picker-trigger" id="service-picker-trigger" aria-haspopup="dialog" aria-expanded="false">
+            <span id="service-picker-label">I need help with...</span>
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <input type="hidden" name="service" id="service-picker-value" value="">
+          <div class="service-picker-modal" id="service-picker-modal">
+            <div class="service-picker-backdrop" id="service-picker-backdrop"></div>
+            <div class="service-picker-panel" role="dialog" aria-label="Choose a service">
+              <div class="service-picker-panel-header">
+                <span>What do you need help with?</span>
+                <button type="button" class="service-picker-close" id="service-picker-close" aria-label="Close">&times;</button>
+              </div>
+              <ul class="service-picker-list">
+                {%- for s in site.services -%}
+                <li>
+                  <button type="button" class="service-picker-option" data-value="{{ s.label }}">
+                    <span class="service-picker-option-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+                    <span class="service-picker-option-label">{{ s.label }}</span>
+                    <svg class="service-picker-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
+                  </button>
+                </li>
+                {%- endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <input type="text" name="postcode" placeholder="Enter your postcode" aria-label="Postcode">
+        <button class="btn btn-primary" type="submit">Get in Touch</button>
+      </form>
+      <p class="quote-bar-note"><span id="quote-typewriter"></span><span class="typewriter-cursor">&#124;</span></p>
+      <ul class="infographic-stats">
+        <li class="infographic-stat"><span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span><span class="stat-label">Years Trading</span></li>
+        <li class="infographic-stat"><span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span><span class="stat-label">Google Rating</span></li>
+        <li class="infographic-stat"><span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span><span class="stat-label">Reviews</span></li>
+      </ul>
     </div>
-    <h1>Your Trusted Electrician <span class="highlight">in Lewes</span></h1>
-    <div class="hero-stripe"></div>
-    <p>LH Electrical (South East) Ltd is a trusted electrician in Lewes with 15+ years of experience in domestic, commercial, solar, and EV installations across East Sussex.</p>
-    <form class="quote-bar" action="/contact/" method="GET">
-      <select name="service" aria-label="I need help with">
-        <option value="">I need help with...</option>
-        {% for s in site.services %}<option value="{{ s.label }}">{{ s.label }}</option>{% endfor %}
-      </select>
-      <input type="text" name="postcode" placeholder="Enter your postcode" aria-label="Postcode">
-      <button class="btn btn-primary" type="submit">Get in Touch</button>
-    </form>
-    <p class="quote-bar-note"><span id="quote-typewriter"></span><span class="typewriter-cursor">&#124;</span></p>
-  </div>
-</section>
-
-<section class="stats-band">
-  <div class="wrap">
-    <ul class="stats-strip">
-      <li><span class="stat-num">15+</span><span class="stat-label">Years Trading</span></li>
-      <li><span class="stat-num">{{ site.reviewRating }}&#9733;</span><span class="stat-label">Google Rating</span></li>
-      <li><span class="stat-num">{{ site.reviewCount }}</span><span class="stat-label">Reviews</span></li>
-      <li><span class="stat-num">NAPIT</span><span class="stat-label">Registered</span></li>
-    </ul>
+    <div class="hero-visual">
+      <svg class="hero-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#E5FAFF" d="M100,20 C140,20 180,45 180,90 C180,135 145,175 100,180 C55,175 20,140 20,95 C20,50 60,20 100,20 Z"/>
+      </svg>
+      <svg class="hero-connector" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60,80 C120,40 260,60 340,110" />
+        <path d="M50,300 C130,340 260,330 350,280" />
+      </svg>
+      <div class="hero-float-badge hero-float-badge-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+      </div>
+      <div class="hero-float-badge hero-float-badge-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      </div>
+      <img class="hero-illustration" src="/images/illustrations/hero-electrician.svg" alt="Illustration representing LH Electrical's electrical services">
+    </div>
   </div>
 </section>
 
@@ -94,23 +123,7 @@ description: NAPIT-certified electrician in Lewes, East Sussex with 15 years' ex
 
 <section class="section">
   <div class="wrap">
-    <h2>What our customers say</h2>
-    <div class="review-card">
-      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"We were very pleased with the work on our power sockets and lighting. George and Finn were pleasant, efficient and helpful."</p>
-      <span class="author">Chris Cooper</span>
-    </div>
-    <div class="review-card">
-      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"A really competitive price but more important to me, the work was completed as agreed and to a very high standard."</p>
-      <span class="author">Greg Milton</span>
-    </div>
-    <div class="review-card">
-      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      <p>"Excellent communication, reliable, thorough, helpful. Many thanks."</p>
-      <span class="author">Julie Frances</span>
-    </div>
-    <p><a href="/reviews/">Read all our reviews &rarr;</a></p>
+    {% include "reviews-carousel.liquid" %}
   </div>
 </section>
 

@@ -6,6 +6,9 @@
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ site.domain }}{{ page.url }}">
+  {% if noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
   <link rel="icon" href="https://lhelectrical.co.uk/wp-content/uploads/2025/04/cropped-LH-Electrical-Favicon-270x270.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +19,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.domain }}{{ page.url }}">
   {% if schema %}
-  <script type="application/ld+json">{{ schema | dump | safe }}</script>
+  {% for s in schema %}
+  <script type="application/ld+json">{{ s | dump | safe }}</script>
+  {% endfor %}
   {% endif %}
 </head>
 <body>
@@ -44,6 +49,7 @@
             <a href="{{ item.url }}">{{ item.label }} <span class="caret">&#9662;</span></a>
             <div class="dropdown-menu">
               {% for s in site.services %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endfor %}
+              <a href="/home2/"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9"/></svg></span><span class="drop-text">Home2 (Preview)</span></a>
             </div>
           </li>
           {% elif item.label == "Locations" %}
@@ -137,8 +143,20 @@
       <p>&copy; {{ "" | year }} {{ site.companyName }}. All rights reserved. Design by Summit Up Digital.</p>
     </div>
   </footer>
+
+  <div class="mobile-cta-bar" id="mobile-cta-bar">
+    <a class="mobile-cta-btn mobile-cta-call" href="{{ site.phoneHref }}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call Now
+    </a>
+    <a class="mobile-cta-btn mobile-cta-quote" href="/contact/">Get a Quote</a>
+  </div>
+
   <script src="/scripts/nav.js" defer></script>
   <script src="/scripts/typewriter.js" defer></script>
   <script src="/scripts/reviewCarousel.js" defer></script>
+  <script src="/scripts/scrollReveal.js" defer></script>
+  <script src="/scripts/counter.js" defer></script>
+  <script src="/scripts/servicePicker.js" defer></script>
 </body>
 </html>

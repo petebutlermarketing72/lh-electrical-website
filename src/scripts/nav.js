@@ -35,11 +35,14 @@
     if (e.target.tagName === "A") closeNav();
   });
 
-  if (header) {
+  var mobileCtaBar = document.getElementById("mobile-cta-bar");
+
+  if (header || mobileCtaBar) {
     window.addEventListener(
       "scroll",
       function () {
-        header.classList.toggle("is-scrolled", window.scrollY > 40);
+        if (header) header.classList.toggle("is-scrolled", window.scrollY > 40);
+        if (mobileCtaBar) mobileCtaBar.classList.toggle("is-visible", window.scrollY > 500);
       },
       { passive: true }
     );
