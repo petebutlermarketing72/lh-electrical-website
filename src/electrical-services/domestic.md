@@ -65,7 +65,6 @@ schema:
   {% heroCircuit %}
   <div class="wrap svc-hero-inner">
     <div>
-      <span class="svc-eyebrow">East Sussex&rsquo;s Trusted Electricians</span>
       <h1 class="svc-display">Domestic Electrics, <span class="tint">Done Properly.</span></h1>
       <p class="svc-hero-intro">From fuse board upgrades to full rewires, we provide safe, reliable domestic electrical services to homeowners across Lewes and East Sussex.</p>
       <div class="svc-actions">
@@ -74,11 +73,6 @@ schema:
           Call {{ site.phone }}
         </a>
         <a class="btn btn-ghost-light btn-pill-lg" href="/contact/">Get a Free Quote</a>
-      </div>
-      <div class="svc-chips">
-        <span class="svc-chip">NAPIT Registered</span>
-        <span class="svc-chip">Part P Compliant</span>
-        <span class="svc-chip">15+ Years</span>
       </div>
     </div>
     <div class="svc-hero-figure">
@@ -165,57 +159,116 @@ schema:
   </div>
 </section>
 
-<section class="svc-dark svc-pad">
+<section class="svc-dark svc-pad svc-offer-band">
   <div class="wrap">
-    <div class="svc-center">
-      <h2 class="svc-display svc-h2">Recent <span class="tint">Domestic Work</span></h2>
-      <p class="svc-lede">A look at recent installations across homes in Lewes and the surrounding villages.</p>
+    <div class="svc-offer-head reveal">
+      <h2 class="svc-display svc-h2">Domestic Services <span class="tint">We Offer</span></h2>
+      <p class="svc-offer-lede">From complete rewires to smaller upgrades, every job we do is approached with care, quality, and attention to detail.</p>
     </div>
-    <div class="svc-gallery">
-      <figure class="svc-shot reveal reveal-delay-1">
-        <img src="/images/services/domestic/domestic-bathroom-lighting.jpg" alt="Bathroom mirror and ceiling lighting installation">
-        <figcaption class="svc-shot-tag">Bathroom Lighting</figcaption>
-      </figure>
-      <figure class="svc-shot reveal reveal-delay-2">
-        <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Kitchen extension lighting installation">
-        <figcaption class="svc-shot-tag">Kitchen Extension</figcaption>
-      </figure>
-      <figure class="svc-shot reveal reveal-delay-3">
-        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Lounge LED lighting upgrade">
-        <figcaption class="svc-shot-tag">Lounge LED Upgrade</figcaption>
-      </figure>
+
+    <div class="svc-carousel reveal" data-svc-carousel role="group" aria-label="Recent domestic electrical work">
+      <div class="svc-carousel-viewport">
+        <div class="svc-carousel-track">
+          <figure class="svc-slide">
+            <img src="/images/services/domestic/domestic-bathroom-lighting.jpg" alt="Bathroom mirror and ceiling lighting installation by LH Electrical" draggable="false">
+            <figcaption>Bathroom Lighting</figcaption>
+          </figure>
+          <figure class="svc-slide">
+            <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Kitchen extension lighting installation by LH Electrical" draggable="false">
+            <figcaption>Kitchen Extension</figcaption>
+          </figure>
+          <figure class="svc-slide">
+            <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Lounge LED lighting upgrade by LH Electrical" draggable="false">
+            <figcaption>Lounge LED Upgrade</figcaption>
+          </figure>
+          <figure class="svc-slide">
+            <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Landing and stairway lighting installation by LH Electrical" draggable="false">
+            <figcaption>Landing Lighting</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="svc-carousel-controls">
+        <button type="button" class="svc-carousel-btn is-prev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="svc-carousel-dots"></div>
+        <button type="button" class="svc-carousel-btn is-next" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <p class="svc-offer-kicker">Popular domestic services include</p>
+    <ul class="svc-offer-list reveal">
+        <li><span><span class="title">Fuse Board Upgrades &amp; Replacements</span><span class="note">Modern consumer units with built-in safety features</span></span></li>
+        <li><span><span class="title">Full &amp; Partial Rewires</span><span class="note">Safe, future-ready wiring for older and modern homes</span></span></li>
+        <li><span><span class="title">Kitchen &amp; Bathroom Electrics</span><span class="note">Lighting, power, appliances, underfloor heating</span></span></li>
+        <li><span><span class="title">Lighting Installations</span><span class="note">LED upgrades, indoor and outdoor schemes</span></span></li>
+        <li><span><span class="title">Additional Sockets &amp; USB Points</span><span class="note">For modern living convenience</span></span></li>
+        <li><span><span class="title">Shower &amp; Cooker Circuits</span><span class="note">Dedicated high-load circuits</span></span></li>
+        <li><span><span class="title">Smoke &amp; Heat Detectors</span><span class="note">Compliant with current fire safety standards</span></span></li>
+        <li><span><span class="title">EV Charger Installations</span><span class="note">Smart charging points for electric vehicles</span></span></li>
+        <li><span><span class="title">Extensions, Loft Conversions &amp; Garden Rooms</span><span class="note">Complete electrical design &amp; fit</span></span></li>
+        <li><span><span class="title">Electric Heating &amp; Smart Heating Controls</span><span class="note">Efficient energy solutions</span></span></li>
+        <li><span><span class="title">Earthing &amp; Bonding Upgrades</span><span class="note">Essential for safety and compliance</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="svc-eco-section">
+  <div class="wrap">
+    <div class="svc-eco reveal">
+      <div class="svc-eco-body">
+        <span class="svc-eco-tag">Energy Efficiency</span>
+        <h2 class="svc-display svc-eco-title">Lower Running Costs, <span>Greener Home.</span></h2>
+        <p>We&rsquo;re big fans of helping our customers cut energy bills and shrink their carbon footprint. Whether you&rsquo;re going all-in on efficiency or just want to lower running costs, we can help with energy-efficient upgrades throughout the home.</p>
+        <ul class="svc-eco-list">
+          <li>LED lighting upgrades</li>
+          <li>Smart thermostats &amp; zoned heating</li>
+          <li><a href="/services/ev-chargers/">EV charger installation</a></li>
+          <li>Energy-saving appliance advice</li>
+        </ul>
+        <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Talk to us about your home</a>
+      </div>
+      <div class="svc-eco-figure">
+        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Energy-efficient LED lounge lighting installed by LH Electrical">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="svc-light svc-pad">
-  <div class="wrap svc-about">
-    <div class="svc-about-figure reveal">
-      <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="LH Electrical electrician carrying out domestic wiring work">
-      <div class="svc-float-card">
-        <span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span>
-        <span class="stat-label">Years of<br>Experience</span>
-      </div>
-    </div>
-    <div class="reveal reveal-delay-2">
+<section class="svc-light svc-pad svc-about-band">
+  <div class="wrap">
+    <div class="svc-center svc-about-head reveal">
       <h2 class="svc-display svc-h2">Qualified, Local <span class="ghost">Electricians</span></h2>
-      <p>Your home deserves the best when it comes to safety, efficiency and workmanship. Whether you&rsquo;re renovating, upgrading, or just fixing a few niggles, we&rsquo;re here to help.</p>
-      <p>We&rsquo;ve been working with homeowners across East Sussex for over 15 years &ndash; delivering expert advice, Part P-compliant work, and a clean, tidy finish every time.</p>
-      <ul class="svc-ticks">
-        <li>Fully qualified, NAPIT-registered</li>
-        <li>Meets Part P building regs</li>
-        <li>Prompt, polite, professional</li>
-        <li>Clean work, minimal disruption</li>
-        <li>Transparent pricing, no extras</li>
-        <li>We handle building control</li>
-      </ul>
+      <p class="svc-lede">Your home deserves the best when it comes to safety, efficiency and workmanship. Whether you&rsquo;re renovating, upgrading, or just fixing a few niggles, we&rsquo;re here to help.</p>
+    </div>
+    <div class="svc-about">
+      <div class="svc-about-figure reveal">
+        <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="LH Electrical electrician carrying out domestic wiring work">
+        <div class="svc-float-card">
+          <span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span>
+          <span class="stat-label">Years of<br>Experience</span>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <p>We&rsquo;ve been working with homeowners across East Sussex for over 15 years &ndash; delivering expert advice, Part P-compliant work, and a clean, tidy finish every time.</p>
+        <ul class="svc-ticks">
+          <li>Fully qualified, NAPIT-registered</li>
+          <li>Meets Part P building regs</li>
+          <li>Prompt, polite, professional</li>
+          <li>Clean work, minimal disruption</li>
+          <li>Transparent pricing, no extras</li>
+          <li>We handle building control</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="svc-cream svc-pad-sm">
   <div class="wrap svc-center">
-    <p class="svc-lede" style="margin-bottom:32px;">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
+    <p class="svc-trust-intro">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
     <div class="svc-logos">
       <span class="svc-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor"></span>
       <span class="svc-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer"></span>

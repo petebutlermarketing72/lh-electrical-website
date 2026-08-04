@@ -28,8 +28,28 @@
   <header class="site-header" id="site-header">
     <div class="topbar">
       <div class="wrap topbar-inner">
-        <span class="topbar-brand">{{ site.companyName }}</span>
+        <div class="topbar-left">
+          <span class="topbar-brand">{{ site.strapline }}</span>
+          <span class="topbar-badges">
+            {% for b in site.topbarBadges %}<span class="topbar-badge">{{ b }}</span>{% endfor %}
+          </span>
+        </div>
         <div class="topbar-right">
+          {% if site.social and site.social.length %}
+          <span class="topbar-social">
+            {% for s in site.social %}
+            <a href="{{ s.url }}" target="_blank" rel="noopener" aria-label="{{ s.label }}" title="{{ s.label }}">
+              {% if s.icon == "facebook" %}<svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+              {% elif s.icon == "instagram" %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+              {% elif s.icon == "linkedin" %}<svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.7c0-1.36-.03-3.11-1.95-3.11-1.96 0-2.26 1.48-2.26 3.01V21h-4z"/></svg>
+              {% elif s.icon == "x" %}<svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.22-6.82-5.96 6.82H1.68l7.73-8.84L1.25 2.25h6.82l4.71 6.23zm-1.16 17.52h1.83L7.01 4.13H5.05z"/></svg>
+              {% else %}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="9"/><path d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18 15 15 0 010-18z"/></svg>
+              {% endif %}
+            </a>
+            {% endfor %}
+          </span>
+          <span class="topbar-divider"></span>
+          {% endif %}
           <a href="mailto:{{ site.email }}">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
             {{ site.email }}
@@ -45,11 +65,12 @@
         <ul>
           {% for item in site.nav %}
           {% if item.label == "Services" %}
-          <li class="has-dropdown">
+          <li class="has-dropdown has-dropdown-wide">
             <a href="{{ item.url }}">{{ item.label }} <span class="caret">&#9662;</span></a>
-            <div class="dropdown-menu">
-              {% for s in site.services %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endfor %}
-              <a href="/home2/"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9"/></svg></span><span class="drop-text">Home2 (Preview)</span></a>
+            <div class="dropdown-menu dropdown-wide">
+              <div class="dropdown-grid">
+                {% for s in site.services %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endfor %}
+              </div>
             </div>
           </li>
           {% elif item.label == "Locations" %}
@@ -160,5 +181,6 @@
   <script src="/scripts/scrollReveal.js" defer></script>
   <script src="/scripts/counter.js" defer></script>
   <script src="/scripts/servicePicker.js" defer></script>
+  <script src="/scripts/svcCarousel.js" defer></script>
 </body>
 </html>

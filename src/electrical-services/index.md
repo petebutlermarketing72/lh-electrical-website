@@ -10,7 +10,6 @@ hideCtaBand: true
   {% heroCircuit %}
   <div class="wrap svc-hero-inner">
     <div>
-      <span class="svc-eyebrow">East Sussex&rsquo;s Trusted Electricians</span>
       <h1 class="svc-display">Electrical Services, <span class="tint">Done Properly.</span></h1>
       <p class="svc-hero-intro">From a single fault to a full rewire, every job is carried out by NAPIT-registered electricians and backed by a fixed written quote.</p>
       <div class="svc-actions">
@@ -19,11 +18,6 @@ hideCtaBand: true
           Call {{ site.phone }}
         </a>
         <a class="btn btn-ghost-light btn-pill-lg" href="/contact/">Get a Free Quote</a>
-      </div>
-      <div class="svc-chips">
-        <span class="svc-chip">NAPIT Registered</span>
-        <span class="svc-chip">Part P Compliant</span>
-        <span class="svc-chip">15+ Years</span>
       </div>
     </div>
     <div class="svc-hero-figure">

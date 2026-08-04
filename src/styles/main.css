@@ -15,8 +15,8 @@
   --accent-dark: #4e7a30;
   --accent-tint: #edf6e3;
   --gray-bg: #f6f8f4;
-  --text: #1c2733;
-  --muted: #54595f;
+  --text: #0d135f;
+  --muted: #474d8d;
   --border: #e2e6ea;
   --max-width: 1160px;
   --radius: 12px;
@@ -71,10 +71,50 @@ main section p { max-width: 720px; }
 .site-header.is-scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.35); }
 .topbar { background: var(--navy-tint); font-size: 0.8rem; }
 .topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 7px 24px; color: rgba(255,255,255,0.65); }
-.topbar-inner a { color: rgba(255,255,255,0.75); display: inline-flex; align-items: center; gap: 6px; }
-.topbar-inner a:hover { color: #fff; text-decoration: none; }
+.topbar-inner a { color: rgba(255,255,255,0.75); display: inline-flex; align-items: center; gap: 6px; transition: color 0.16s ease; }
+.topbar-inner a:hover { color: var(--accent); text-decoration: none; }
 .topbar-right { display: flex; align-items: center; gap: 10px; }
 .topbar-divider { width: 1px; height: 13px; background: rgba(255,255,255,0.18); }
+
+/* Social icons in the top bar */
+.topbar-social { display: inline-flex; align-items: center; gap: 4px; }
+.topbar-social a {
+  width: 24px; height: 24px; border-radius: 50%; justify-content: center; gap: 0;
+  color: rgba(255,255,255,0.75); transition: color 0.16s ease, background 0.16s ease;
+}
+.topbar-social a:hover { color: var(--accent); background: rgba(255,255,255,0.1); }
+.topbar-social svg { display: block; }
+
+/* Strapline + credential lozenges (top left) */
+.topbar-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.topbar-brand {
+  white-space: nowrap; color: #fff;
+  font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
+  font-size: 0.74rem; letter-spacing: 0.1em;
+}
+
+/* One lozenge visible at a time, cycling on a loop. Grid-stacking keeps
+   the container as wide as the widest badge so nothing shifts around. */
+.topbar-badges { display: inline-grid; align-items: center; }
+.topbar-badge {
+  grid-area: 1 / 1; justify-self: start; white-space: nowrap;
+  color: var(--accent);
+  font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
+  font-size: 0.74rem; letter-spacing: 0.1em;
+  opacity: 0; animation: topbar-badge-cycle 12s ease-in-out infinite;
+}
+.topbar-badge:nth-child(1) { animation-delay: 0s; }
+.topbar-badge:nth-child(2) { animation-delay: 4s; }
+.topbar-badge:nth-child(3) { animation-delay: 8s; }
+@keyframes topbar-badge-cycle {
+  0%       { opacity: 0; transform: translateY(5px); }
+  4%, 28%  { opacity: 1; transform: none; }
+  33%,100% { opacity: 0; transform: translateY(-5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topbar-badge { animation: none; opacity: 0; }
+  .topbar-badge:first-child { opacity: 1; }
+}
 .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; gap: 24px; }
 .logo { color: #fff; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
 .logo:hover { text-decoration: none; }
@@ -82,8 +122,12 @@ main section p { max-width: 720px; }
 .main-nav > ul {
   list-style: none; display: flex; align-items: center; gap: 0; margin: 0; padding: 5px;
   border: 1.5px solid rgba(255,255,255,0.1); border-radius: 100px; background: rgba(255,255,255,0.03); flex-wrap: wrap;
+  position: relative;
 }
 .main-nav > ul > li { position: relative; }
+/* The wide dropdown centres on the nav bar (and so the page) rather than
+   on its own nav item, by letting the <ul> be its positioning context. */
+.main-nav > ul > li.has-dropdown-wide { position: static; }
 .main-nav a {
   color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.04em;
   text-transform: uppercase; opacity: 0.85; transition: opacity 0.15s ease, background 0.15s ease;
@@ -97,11 +141,16 @@ main section p { max-width: 720px; }
 
 /* Dropdown */
 .dropdown-menu {
-  position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-6px);
+  position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(-6px);
   background: #fff; border-radius: 10px; box-shadow: var(--shadow-md); padding: 14px 6px 6px; min-width: 220px;
   border-top: 3px solid var(--accent); z-index: 30;
   opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+}
+/* Invisible bridge across the gap so the pointer can travel from the nav
+   item down into the menu without the hover dropping out. */
+.dropdown-menu::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px;
 }
 li.has-dropdown:hover .dropdown-menu {
   opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
@@ -114,6 +163,21 @@ li.has-dropdown:hover .dropdown-menu {
 }
 .dropdown-menu a:hover { background: var(--accent-tint); text-decoration: none; }
 .dropdown-menu a + a { border-top: 1px solid var(--border); }
+
+/* Wide multi-column dropdown (Services) */
+.dropdown-wide { min-width: 640px; max-width: calc(100vw - 40px); padding: 14px 12px 12px; }
+.dropdown-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px 10px; }
+.dropdown-grid a { border-top: none !important; }
+/* Vertical rules between the columns, without extra markup */
+.dropdown-grid a:nth-child(3n+2), .dropdown-grid a:nth-child(3n) {
+  border-left: 1px solid var(--border); border-radius: 0 6px 6px 0;
+}
+@media (max-width: 900px) {
+  .dropdown-wide { min-width: 440px; }
+  .dropdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dropdown-grid a:nth-child(3n+2), .dropdown-grid a:nth-child(3n) { border-left: none; border-radius: 6px; }
+  .dropdown-grid a:nth-child(2n) { border-left: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+}
 .dropdown-menu .drop-icon { display: flex; align-items: center; justify-content: center; width: 18px; flex-shrink: 0; color: var(--accent-dark); }
 
 /* Full-screen mobile nav */
@@ -470,6 +534,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .nav-toggle { display: flex; }
   .main-nav { display: none; }
   .topbar-inner { font-size: 0.75rem; }
+  .topbar-badges { display: none; }
 }
 @media (max-width: 480px) {
   .topbar-right span:not(.topbar-divider) { display: none; }
@@ -915,7 +980,127 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   padding: 6px 13px; border-radius: 100px;
 }
 
+/* ---------- SERVICES WE OFFER (centred intro + carousel + 3-col list) ---------- */
+.svc-offer-head { text-align: center; max-width: 660px; margin: 0 auto 44px; }
+.svc-offer-head .svc-display { margin-bottom: 14px; }
+.svc-offer-lede { color: #c6cfe2; margin: 0; }
+/* Extra breathing room left/right on this band, plus room at the
+   bottom for the green energy container to overlap into. */
+.svc-offer-band { position: relative; z-index: 1; padding-bottom: 180px; }
+.svc-offer-band > .wrap { max-width: 1080px; padding-left: 64px; padding-right: 64px; }
+
+.svc-offer-kicker {
+  font-family: var(--font-head); font-weight: 700; color: var(--accent); text-align: center;
+  font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+  margin: 56px auto 40px; max-width: 100%;
+}
+
+/* 3-column service list with outlined square tick bullets */
+.svc-offer-list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+}
+.svc-offer-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: #141a67; border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px; padding: 15px 17px;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+.svc-offer-list li:hover { background: #1a2277; border-color: rgba(191,234,151,0.22); }
+.svc-offer-list li::before {
+  content: ""; flex-shrink: 0; width: 19px; height: 19px; margin-top: 2px;
+  border: 1.5px solid var(--accent); border-radius: 4px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bfea97' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 11px no-repeat;
+}
+.svc-offer-list .title { display: block; font-family: var(--font-head); font-weight: 700; color: #fff; font-size: 0.9rem; line-height: 1.35; }
+.svc-offer-list .note { display: block; font-size: 0.77rem; color: #9aa5be; line-height: 1.45; margin-top: 3px; }
+
+/* Continuous two-up carousel */
+.svc-carousel { position: relative; }
+.svc-carousel-viewport {
+  overflow-x: auto; overflow-y: hidden; cursor: grab;
+  scrollbar-width: none; -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.svc-carousel-viewport::-webkit-scrollbar { display: none; }
+.svc-carousel-viewport.is-dragging { cursor: grabbing; }
+.svc-carousel-track { display: flex; gap: 18px; }
+.svc-slide {
+  flex: 0 0 calc(50% - 9px); margin: 0; position: relative; aspect-ratio: 4 / 3;
+  border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md);
+}
+.svc-slide img { width: 100%; height: 100%; object-fit: cover; display: block; -webkit-user-drag: none; user-select: none; }
+.svc-slide figcaption {
+  position: absolute; left: 0; bottom: 0; background: rgba(13,19,95,0.93); color: #fff;
+  font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em;
+  text-transform: uppercase; padding: 11px 18px;
+  border-radius: 0 12px 0 16px;
+  display: inline-flex; align-items: center; gap: 9px;
+}
+.svc-slide figcaption::after {
+  content: ""; width: 13px; height: 13px; flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bfea97' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='4' y1='12' x2='19' y2='12'/%3E%3Cpolyline points='13 6 19 12 13 18'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform 0.18s ease;
+}
+.svc-slide:hover figcaption::after { transform: translateX(3px); }
+
+/* Controls sit below the images, centred with the dots */
+.svc-carousel-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 22px; }
+.svc-carousel-btn {
+  width: 32px; height: 32px; border-radius: 50%; cursor: pointer; flex-shrink: 0;
+  background: transparent; border: 1.5px solid rgba(191,234,151,0.45); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.16s ease, border-color 0.16s ease;
+}
+.svc-carousel-btn:hover { background: rgba(191,234,151,0.16); border-color: var(--accent); }
+.svc-carousel-btn svg { width: 15px; height: 15px; }
+.svc-carousel-dots { display: flex; justify-content: center; gap: 8px; }
+.svc-carousel-dot {
+  width: 8px; height: 8px; border-radius: 50%; border: none; padding: 0; cursor: pointer;
+  background: rgba(255,255,255,0.28); transition: background 0.16s ease, width 0.16s ease;
+}
+.svc-carousel-dot.is-active { background: var(--accent); width: 22px; border-radius: 100px; }
+
+/* ---------- ENERGY EFFICIENCY BAND (green container) ----------
+   Transparent section so the container itself can ride up and
+   straddle the dark band above it. */
+.svc-eco-section { background: transparent; position: relative; z-index: 2; padding: 0; }
+.svc-eco-section > .wrap { max-width: 1040px; padding-left: 64px; padding-right: 64px; }
+.svc-eco {
+  display: grid; grid-template-columns: 1.08fr 0.92fr; align-items: stretch;
+  background: var(--accent); border-radius: 26px; overflow: hidden;
+  box-shadow: 0 22px 54px rgba(13,19,95,0.22);
+  margin-top: -132px;
+}
+.svc-eco-body { padding: 52px 48px; display: flex; flex-direction: column; justify-content: center; }
+.svc-eco-tag {
+  display: inline-flex; align-self: flex-start; align-items: center; gap: 7px;
+  background: rgba(13,19,95,0.12); color: var(--navy);
+  font-family: var(--font-head); font-size: 0.64rem; font-weight: 800; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 18px;
+}
+.svc-eco-title {
+  color: var(--navy); font-size: 2.5rem; margin: 0 0 14px; max-width: 16ch;
+}
+.svc-eco-title span { display: block; color: rgba(13,19,95,0.42); }
+.svc-eco-body > p {
+  color: rgba(13,19,95,0.82); font-size: 0.98rem; margin: 0 0 22px; max-width: 46ch;
+}
+.svc-eco-list { list-style: none; padding: 0; margin: 0 0 30px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 22px; }
+.svc-eco-list li { display: flex; align-items: flex-start; gap: 9px; font-size: 0.88rem; color: var(--navy); font-weight: 600; line-height: 1.4; }
+.svc-eco-list li::before {
+  content: ""; flex-shrink: 0; width: 16px; height: 16px; margin-top: 2px;
+  border: 1.5px solid rgba(13,19,95,0.55); border-radius: 4px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230d135f' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center / 10px no-repeat;
+}
+.svc-eco-list a { color: var(--navy); text-decoration: underline; text-underline-offset: 2px; }
+.svc-eco-body .btn { align-self: flex-start; }
+.svc-eco-figure { position: relative; min-height: 300px; }
+.svc-eco-figure img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+
 /* ---------- ABOUT SPLIT (floating stat card) ---------- */
+.svc-about-band { padding-top: 60px; }
+.svc-about-head { max-width: 660px; margin: 0 auto 52px; }
 .svc-about { display: grid; grid-template-columns: 1fr 1.05fr; gap: 56px; align-items: center; }
 .svc-about-figure { position: relative; }
 .svc-about-figure > img { width: 100%; border-radius: 20px; display: block; box-shadow: var(--shadow-md); }
@@ -967,6 +1152,10 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .btn-on-accent-ghost:hover { background: rgba(255,255,255,0.35); border-color: var(--navy-dark); text-decoration: none; }
 
 /* ---------- TRUST LOGOS ---------- */
+.svc-trust-intro {
+  font-family: var(--font-head); font-weight: 700; color: var(--navy);
+  font-size: 1.18rem; line-height: 1.5; max-width: 720px; margin: 0 auto 34px;
+}
 .svc-logos { display: flex; align-items: stretch; justify-content: center; gap: 22px; flex-wrap: wrap; }
 .svc-logo-tile {
   background: var(--navy-dark); border-radius: 16px; padding: 22px 34px;
@@ -1002,6 +1191,14 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .svc-hero h1 { font-size: 2.5rem; max-width: none; }
   .svc-hero-figure { order: -1; min-height: 300px; }
   .svc-about { grid-template-columns: 1fr; gap: 56px; }
+  .svc-offer-band > .wrap { padding-left: 40px; padding-right: 40px; }
+  .svc-offer-list { grid-template-columns: repeat(2, 1fr); }
+  .svc-offer-band { padding-bottom: 150px; }
+  .svc-eco { grid-template-columns: 1fr; margin-top: -108px; }
+  .svc-eco-section > .wrap { padding-left: 40px; padding-right: 40px; }
+  .svc-eco-body { padding: 40px 32px; }
+  .svc-eco-figure { min-height: 260px; order: 2; }
+  .svc-about-head { margin-bottom: 40px; }
   .svc-price-grid, .svc-review-grid, .svc-gallery { grid-template-columns: repeat(2, 1fr); }
   .svc-h2 { font-size: 1.9rem; }
 }
@@ -1013,7 +1210,18 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .svc-price-grid, .svc-review-grid, .svc-gallery, .svc-ticks { grid-template-columns: 1fr; }
   .svc-stat-1 { left: -4%; }
   .svc-stat-2 { right: -4%; }
-  .svc-logos { gap: 30px; }
-  .svc-logos img { height: 46px; }
+  .svc-logos { gap: 14px; }
+  .svc-logo-tile { padding: 16px 22px; min-width: 0; flex: 1 1 130px; }
+  .svc-logo-tile img { height: 40px; }
+  .svc-offer-band > .wrap { padding-left: 24px; padding-right: 24px; }
+  .svc-offer-list { grid-template-columns: 1fr; }
+  .svc-offer-band { padding-bottom: 120px; }
+  .svc-eco { margin-top: -80px; }
+  .svc-eco-section > .wrap { padding-left: 24px; padding-right: 24px; }
+  .svc-eco-body { padding: 34px 24px; }
+  .svc-eco-title { font-size: 1.85rem; }
+  .svc-eco-list { grid-template-columns: 1fr; }
+  .svc-about-band { padding-top: 44px; }
+  .svc-slide { flex: 0 0 calc(85% - 9px); }
   .svc-h2 { font-size: 1.6rem; }
 }
