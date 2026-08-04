@@ -3,10 +3,18 @@ title: Landlord EICR & Compliance | LH Electrical (South East)
 description: NAPIT-registered landlord EICRs and remedial electrical work across East Sussex. Fast turnaround, clear reports, portfolio coordination.
 ---
 
-<section class="hero">
-  <div class="wrap">
+<section class="hero hero-split">
+  <div class="hero-split-media">
+    <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Landlord electrical compliance work by LH Electrical">
+  </div>
+  <div class="hero-split-content">
+    <div class="hero-badges">
+      <a class="hero-badge hero-badge-link" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener"><span class="stars">&#9733;</span>Trustpilot Excellent &middot; {{ site.trustpilotRating }} stars</a>
+      <span class="hero-badge"><span class="stars">&#9733;</span>{{ site.reviewCount }} five-star Google reviews</span>
+    </div>
     <h1>Landlord Electrical Compliance</h1>
     <p>EICRs and remedial work that keeps you compliant and your tenants safe.</p>
+    <a class="btn btn-primary" href="/contact/">Get your free no-obligation quote</a>
   </div>
 </section>
 
@@ -30,9 +38,21 @@ Since 2020, private landlords in England have been legally required to hold a cu
 
 For portfolio landlords and letting agents, timing matters. We'll coordinate inspections across multiple properties to keep access visits efficient, and prioritise remedial work so void periods between tenancies stay as short as possible.
 
-## Common questions
+  </div>
+</section>
 
-<dl class="faq">
+{% whyChooseLH %}
+
+{% trustBadges %}
+
+{% customerReviews %}
+
+{% areaMap %}
+
+<section class="section">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <dl class="faq">
 <dt>My EICR has come back unsatisfactory — what now?</dt>
 <dd>You've got 28 days to address any C1 or C2 codes. If we carried out the inspection, we'll quote the remedial work directly and re-issue a clean certificate once it's done. If another contractor did the original report, we can still help — we'll review the findings and price the work.</dd>
 <dt>How often do I need an EICR?</dt>
@@ -40,6 +60,5 @@ For portfolio landlords and letting agents, timing matters. We'll coordinate ins
 <dt>Can you manage inspections across a whole portfolio?</dt>
 <dd>Yes — we regularly coordinate multi-property programmes for landlords and letting agents to keep scheduling and reporting consistent.</dd>
 </dl>
-
   </div>
 </section>

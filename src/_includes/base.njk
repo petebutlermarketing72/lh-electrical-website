@@ -92,6 +92,7 @@
     {{ content | safe }}
   </main>
 
+  {% if not hideCtaBand %}
   <section class="cta-band">
     <div class="wrap cta-inner">
       <div>
@@ -104,6 +105,7 @@
       </div>
     </div>
   </section>
+  {% endif %}
 
   <footer class="site-footer">
     <div class="wrap footer-grid">

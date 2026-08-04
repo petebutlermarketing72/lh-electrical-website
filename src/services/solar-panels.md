@@ -3,10 +3,18 @@ title: Solar Panel Installation | LH Electrical (South East)
 description: MCS-certified solar PV and battery storage installation across East Sussex. REC certified, government scheme eligible.
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>Solar PV & Battery Storage</h1>
+<section class="hero hero-split">
+  <div class="hero-split-media">
+    <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Solar PV and battery storage installation by LH Electrical">
+  </div>
+  <div class="hero-split-content">
+    <div class="hero-badges">
+      <a class="hero-badge hero-badge-link" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener"><span class="stars">&#9733;</span>Trustpilot Excellent &middot; {{ site.trustpilotRating }} stars</a>
+      <span class="hero-badge"><span class="stars">&#9733;</span>{{ site.reviewCount }} five-star Google reviews</span>
+    </div>
+    <h1>Solar PV &amp; Battery Storage</h1>
     <p>MCS-certified installation, so you're eligible for government incentives like the Smart Export Guarantee.</p>
+    <a class="btn btn-primary" href="/contact/">Get your free no-obligation quote</a>
   </div>
 </section>
 
@@ -29,9 +37,21 @@ As an MCS-certified installer, we handle the electrical side of solar PV and bat
 
 MCS-certified installers are independently assessed against national standards for solar and renewable installations. Beyond the paperwork, it means your system is installed to a consistent standard, that you're covered for scheme eligibility, and that the certification will be recognised if you come to sell the property.
 
-## Common questions
+  </div>
+</section>
 
-<dl class="faq">
+{% whyChooseLH %}
+
+{% trustBadges %}
+
+{% customerReviews %}
+
+{% areaMap %}
+
+<section class="section">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <dl class="faq">
 <dt>Do I need planning permission for solar panels?</dt>
 <dd>Most residential rooftop solar installations fall under permitted development, but it depends on your property and location. We can advise during the survey.</dd>
 <dt>Can I add battery storage later?</dt>
@@ -39,6 +59,5 @@ MCS-certified installers are independently assessed against national standards f
 <dt>What's the benefit of the Smart Export Guarantee?</dt>
 <dd>It means you get paid for excess electricity you export back to the grid. MCS certification is a requirement to register for it.</dd>
 </dl>
-
   </div>
 </section>

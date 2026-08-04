@@ -1,0 +1,5 @@
+{
+  "layout": "base.njk",
+  "tags": ["services"],
+  "permalink": "/electrical-services/{{ page.fileSlug }}/index.html"
+}
