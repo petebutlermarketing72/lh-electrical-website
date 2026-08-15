@@ -10,7 +10,7 @@ layout: base.njk
       <span class="svc-eyebrow">{{ category }}</span>
       <h1 class="blog-hero-title">{{ heading }}</h1>
       <div class="blog-meta-row">
-        <a class="blog-back-link" href="/blog/">&larr; Back to Blog</a>
+        <a class="blog-back-link" href="{{ backUrl | default('/blog/') }}">&larr; {{ backLabel | default('Back to Blog') }}</a>
         <span class="blog-readtime">{{ readTime }}</span>
       </div>
     </div>

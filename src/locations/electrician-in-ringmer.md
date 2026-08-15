@@ -1,40 +1,50 @@
 ---
 layout: base.njk
-title: Electrician in Ringmer | LH Electrical (South East)
+title: Trusted Electrician in Ringmer | LH Electrical (South East)
 description: NAPIT-registered electrician covering Ringmer — EICRs, rewires, consumer unit upgrades, EV chargers and solar. MCS-certified, based in Lewes.
 ---
 
 <section class="hero">
   <div class="wrap">
-    <h1>Electrician in Ringmer</h1>
-    <p>NAPIT-registered, MCS-certified, based ten minutes down the road in Lewes.</p>
+    <h1>Trusted Electrician in Ringmer</h1>
+    <p>Looking for a reliable electrician in Ringmer? Whether you're in the heart of the village, out towards Laughton, or near Glynde or Barcombe, LH Electrical is your trusted local expert. We offer professional electrical services for homeowners, landlords, and small businesses — always delivered on time, with care, and to the highest safety standards.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
 
-Ringmer has the kind of mixed housing stock that keeps an electrician's work interesting — flint cottages off The Green, 70s and 80s estates around Broyle Road, modern new builds on the village edges, and farm conversions out towards Glynde and Barcombe. We work across all of it. LH Electrical is based in Lewes, about ten minutes down the road, which makes Ringmer one of the areas we cover most often.
+## Complete Domestic &amp; Landlord Electrical Services in Ringmer
 
-## What we typically work on in Ringmer
-
-Two distinct conversations come up in the village. In the older properties — particularly anything that hasn't been rewired since the 80s — it's usually consumer unit upgrades, an EICR ahead of a sale, or a partial rewire once the surveyor has flagged the wiring. In the newer homes it's more often EV chargers, smart lighting, and additional circuits for garden offices and outbuildings. We're MCS-certified for EV and solar work and NAPIT-registered for everything notifiable, so the right certificates land with you on completion.
-
-**Regular jobs in Ringmer:**
+From modern rewires to fault finding, LH Electrical is trusted across Ringmer for responsive, safety-led electrical work. Our NAPIT-registered electricians are fully qualified and experienced in all aspects of domestic installation, testing, and repair. We work with:
 
 <ul class="checklist">
-<li>EICRs for homeowners, landlords, and pre-sale checks</li>
-<li>Consumer unit and fuse board upgrades</li>
-<li>EV charger installation (MCS-certified)</li>
-<li>Full and partial rewires</li>
-<li>Solar PV and battery storage — the electrical side</li>
-<li>New circuits, outdoor power, smart lighting</li>
-<li>Commercial work at Ringmer Business Park and for small operators</li>
+<li>Homeowners looking to upgrade or extend their systems</li>
+<li>Landlords needing reliable safety certificates (EICRs)</li>
+<li>Developers working on residential builds</li>
+<li>Local businesses looking for dependable ongoing support</li>
 </ul>
 
-## A note on Ringmer's older properties
+## Electrical Services We Offer
 
-Period cottages around The Green, Anchor Lane, and the lanes towards Norlington often still have wiring from the original install — sometimes rubber-insulated cable that hasn't been touched in decades. We approach these properties carefully: a survey first, then a clear scope of work, then the smallest sensible intervention. Rewires in occupied period homes don't have to mean total upheaval — we plan the cable routes, lift floorboards or run discreet surface conduit where appropriate, and keep the disruption proportionate.
+We cover a wide range of electrical services across Ringmer and nearby villages, including Glynde, Barcombe, Laughton, and Lewes. Our most requested work includes:
+
+<ul class="checklist">
+<li>Fuse board replacements and consumer unit upgrades</li>
+<li>Full or partial property rewires</li>
+<li>Interior and exterior lighting installations</li>
+<li>Smart lighting and home automation</li>
+<li>Landlord EICR certificates and safety checks</li>
+<li>EV charger installation (home &amp; workplace)</li>
+<li>Solar PV installations and maintenance</li>
+<li>PAT testing, fault finding and general repairs</li>
+</ul>
+
+## Serving the Ringmer Community
+
+From the leafy lanes of Barcombe to the station-side homes in Glynde, we're proud to support Ringmer's community with trusted, local electrical services. Whether you're on Broyle Estate, near Ringmer College, or nestled in nearby Laughton, we're only a call away.
+
+Need help fast? We aim to respond quickly and minimise disruption, whether it's a one-off job or ongoing electrical support.
 
 ## Common questions
 
@@ -43,9 +53,19 @@ Period cottages around The Green, Anchor Lane, and the lanes towards Norlington 
 <dd>Ringmer is on our doorstep, so urgent jobs — a tripped board, a circuit that's failed — usually get same-day attention. Planned work tends to book in within a few working days.</dd>
 <dt>Do I need an EICR before selling my house?</dt>
 <dd>You're not legally required to commission one, but most buyers' solicitors now ask, and a current report removes a friction point in conveyancing. If yours is more than five years old, it's worth refreshing.</dd>
-<dt>Is rubber-insulated wiring an automatic write-off?</dt>
-<dd>No — but it's a strong signal that the installation deserves a proper look. We'll inspect, report, and recommend the smallest sensible intervention, whether that's a full rewire or targeted replacement of the affected circuits.</dd>
+<dt>Do you cover the villages around Ringmer as well?</dt>
+<dd>Yes — Glynde, Barcombe and Laughton are all part of our regular coverage alongside Ringmer itself.</dd>
 </dl>
 
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2 style="text-align:center">Find Us Near Ringmer</h2>
+    <p style="text-align:center; max-width:560px; margin:0 auto 24px;">We're based in Lewes, about ten minutes down the road from Ringmer.</p>
+    <div class="location-map-wrap">
+      <iframe class="map-embed" loading="lazy" src="https://www.google.com/maps?q=Ringmer,+East+Sussex&output=embed" title="Map of Ringmer, East Sussex"></iframe>
+    </div>
   </div>
 </section>

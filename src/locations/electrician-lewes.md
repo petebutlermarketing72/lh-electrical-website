@@ -1,35 +1,52 @@
 ---
 layout: base.njk
-title: Electrician in Lewes | LH Electrical (South East)
+title: Your Trusted Electrician in Lewes, East Sussex | LH Electrical (South East)
 description: NAPIT-registered electrician based in Lewes, East Sussex — domestic, commercial, EV charger and solar work. MCS-certified, 15+ years' experience.
 ---
 
 <section class="hero">
   <div class="wrap">
-    <h1>Electrician in Lewes</h1>
-    <p>Based in Lewes, working across the town and the surrounding villages.</p>
+    <h1>Your Trusted Electrician in Lewes, East Sussex</h1>
+    <p>Looking for a reliable electrician in Lewes? LH Electrical provides certified, trusted electrical services for homes, landlords and businesses across East Sussex.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
 
-LH Electrical is based just outside Lewes, so the town is where most of our work starts — from period homes in the older parts of the town to newer developments on its edges. As East Sussex's county town, Lewes has a wide mix of property types, and our work reflects that: everything from EICRs and consumer unit upgrades to EV chargers and full rewires.
+## Professional Electrical Services Across Lewes
 
-## What we typically work on in Lewes
+Based right here in Lewes, LH Electrical proudly serves the town and surrounding areas with safe, reliable, and compliant electrical services.
 
-Being based on our doorstep means we can usually respond quickly to jobs in Lewes, whether that's an urgent fault or a planned installation. We're MCS-certified for EV charger and solar PV work, and NAPIT-registered for all notifiable electrical work, so the right paperwork lands with you on completion.
+From period properties in the historic town centre to new builds in the surrounding villages, we understand the unique needs of local homes, landlords and businesses and deliver expert electrical solutions tailored to every property.
 
-**Regular jobs in Lewes:**
+**We offer a full range of electrical services in Lewes, including:**
 
 <ul class="checklist">
-<li>EICRs for homeowners, landlords, and pre-sale checks</li>
-<li>Consumer unit and fuse board upgrades</li>
-<li>EV charger installation (MCS-certified)</li>
-<li>Full and partial rewires</li>
-<li>Solar PV and battery storage — the electrical side</li>
-<li>Commercial inspections and fit-outs</li>
+<li>Domestic Electrical Work – rewires, consumer units, lighting, sockets and more</li>
+<li>Landlord Services – EICRs, PAT testing, safety certificates and inspections</li>
+<li>Commercial Electrical Installations – for shops, offices, schools and hospitality</li>
+<li>EV Charger Installation – Zappi, Pod Point, Wallbox and grant advice</li>
+<li>Lighting Design &amp; Installation – indoor, outdoor, smart and feature lighting</li>
+<li>Fuse Board Upgrades – modern, safe and fully certified</li>
+<li>Fault Finding &amp; Repairs – fast diagnostics and problem-solving</li>
+<li>Emergency Callouts – responsive support (subject to availability)</li>
 </ul>
+
+## Your Local, Reliable Lewes Electrician
+
+With over 15 years of experience and full NAPIT registration, LH Electrical brings professional standards and a personal touch to every job in Lewes. We're committed to:
+
+<ul class="checklist">
+<li>Clear, transparent pricing</li>
+<li>Tidy, respectful workmanship</li>
+<li>Fully certified work to the latest UK regulations</li>
+<li>Building trusted, long-term relationships in our local community</li>
+</ul>
+
+Whether you're planning a renovation, need a safety check, or want to install solar or EV charging — we're here to help.
+
+**Proudly serving all areas of Lewes and nearby:** Wallands, South Malling, Winterbourne, Offham, Ringmer, Cooksbridge, Barcombe and Glynde.
 
 ## Common questions
 
@@ -40,5 +57,15 @@ Being based on our doorstep means we can usually respond quickly to jobs in Lewe
 <dd>Yes — older wiring is common across the town, and we survey first, then recommend the smallest sensible intervention rather than assuming a full rewire is needed.</dd>
 </dl>
 
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2 style="text-align:center">Find Us Near Lewes</h2>
+    <p style="text-align:center; max-width:560px; margin:0 auto 24px;">We're based just outside Lewes and cover the town and surrounding villages.</p>
+    <div class="location-map-wrap">
+      <iframe class="map-embed" loading="lazy" src="https://www.google.com/maps?q=Lewes,+East+Sussex&output=embed" title="Map of Lewes, East Sussex"></iframe>
+    </div>
   </div>
 </section>

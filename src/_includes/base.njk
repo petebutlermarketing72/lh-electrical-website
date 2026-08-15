@@ -69,7 +69,12 @@
             <a href="{{ item.url }}">{{ item.label }} <span class="caret">&#9662;</span></a>
             <div class="dropdown-menu dropdown-wide">
               <div class="dropdown-grid">
-                {% for s in site.services %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endfor %}
+                {% for s in site.services %}{% if s.label != "EV Chargers" and s.label != "Solar Panels" %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endif %}{% endfor %}
+              </div>
+              <div class="dropdown-divider"></div>
+              <p class="dropdown-section-label">Renewable Energy</p>
+              <div class="dropdown-grid-green">
+                {% for s in site.services %}{% if s.label == "EV Chargers" or s.label == "Solar Panels" %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endif %}{% endfor %}
               </div>
             </div>
           </li>
@@ -166,6 +171,7 @@
           {% for item in site.nav %}
           <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ item.url }}">{{ item.label }}</a></li>
           {% endfor %}
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="/blog/">Blog</a></li>
         </ul>
       </div>
     </div>

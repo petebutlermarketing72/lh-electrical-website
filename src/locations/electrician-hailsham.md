@@ -49,3 +49,13 @@ Outside the rental market, the town's housing mix keeps things varied. Victorian
 
   </div>
 </section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2 style="text-align:center">Find Us Near Hailsham</h2>
+    <p style="text-align:center; max-width:560px; margin:0 auto 24px;">We're based in Lewes and cover Hailsham and the surrounding area.</p>
+    <div class="location-map-wrap">
+      <iframe class="map-embed" loading="lazy" src="https://www.google.com/maps?q=Hailsham,+East+Sussex&output=embed" title="Map of Hailsham, East Sussex"></iframe>
+    </div>
+  </div>
+</section>
