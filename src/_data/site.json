@@ -22,13 +22,13 @@
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
     { "label": "Services", "url": "/electrical-services/" },
-    { "label": "Locations", "url": "/locations/" },
+    { "label": "Locations", "url": "/local-electrician/" },
     { "label": "Reviews", "url": "/reviews/" },
     { "label": "Contact", "url": "/contact/" }
   ],
   "services": [
     { "label": "Installations", "url": "/electrical-services/installations/" },
-    { "label": "Maintenance", "url": "/electrical-services/maintenance/" },
+    { "label": "Maintenance", "url": "/electrical-services/electrical-maintenance-services/" },
     { "label": "Domestic", "url": "/electrical-services/domestic/" },
     { "label": "Lighting", "url": "/electrical-services/lighting/" },
     { "label": "Testing & Inspection", "url": "/electrical-services/testing-inspection/" },
@@ -36,15 +36,15 @@
     { "label": "Commercial", "url": "/electrical-services/commercial-electrician/" },
     { "label": "House Rewire", "url": "/electrical-services/house-rewire/" },
     { "label": "Fuse Board Upgrades", "url": "/electrical-services/fuse-board-upgrades/" },
-    { "label": "EV Chargers", "url": "/services/ev-chargers/" },
-    { "label": "Solar Panels", "url": "/services/solar-panels/" }
+    { "label": "EV Chargers", "url": "/electric-vehicle-chargers/" },
+    { "label": "Solar Panels", "url": "/solar-panels/" }
   ],
   "locations": [
-    { "label": "Lewes", "url": "/locations/electrician-lewes/" },
-    { "label": "Ringmer", "url": "/locations/electrician-ringmer/" },
-    { "label": "Uckfield", "url": "/locations/electrician-uckfield/" },
-    { "label": "Hailsham", "url": "/locations/electrician-hailsham/" },
-    { "label": "Peacehaven", "url": "/locations/electrician-peacehaven/" },
-    { "label": "Seaford", "url": "/locations/electrician-seaford/" }
+    { "label": "Lewes", "url": "/electrician-lewes/" },
+    { "label": "Ringmer", "url": "/electrician-in-ringmer/" },
+    { "label": "Uckfield", "url": "/electrician-in-uckfield/" },
+    { "label": "Hailsham", "url": "/electrician-hailsham/" },
+    { "label": "Peacehaven", "url": "/electrician-peacehaven/" },
+    { "label": "Seaford", "url": "/electrician-seaford/" }
   ]
 }

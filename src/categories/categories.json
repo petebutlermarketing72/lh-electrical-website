@@ -1,0 +1,4 @@
+{
+  "layout": "blog-listing.njk",
+  "permalink": "/category/{{ page.fileSlug }}/index.html"
+}

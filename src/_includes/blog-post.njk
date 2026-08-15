@@ -1,0 +1,35 @@
+---
+layout: base.njk
+---
+<section class="blog-hero-photo">
+  <div class="blog-hero-photo-bg">
+    <img src="{{ image }}" alt="{{ imageAlt }}">
+  </div>
+  <div class="wrap">
+    <div class="blog-hero-card">
+      <span class="svc-eyebrow">{{ category }}</span>
+      <h1 class="blog-hero-title">{{ heading }}</h1>
+      <div class="blog-meta-row">
+        <a class="blog-back-link" href="/blog/">&larr; Back to Blog</a>
+        <span class="blog-readtime">{{ readTime }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<article class="svc-light">
+  <div class="wrap blog-prose">
+    {{ content | safe }}
+  </div>
+</article>
+
+<section class="svc-cta-band">
+  <div class="wrap">
+    <h2 class="svc-display svc-h2">Ready When You Are</h2>
+    <p>Free survey, fixed written quote, no obligation. Call us or send over the details and we&rsquo;ll come back to you.</p>
+    <div class="svc-actions" style="justify-content:center;">
+      <a class="btn btn-on-accent btn-pill-lg" href="{{ site.phoneHref }}">Call {{ site.phone }}</a>
+      <a class="btn btn-on-accent-ghost btn-pill-lg" href="/contact/">Get a Free Quote</a>
+    </div>
+  </div>
+</section>

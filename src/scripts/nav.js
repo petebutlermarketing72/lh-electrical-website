@@ -1,4 +1,18 @@
 (function () {
+  var backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    window.addEventListener(
+      "scroll",
+      function () {
+        backToTop.classList.toggle("is-visible", window.scrollY > 500);
+      },
+      { passive: true }
+    );
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
   var toggle = document.getElementById("nav-toggle");
   var closeBtn = document.getElementById("mobile-nav-close");
   var mobileNav = document.getElementById("mobile-nav");

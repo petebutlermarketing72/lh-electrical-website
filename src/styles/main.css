@@ -141,16 +141,18 @@ main section p { max-width: 720px; }
 
 /* Dropdown */
 .dropdown-menu {
-  position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(-6px);
+  position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(-6px);
   background: #fff; border-radius: 10px; box-shadow: var(--shadow-md); padding: 14px 6px 6px; min-width: 220px;
   border-top: 3px solid var(--accent); z-index: 30;
   opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
 }
 /* Invisible bridge across the gap so the pointer can travel from the nav
-   item down into the menu without the hover dropping out. */
+   item down into the menu without the hover dropping out. It reaches back
+   up past the nav bar's own padding and slightly overlaps the link, so
+   there is no dead band anywhere along the way. */
 .dropdown-menu::before {
-  content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px;
+  content: ""; position: absolute; left: 0; right: 0; top: -24px; height: 24px;
 }
 li.has-dropdown:hover .dropdown-menu {
   opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
@@ -503,14 +505,37 @@ ul.checklist li::before { content: "\2713"; position: absolute; left: 0; color: 
 
 /* Footer */
 .site-footer { background: var(--navy-dark); color: #c6d0da; padding: 48px 0 18px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 28px; }
-.footer-grid h3, .footer-grid h4 { color: #fff; font-family: var(--font-head); }
-.footer-grid a { color: #c6d0da; }
-.footer-grid a:hover { color: #fff; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 28px; align-items: start; }
+.footer-grid h3, .footer-grid h4 { color: #fff; font-family: var(--font-head); margin: 0 0 14px; font-weight: 700; }
+.footer-grid h3 { font-size: 1.05rem; }
+.footer-grid h4 { font-size: 0.92rem; letter-spacing: 0.03em; text-transform: uppercase; }
+.footer-grid a { color: #dbe2e8; font-family: var(--font-head); font-weight: 600; font-size: 0.92rem; }
+.footer-grid a:hover { color: var(--accent); }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
-.footer-grid li { margin-bottom: 7px; }
+.footer-grid li { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; line-height: 1.4; }
+.footer-icon { color: var(--accent); flex-shrink: 0; }
+.footer-contact { margin-bottom: 26px; }
+.footer-contact li { color: #c6d0da; font-size: 0.92rem; }
+.footer-credentials-head { margin-top: 0; }
 .credentials-list { font-size: 0.9rem; color: #9fb0c0; }
-.footer-bottom { border-top: 1px solid #23285f; margin-top: 28px; padding-top: 18px; font-size: 0.85rem; }
+.footer-bottom { border-top: 1px solid #23285f; margin-top: 28px; padding-top: 18px; font-size: 0.85rem; line-height: 1.7; }
+.footer-bottom a { color: #fff; text-decoration: underline; }
+.footer-bottom a:hover { color: var(--accent); }
+
+/* Back to top */
+.back-to-top {
+  position: fixed; right: 22px; bottom: 22px; z-index: 40;
+  width: 44px; height: 44px; border-radius: 50%; border: none;
+  background: var(--accent-dark); color: #fff; box-shadow: var(--shadow-md);
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease;
+}
+.back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+.back-to-top:hover { background: var(--navy); }
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: opacity 0.15s ease; }
+}
 
 /* Contact form */
 form.contact-form { display: grid; gap: 14px; max-width: 560px; }
@@ -535,6 +560,13 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .main-nav { display: none; }
   .topbar-inner { font-size: 0.75rem; }
   .topbar-badges { display: none; }
+}
+/* Mobile: strapline only, centred — email, hours and socials drop away */
+@media (max-width: 700px) {
+  .topbar-right { display: none; }
+  .topbar-inner { justify-content: center; padding: 8px 16px; }
+  .topbar-left { justify-content: center; gap: 0; }
+  .topbar-brand { white-space: normal; text-align: center; letter-spacing: 0.08em; }
 }
 @media (max-width: 480px) {
   .topbar-right span:not(.topbar-divider) { display: none; }
@@ -941,11 +973,18 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-marquee { background: #f6f8f4; padding: 20px 0; overflow: hidden; border-bottom: 1px solid #e4ebdd; }
 .svc-marquee-track { display: flex; width: max-content; animation: svc-scroll 34s linear infinite; }
 .svc-marquee-group { display: flex; align-items: center; flex-shrink: 0; }
+/* Padding-left only, matching the gap, so the separator sits exactly
+   midway between the word before it and the word after it. */
 .svc-marquee-item {
   font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
-  font-size: 0.86rem; color: var(--navy); padding: 0 30px; display: inline-flex; align-items: center; gap: 30px; white-space: nowrap;
+  font-size: 0.86rem; color: var(--navy); padding: 0 0 0 30px;
+  display: inline-flex; align-items: center; gap: 30px; white-space: nowrap;
 }
-.svc-marquee-item::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.svc-marquee-item::after {
+  content: ""; width: 15px; height: 15px; flex-shrink: 0; background: var(--accent-dark);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M13 2L4 14h6l-1 8 9-12h-6l1-8z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'%3E%3Cpath d='M13 2L4 14h6l-1 8 9-12h-6l1-8z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
 @keyframes svc-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .svc-marquee:hover .svc-marquee-track { animation-play-state: paused; }
 
@@ -959,7 +998,8 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-price-card:hover { box-shadow: 0 16px 40px rgba(13,19,95,0.13); transform: translateY(-4px); border-color: var(--accent); }
 .svc-price-card.is-featured { border-color: var(--accent); border-width: 2px; }
 .svc-price-flag {
-  position: absolute; top: -12px; right: 20px; background: var(--accent); color: var(--navy-dark);
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: var(--navy-dark);
   font-family: var(--font-head); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
   padding: 6px 13px; border-radius: 100px;
 }
@@ -1043,6 +1083,16 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   transition: transform 0.18s ease;
 }
 .svc-slide:hover figcaption::after { transform: translateX(3px); }
+
+/* Full-bleed variant — sits outside .wrap so it spans the whole screen,
+   held just off the edges so the images don't run clean off. */
+.svc-carousel-full { margin: 0; padding: 0 18px; }
+.svc-carousel-full .svc-slide { border-radius: 12px; box-shadow: none; }
+@media (min-width: 1200px) {
+  /* Wider aspect on big screens so full-width images stretch across
+     rather than becoming very tall */
+  .svc-carousel-full .svc-slide { aspect-ratio: 16 / 9; }
+}
 
 /* Controls sit below the images, centred with the dots */
 .svc-carousel-controls { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 22px; }
@@ -1224,4 +1274,114 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .svc-about-band { padding-top: 44px; }
   .svc-slide { flex: 0 0 calc(85% - 9px); }
   .svc-h2 { font-size: 1.6rem; }
+}
+
+/* ============================================================
+   BLOG  — clean single-column article template + index/category
+   card grids. Reuses svc- tokens (colours, display heading,
+   eyebrow pill, cta band) for visual consistency with the
+   service page template.
+   ============================================================ */
+
+/* Blog post hero — full-bleed photo behind the nav, white content card on top */
+.blog-hero-photo { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; }
+.blog-hero-photo-bg { position: absolute; inset: 0; z-index: 0; }
+.blog-hero-photo-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.blog-hero-photo-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 10%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,0.06) 55%, rgba(0,0,0,0.32) 100%);
+}
+.blog-hero-photo > .wrap { position: relative; z-index: 1; padding: 160px 24px 64px; width: 100%; }
+.blog-hero-card {
+  background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-md);
+  padding: 30px 34px; max-width: 560px;
+}
+.blog-hero-card .svc-eyebrow {
+  background: rgba(191,234,151,0.25); border-color: rgba(78,122,48,0.35); color: var(--accent-dark); margin-bottom: 0;
+}
+.blog-hero-title {
+  font-family: var(--font-head); font-weight: 700; text-transform: none; letter-spacing: normal;
+  color: var(--navy-dark); font-size: 1.6rem; line-height: 1.3; margin: 14px 0 16px;
+}
+.blog-meta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.blog-back-link { color: var(--navy-dark); font-weight: 700; font-size: 0.92rem; text-decoration: none; }
+.blog-back-link:hover { color: var(--accent-dark); text-decoration: underline; }
+.blog-readtime { color: var(--muted); font-size: 0.88rem; }
+
+/* Transparent header floating over the photo hero, solidifies once scrolled */
+body:has(.blog-hero-photo) .site-header { position: absolute; top: 0; left: 0; width: 100%; background: transparent; box-shadow: none; }
+body:has(.blog-hero-photo) .site-header .topbar { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.15); }
+body:has(.blog-hero-photo) .site-header.is-scrolled { position: fixed; background: var(--navy); }
+body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--navy-dark); border-bottom: none; }
+
+@media (max-width: 640px) {
+  .blog-hero-photo { min-height: 80vh; }
+  .blog-hero-photo > .wrap { padding: 130px 20px 44px; }
+  .blog-hero-card { padding: 24px 22px; max-width: none; }
+  .blog-hero-title { font-size: 1.35rem; }
+}
+
+/* Article body — clean, single column, no sidebar */
+.blog-prose { max-width: 720px; margin: 0 auto; padding: 64px 0; }
+.blog-prose > *:first-child { margin-top: 0; }
+.blog-prose p { font-size: 1.06rem; line-height: 1.8; color: var(--text); margin: 0 0 22px; }
+.blog-prose h2 {
+  font-family: var(--font-head); font-weight: 800; color: var(--navy-dark); font-size: 1.55rem;
+  margin: 48px 0 18px; line-height: 1.25;
+}
+.blog-prose h3 {
+  font-family: var(--font-head); font-weight: 700; color: var(--navy-dark); font-size: 1.18rem;
+  margin: 32px 0 14px;
+}
+.blog-prose ul, .blog-prose ol { margin: 0 0 22px; padding-left: 1.3em; }
+.blog-prose li { font-size: 1.02rem; line-height: 1.75; color: var(--text); margin-bottom: 8px; }
+.blog-prose strong { color: var(--navy-dark); }
+.blog-prose a { color: var(--accent-dark); text-decoration: underline; }
+.blog-prose a:hover { color: var(--navy-dark); }
+.blog-prose hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+.blog-prose blockquote {
+  margin: 30px 0; padding: 20px 26px; background: var(--gray-bg); border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--navy-dark);
+}
+.blog-prose blockquote p { margin: 0; font-size: 1.05rem; }
+.blog-prose table {
+  width: 100%; border-collapse: collapse; margin: 0 0 28px; font-size: 0.95rem;
+  border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+}
+.blog-prose th, .blog-prose td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+.blog-prose th { background: var(--navy-dark); color: #fff; font-family: var(--font-head); font-weight: 700; }
+.blog-prose tr:last-child td { border-bottom: none; }
+.blog-prose tr:nth-child(even) td { background: var(--gray-bg); }
+
+@media (max-width: 640px) {
+  .blog-prose { padding: 40px 0; }
+  .blog-prose table { display: block; overflow-x: auto; }
+}
+
+/* Blog index / category card grid */
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.blog-card {
+  display: flex; flex-direction: column; background: #fff; border-radius: var(--radius);
+  overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+  text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.blog-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); text-decoration: none; }
+.blog-card-img { aspect-ratio: 16/10; overflow: hidden; }
+.blog-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.blog-card-body { padding: 20px 22px 24px; }
+.blog-card-cat {
+  display: inline-block; font-family: var(--font-head); font-weight: 700; font-size: 0.68rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 10px;
+}
+.blog-card h3 {
+  font-family: var(--font-head); font-weight: 700; color: var(--navy-dark); font-size: 1.08rem;
+  line-height: 1.35; margin: 0 0 10px;
+}
+.blog-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; margin: 0; }
+
+@media (max-width: 900px) {
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .blog-grid { grid-template-columns: 1fr; }
 }

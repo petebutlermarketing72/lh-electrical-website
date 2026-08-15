@@ -1,6 +1,8 @@
 ---
+layout: base.njk
 title: EV Charger Installation | LH Electrical (South East)
 description: MCS-certified EV charger installation for homes and businesses across East Sussex. Fast, safe installs, vehicle-agnostic.
+permalink: /electric-vehicle-chargers/index.html
 ---
 
 <section class="hero hero-split">

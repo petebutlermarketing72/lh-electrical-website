@@ -1,0 +1,29 @@
+---
+layout: base.njk
+---
+<section class="svc-light svc-pad-sm">
+  <div class="wrap svc-center">
+    <span class="svc-eyebrow" style="background:rgba(191,234,151,0.25); border-color:rgba(78,122,48,0.35); color:var(--accent-dark);">{% if categorySlug %}Blog Category{% else %}LH Electrical Blog{% endif %}</span>
+    <h1 class="svc-display" style="color:var(--navy-dark);">{{ heading }}</h1>
+    <p class="svc-lede">{{ intro }}</p>
+  </div>
+</section>
+
+<section class="svc-light" style="padding: 0 0 84px;">
+  <div class="wrap">
+    <div class="blog-grid">
+      {% for post in collections.post %}
+        {% if not categorySlug or post.data.categorySlug == categorySlug %}
+        <a class="blog-card" href="{{ post.url }}">
+          <div class="blog-card-img"><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy"></div>
+          <div class="blog-card-body">
+            <span class="blog-card-cat">{{ post.data.category }}</span>
+            <h3>{{ post.data.heading }}</h3>
+            <p>{{ post.data.excerpt }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

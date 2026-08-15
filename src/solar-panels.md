@@ -1,6 +1,8 @@
 ---
+layout: base.njk
 title: Solar Panel Installation | LH Electrical (South East)
 description: MCS-certified solar PV and battery storage installation across East Sussex. REC certified, government scheme eligible.
+permalink: /solar-panels/index.html
 ---
 
 <section class="hero hero-split">

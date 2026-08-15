@@ -66,7 +66,7 @@ hideCtaBand: true
       </li>
       <li>
         <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></div>
-        <a href="/electrical-services/maintenance/">Maintenance</a><p>Fault-finding, testing and reactive repairs to keep things running.</p>
+        <a href="/electrical-services/electrical-maintenance-services/">Maintenance</a><p>Fault-finding, testing and reactive repairs to keep things running.</p>
       </li>
       <li>
         <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9"/></svg></div>
@@ -98,11 +98,11 @@ hideCtaBand: true
       </li>
       <li>
         <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8V4M11 8V4"/><rect x="5" y="8" width="8" height="7" rx="1"/><path d="M9 15v2a3 3 0 003 3h1a3 3 0 003-3v-1h1a1 1 0 001-1v-2h-2"/></svg></div>
-        <a href="/services/ev-chargers/">EV Chargers</a><p>MCS-certified home and commercial charger installs.</p>
+        <a href="/electric-vehicle-chargers/">EV Chargers</a><p>MCS-certified home and commercial charger installs.</p>
       </li>
       <li>
         <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <a href="/services/solar-panels/">Solar Panels</a><p>Solar PV and battery storage, installed to MCS standards.</p>
+        <a href="/solar-panels/">Solar Panels</a><p>Solar PV and battery storage, installed to MCS standards.</p>
       </li>
     </ul>
   </div>

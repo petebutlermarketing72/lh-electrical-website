@@ -134,7 +134,7 @@ schema:
         <h3>EV Charger Install</h3>
         <span class="svc-price">&pound;750&ndash;&pound;1,200</span>
         <p>Includes unit and standard installation, commissioning and certification. MCS-certified.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/services/ev-chargers/">Find out more</a>
+        <a class="btn btn-outline-dark btn-pill-lg" href="/electric-vehicle-chargers/">Find out more</a>
       </li>
       <li class="svc-price-card reveal reveal-delay-1">
         <h3>Extra Socket or Light Point</h3>
@@ -165,8 +165,9 @@ schema:
       <h2 class="svc-display svc-h2">Domestic Services <span class="tint">We Offer</span></h2>
       <p class="svc-offer-lede">From complete rewires to smaller upgrades, every job we do is approached with care, quality, and attention to detail.</p>
     </div>
+  </div>
 
-    <div class="svc-carousel reveal" data-svc-carousel role="group" aria-label="Recent domestic electrical work">
+  <div class="svc-carousel svc-carousel-full reveal" data-svc-carousel role="group" aria-label="Recent domestic electrical work">
       <div class="svc-carousel-viewport">
         <div class="svc-carousel-track">
           <figure class="svc-slide">
@@ -195,9 +196,10 @@ schema:
         <button type="button" class="svc-carousel-btn is-next" aria-label="Next image">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
-      </div>
     </div>
+  </div>
 
+  <div class="wrap">
     <p class="svc-offer-kicker">Popular domestic services include</p>
     <ul class="svc-offer-list reveal">
         <li><span><span class="title">Fuse Board Upgrades &amp; Replacements</span><span class="note">Modern consumer units with built-in safety features</span></span></li>
@@ -225,7 +227,7 @@ schema:
         <ul class="svc-eco-list">
           <li>LED lighting upgrades</li>
           <li>Smart thermostats &amp; zoned heating</li>
-          <li><a href="/services/ev-chargers/">EV charger installation</a></li>
+          <li><a href="/electric-vehicle-chargers/">EV charger installation</a></li>
           <li>Energy-saving appliance advice</li>
         </ul>
         <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Talk to us about your home</a>

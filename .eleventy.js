@@ -93,7 +93,7 @@ module.exports = function (eleventyConfig) {
     <div class="cert-callout reveal">
       <p class="lead-in">Ensure your solar PV installation meets the highest industry standards with MCS certification.</p>
       <p>As an MCS-certified installer, we guarantee quality, compliance, and eligibility for government incentives like the Feed-in Tariff (FiT) and Smart Export Guarantee (SEG).</p>
-      <a class="btn btn-outline-dark" href="/services/solar-panels/">Learn more about MCS certification and its benefits</a>
+      <a class="btn btn-outline-dark" href="/solar-panels/">Learn more about MCS certification and its benefits</a>
     </div>
   </div>
 </section>`;

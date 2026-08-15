@@ -132,40 +132,51 @@
     <div class="wrap footer-grid">
       <div>
         <h3>{{ site.companyName }}</h3>
-        <p>{{ site.address }}</p>
-        <p><a href="{{ site.phoneHref }}">{{ site.phone }}</a></p>
-        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-        <p>{{ site.hours }}</p>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          {% for s in site.services %}
-          <li><a href="{{ s.url }}">{{ s.label }}</a></li>
-          {% endfor %}
+        <ul class="footer-contact">
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="{{ site.phoneHref }}">{{ site.phone }}</a></li>
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>{{ site.hours }}</li>
         </ul>
-      </div>
-      <div>
-        <h4>Locations</h4>
-        <ul>
-          {% for l in site.locations %}
-          <li><a href="{{ l.url }}">{{ l.label }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div>
-        <h4>Credentials</h4>
+        <h4 class="footer-credentials-head">Credentials</h4>
         <ul class="credentials-list">
           {% for c in site.credentials %}
           <li>{{ c }}</li>
           {% endfor %}
         </ul>
       </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          {% for s in site.services %}
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ s.url }}">{{ s.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul class="footer-links">
+          {% for l in site.locations %}
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ l.url }}">{{ l.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul class="footer-links">
+          {% for item in site.nav %}
+          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
     <div class="wrap footer-bottom">
-      <p>&copy; {{ "" | year }} {{ site.companyName }}. All rights reserved. Design by Summit Up Digital.</p>
+      <p>{{ site.address }}<br>&copy; {{ "" | year }} {{ site.companyName }}. All rights reserved. Design by <a href="https://summitupdigital.co.uk/" target="_blank" rel="noopener">Summit Up Digital</a>.</p>
     </div>
   </footer>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
 
   <div class="mobile-cta-bar" id="mobile-cta-bar">
     <a class="mobile-cta-btn mobile-cta-call" href="{{ site.phoneHref }}">
