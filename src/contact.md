@@ -10,7 +10,7 @@ permalink: /contact/index.html
   <div class="wrap" style="position:relative; z-index:2;">
     <span class="svc-eyebrow">Lewes, East Sussex</span>
     <h1 class="svc-display">Get In <span class="tint">Touch.</span></h1>
-    <p class="svc-hero-intro">Call us, email us, or send your job details online. We're here Monday to Friday, 08:00&ndash;17:00.</p>
+    <p class="svc-hero-intro">Call us, email us, or send your job details online. We're here Monday to Friday, 08:00 - 17:00.</p>
   </div>
 </section>
 
@@ -43,7 +43,7 @@ permalink: /contact/index.html
         <div>
           <h3>Phone</h3>
           <p class="contact-card-main"><a href="{{ site.phoneHref }}">{{ site.phone }}</a></p>
-          <p>Fastest way to reach us for urgent jobs</p>
+          <p>Fastest way to reach us for urgent jobs.</p>
         </div>
       </div>
       <div class="contact-card">
@@ -53,7 +53,7 @@ permalink: /contact/index.html
         <div>
           <h3>Email</h3>
           <p class="contact-card-main"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-          <p>We aim to reply within 2 working hours</p>
+          <p>We aim to reply within 2 working hours.</p>
         </div>
       </div>
       <div class="contact-card">
@@ -62,7 +62,7 @@ permalink: /contact/index.html
         </div>
         <div>
           <h3>Address</h3>
-          <p>{{ site.address }}</p>
+          <p>{{ site.address }}.</p>
           <a class="contact-card-link" href="https://www.google.com/maps?q={{ site.address | url_encode }}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
         </div>
       </div>
@@ -120,7 +120,7 @@ permalink: /contact/index.html
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="5" placeholder="Describe the job or ask your question here&hellip;" required></textarea>
         </div>
-        <button class="btn btn-primary btn-pill-lg contact-form-submit" type="submit">Send Message &rarr;</button>
+        <button class="btn btn-outline-dark btn-pill-lg contact-form-submit" type="submit">Send Message &rarr;</button>
         <p class="contact-form-note">No spam, no sharing. We'll only use your details to respond to this enquiry.</p>
       </form>
     </div>
@@ -135,15 +135,6 @@ permalink: /contact/index.html
     <div class="svc-actions" style="justify-content:center;">
       <a class="btn btn-outline-dark btn-pill-lg" href="{{ site.phoneHref }}">{{ site.phone }}</a>
       <a class="btn btn-outline-dark btn-pill-lg" href="mailto:{{ site.email }}">{{ site.email }}</a>
-    </div>
-  </div>
-</section>
-
-<section class="svc-light" style="padding: 0 0 84px;">
-  <div class="wrap">
-    <div class="contact-map-wrap">
-      <a class="contact-map-link" href="https://www.google.com/maps?q={{ site.address | url_encode }}" target="_blank" rel="noopener">Open in Maps &nearr;</a>
-      <iframe class="map-embed" loading="lazy" src="https://www.google.com/maps?q={{ site.address | url_encode }}&output=embed" title="Map to LH Electrical, Lewes"></iframe>
     </div>
   </div>
 </section>

@@ -8,7 +8,7 @@ category: Solar Panel Installation
 readTime: 3 min read
 backLabel: Back to Services
 backUrl: /electrical-services/
-image: /images/blog/installation-solar-panels-east-sussex.jpg
+image: /images/blog/solar-panel-installation-east-sussex.jpg
 imageAlt: Solar panel installation by LH Electrical in East Sussex
 ---
 

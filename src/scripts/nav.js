@@ -1,4 +1,13 @@
 (function () {
+  var headerEl = document.getElementById("site-header");
+  if (headerEl) {
+    var setHeaderHeightVar = function () {
+      document.documentElement.style.setProperty("--header-h", headerEl.offsetHeight + "px");
+    };
+    setHeaderHeightVar();
+    window.addEventListener("resize", setHeaderHeightVar);
+  }
+
   var backToTop = document.getElementById("back-to-top");
   if (backToTop) {
     window.addEventListener(
