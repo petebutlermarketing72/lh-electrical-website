@@ -9,7 +9,7 @@ categorySlug: ev-charger-installation
 readTime: 6 min read
 image: /images/blog/home-ev-charging-lewes-east-sussex.jpg
 imageAlt: Home EV charging in Lewes, East Sussex
-excerpt: Is it cheaper to charge your EV at home or rely on public charging? Here's the real cost breakdown for drivers in Lewes and East Sussex.
+excerpt: Is it cheaper to charge your EV at home or rely on public charging? Here’s the real cost breakdown for drivers in Lewes and East Sussex.
 ---
 
 <p>If you've recently switched to an electric vehicle in Lewes or East Sussex, you might be wondering whether it's cheaper to charge at home or rely on public charging points. At LH Electrical, we're local EV charger installation specialists. In this guide, we'll explain the real costs, outline local savings, and show how pairing your charger with solar panels can help you reduce running costs even further.</p>

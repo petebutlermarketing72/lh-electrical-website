@@ -9,7 +9,7 @@ categorySlug: electrical
 readTime: 4 min read
 image: /images/blog/outdoor-garden-lighting-maintenance.jpg
 imageAlt: MCS-certified solar and electrical work by LH Electrical
-excerpt: If your solar system is MCS certified, you may be adding significant value to your property — along with energy savings. Here's how.
+excerpt: If your solar system is MCS certified, you may be adding significant value to your property — along with energy savings. Here’s how.
 ---
 
 <p>Thinking of selling your home in <strong>East Sussex</strong> with solar panels installed? If your system is <strong>MCS certified</strong>, you may be adding significant value to your property — along with energy savings.</p>

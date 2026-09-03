@@ -9,7 +9,7 @@ categorySlug: landlord-certificates-eicr
 readTime: 4 min read
 image: /images/blog/local-electrician-at-work-in-east-sussex.jpg
 imageAlt: Local electrician at work in East Sussex
-excerpt: Landlords across Lewes and East Sussex are legally required to renew their EICR every five years. Here's what that means and how to stay compliant.
+excerpt: Landlords across Lewes and East Sussex are legally required to renew their EICR every five years. Here’s what that means and how to stay compliant.
 ---
 
 <p><strong>Landlords across Lewes and East Sussex are legally required to renew their Electrical Installation Condition Reports (EICRs) every five years.</strong> At LH Electrical, we help ensure your property remains compliant, safe, and fully certified—avoiding unnecessary risks and costly penalties.</p>

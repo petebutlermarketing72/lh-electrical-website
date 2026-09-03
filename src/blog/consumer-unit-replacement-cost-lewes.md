@@ -9,7 +9,7 @@ categorySlug: consumer-units-rewiring
 readTime: 8 min read
 image: /images/blog/consumer-unit-replacement-east-sussex.jpg
 imageAlt: Consumer unit replacement in East Sussex
-excerpt: Wondering how much it costs to replace a consumer unit in Lewes? You're looking at £500–£1,500 depending on your property size and requirements.
+excerpt: Wondering how much it costs to replace a consumer unit in Lewes? You’re looking at £500–£1,500 depending on your property size and requirements.
 ---
 
 <p>Wondering how much it costs to replace a consumer unit in Lewes? You're looking at <strong>£500-£1,500</strong> depending on your property size and requirements. Here's everything you need to know.</p>

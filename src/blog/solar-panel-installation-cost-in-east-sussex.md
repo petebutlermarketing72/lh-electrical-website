@@ -9,7 +9,7 @@ categorySlug: solar-panel-installation
 readTime: 5 min read
 image: /images/blog/installation-solar-panels-east-sussex.jpg
 imageAlt: Solar panel installation in East Sussex
-excerpt: With energy bills rising, more East Sussex homeowners are investing in solar. Here's what to expect in 2025 — costs, grants, and savings insights.
+excerpt: With energy bills rising, more East Sussex homeowners are investing in solar. Here’s what to expect in 2025 — costs, grants, and savings insights.
 ---
 
 <p>Thinking about going solar? Wondering about the <strong>solar panel installation cost</strong> in East Sussex? You're not alone. With energy bills rising and incentives available, more homeowners in the region are investing in solar panels to save money and gain energy independence.</p>

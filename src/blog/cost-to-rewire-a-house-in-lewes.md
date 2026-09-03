@@ -9,7 +9,7 @@ categorySlug: electrical
 readTime: 10 min read
 image: /images/blog/house-rewiring.jpg
 imageAlt: House rewiring work carried out by LH Electrical
-excerpt: A full rewire in Lewes usually starts around £3,500 and ranges to £9,500+ depending on property size, access and specification. Here's the full breakdown.
+excerpt: A full rewire in Lewes usually starts around £3,500 and ranges to £9,500+ depending on property size, access and specification. Here’s the full breakdown.
 ---
 
 <p>If you're wondering <em>"how much does it cost to rewire a house?"</em> the short answer is: in Lewes and across East Sussex, a full rewire usually starts around <strong>£3,500</strong> and ranges to <strong>£9,500+</strong> depending on property size, access, whether the home is occupied and the specification you choose. Below is a clear breakdown based on the most common property types we work on locally.</p>

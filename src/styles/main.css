@@ -24,8 +24,8 @@
      reviews section) where the full-strength gradient would be too strong. */
   --seafoam-gradient-pale: linear-gradient(100deg, rgba(227,250,233,0.35) 0%, rgba(219,230,251,0.35) 100%);
   /* Deeper green-to-blue variant, for text that needs to stay readable on a pale background */
-  --seafoam-gradient-text: linear-gradient(100deg, #2fa876 0%, #3f7fd1 100%);
-  --gray-bg: #f6f8f4;
+  --seafoam-gradient-text: linear-gradient(100deg, #55a47b 0%, #4f80c3 100%);
+  --gray-bg: #f5fcf3;
   --text: #0d135f;
   --muted: #474d8d;
   --border: #e2e6ea;
@@ -71,6 +71,12 @@ main section p { max-width: 720px; }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
 .btn-primary { background: var(--seafoam-gradient); color: var(--navy-dark); box-shadow: var(--shadow-sm); }
 .btn-primary:hover { background: var(--seafoam-gradient-hover); box-shadow: var(--shadow-md); }
+
+/* Blue quote-bar CTA — scoped to the homepage hero form only, so it pops
+   against the mint/seafoam used everywhere else, without changing every
+   other .btn-primary sitewide. */
+.btn-quote { background: #3f7fd1; color: #fff; }
+.btn-quote:hover { background: #326bb5; box-shadow: var(--shadow-md); }
 .btn-outline { border: 2px solid #fff; color: #fff; }
 .btn-outline:hover { background: rgba(255,255,255,0.12); }
 .btn-outline-dark { border: 2px solid var(--navy); color: var(--navy); background: transparent; }
@@ -177,34 +183,45 @@ li.has-dropdown:hover .dropdown-menu {
 }
 .dropdown-menu a:hover { background: var(--accent-tint); text-decoration: none; }
 .dropdown-menu a + a { border-top: 1px solid var(--border); }
-
-/* Wide multi-column dropdown (Services) */
-.dropdown-wide { min-width: 640px; max-width: calc(100vw - 40px); padding: 14px 12px 12px; }
-.dropdown-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px 10px; }
-.dropdown-grid a { border-top: none !important; }
-/* Vertical rules between the columns, without extra markup */
-.dropdown-grid a:nth-child(3n+2), .dropdown-grid a:nth-child(3n) {
-  border-left: 1px solid var(--border); border-radius: 0 6px 6px 0;
-}
-@media (max-width: 900px) {
-  .dropdown-wide { min-width: 440px; }
-  .dropdown-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .dropdown-grid a:nth-child(3n+2), .dropdown-grid a:nth-child(3n) { border-left: none; border-radius: 6px; }
-  .dropdown-grid a:nth-child(2n) { border-left: 1px solid var(--border); border-radius: 0 6px 6px 0; }
-}
 .dropdown-menu .drop-icon { display: flex; align-items: center; justify-content: center; width: 18px; flex-shrink: 0; color: var(--accent-dark); }
 
-/* Renewable Energy pullout — separates EV Chargers / Solar Panels from the rest */
-.dropdown-divider { height: 1px; background: var(--border); margin: 10px 6px 6px; }
+/* Wide multi-column dropdown (Services) — icon-card grid with descriptions */
+.dropdown-wide { min-width: 660px; max-width: calc(100vw - 40px); padding: 26px 28px 22px; }
+.dropdown-wide .dropdown-section-label:first-child { margin-top: 0; }
 .dropdown-section-label {
-  font-family: var(--font-head); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--muted); margin: 0; padding: 4px 12px 2px;
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-head); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.07em;
+  text-transform: uppercase; color: var(--accent-dark); margin: 0 0 16px;
 }
-.dropdown-grid-green { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; }
-.dropdown-grid-green a { border-top: none !important; }
-.dropdown-grid-green a:nth-child(2) { border-left: 1px solid var(--border); border-radius: 0 6px 6px 0; }
+.dropdown-badge {
+  font-family: var(--font-head); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--accent-dark); border: 1px solid var(--accent-dark);
+  border-radius: 100px; padding: 3px 10px;
+}
+.dropdown-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 28px; }
+.dropdown-grid + .dropdown-divider { margin-top: 22px; }
+.dropdown-divider { height: 1px; background: var(--border); margin: 0 0 22px; }
+
+.drop-card {
+  display: flex; align-items: flex-start; gap: 14px; padding: 8px 8px; border-radius: 8px;
+  opacity: 1; font-family: var(--font-body); text-transform: none; letter-spacing: normal;
+}
+.drop-card:hover { background: var(--accent-tint); text-decoration: none; }
+.drop-card .drop-icon {
+  width: 40px; height: 40px; border-radius: 10px; background: var(--accent-tint);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--navy-dark);
+  margin-top: 2px;
+}
+.drop-card-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.drop-title { font-family: var(--font-head); font-weight: 700; font-size: 0.96rem; color: var(--navy); line-height: 1.3; }
+.drop-desc {
+  font-family: var(--font-body); font-weight: 400; font-size: 0.82rem; color: var(--muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 @media (max-width: 900px) {
-  .dropdown-grid-green a:nth-child(2) { border-left: none; border-radius: 6px; }
+  .dropdown-wide { min-width: 480px; }
+  .dropdown-grid { grid-template-columns: 1fr; }
+  .drop-desc { white-space: normal; }
 }
 
 /* Full-screen mobile nav */
@@ -388,7 +405,7 @@ li.has-dropdown:hover .dropdown-menu {
 /* Quote bar */
 .quote-bar {
   display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 100px;
-  padding: 6px; margin-top: 28px; max-width: 660px; box-shadow: var(--shadow-md); flex-wrap: nowrap;
+  padding: 6px; margin-top: 28px; max-width: 520px; box-shadow: var(--shadow-md); flex-wrap: nowrap;
 }
 .quote-bar select {
   border: none; background: transparent; font-family: var(--font-head); font-size: 0.94rem; line-height: 1.2;
@@ -411,7 +428,7 @@ li.has-dropdown:hover .dropdown-menu {
   border: none; margin: 0; font-family: var(--font-body); font-size: 0.94rem; font-weight: 700; line-height: 1.2; cursor: pointer;
   appearance: none; -webkit-appearance: none; -moz-appearance: none;
 }
-.quote-bar-note { color: var(--accent); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; margin: 10px 0 0; min-height: 1.2em; }
+.quote-bar-note { color: var(--accent); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; margin: 12px 0 0; min-height: 1.3em; }
 .typewriter-cursor { display: inline-block; margin-left: 2px; color: var(--accent); animation: typewriter-blink 0.8s step-end infinite; }
 @keyframes typewriter-blink { 50% { opacity: 0; } }
 
@@ -843,10 +860,13 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .hero-infographic p { color: var(--muted); font-size: 1.1rem; max-width: 520px; }
 .infographic-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
 .infographic-tag {
-  display: inline-flex; align-items: center; gap: 7px; background: var(--accent-tint); color: var(--navy);
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(63,127,209,0.16); border: 1px solid rgba(63,127,209,0.35); color: #dbe7fa;
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 7px 14px; border-radius: 100px;
 }
-.infographic-tag .stars { color: #f5a623; }
+.infographic-tag .stars { color: #dbe7fa; }
+.hero-infographic .infographic-tag { background: var(--accent-tint); border-color: transparent; color: var(--navy); }
+.hero-infographic .infographic-tag .stars { color: #f5a623; }
 .hero-infographic .quote-bar { box-shadow: 0 12px 32px rgba(13,19,95,0.14); }
 .hero-infographic .quote-bar-note { color: var(--accent-dark); }
 .hero-infographic .typewriter-cursor { color: var(--accent-dark); }
@@ -866,10 +886,58 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   aspect-ratio: 507.99631 / 486.46461;
 }
 .hero-illustration-slide {
-  position: absolute; inset: 0; width: 100%; height: 100%;
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;
   opacity: 0; transition: opacity 0.8s ease;
 }
 .hero-illustration-slide.is-active { opacity: 1; }
+
+/* Homepage hero visual — rotating photo card + trust caption + stat pills */
+.hero-visual-card { width: 100%; max-width: 380px; flex: 0 1 380px; animation: hero-card-bob 6s ease-in-out infinite; }
+@keyframes hero-card-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.hero-visual-frame {
+  position: relative; border-radius: 20px; overflow: hidden;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+.hero-visual-carousel { position: relative; aspect-ratio: 3 / 2.1; }
+/* Standalone trust badge above the H1 — replaces the old 3 text pills.
+   Reuses the same rotating Google/Trustpilot markup that used to live in
+   the visual card's caption strip (now removed, card is just the photo). */
+.hero-rating-badge {
+  display: inline-flex; align-items: center; gap: 16px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16);
+  padding: 6px 16px 6px 6px; border-radius: 100px; margin-bottom: 20px;
+}
+/* Icon (left) and rating text (right) fade independently but share the
+   same rotation timing in heroIllustrationRotator.js, so Google/Trustpilot
+   switch together even though they're visually split across the strip. */
+.hero-review-icon-wrap { position: relative; width: 26px; height: 26px; flex-shrink: 0; }
+.hero-review-icon-slide {
+  position: absolute; inset: 0; border-radius: 50%; background: #fff; padding: 4px;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.6s ease;
+}
+.hero-review-icon-slide.is-active { opacity: 1; }
+.hero-review-icon-slide svg { width: 100%; height: 100%; display: block; }
+
+.hero-review-text-wrap { position: relative; height: 20px; min-width: 80px; }
+.hero-review-text-slide {
+  position: absolute; top: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 5px;
+  opacity: 0; transition: opacity 0.6s ease; white-space: nowrap;
+  font-family: var(--font-head); font-weight: 800; font-size: 0.85rem; color: #fff;
+}
+.hero-review-text-slide.is-active { opacity: 1; }
+.hero-review-text-slide .stars { color: var(--accent); letter-spacing: 1px; font-size: 0.68rem; }
+/* Half-star trick — dim base glyph + clipped accent-coloured overlay at 50% width.
+   Unscoped so it can be reused anywhere stars appear on a dark background
+   (hero rating badge, review pills, etc). */
+.star-half { position: relative; display: inline-block; color: rgba(255,255,255,0.28); }
+.star-half::before {
+  content: "\2605"; position: absolute; left: 0; top: 0; width: 50%; overflow: hidden; color: var(--accent);
+}
+@media (max-width: 900px) {
+  .hero-visual-card { max-width: 360px; order: -1; }
+}
 
 .hero-icon-stack { position: relative; z-index: 1; width: 240px; height: 240px; margin: 0 auto; }
 .hero-icon-slide {
@@ -892,7 +960,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 /* Marquee sitting inside the dark hero itself — white text, transparent
    background (no separate coloured band), brighter accent separators. */
 .svc-hero > .svc-marquee {
-  background: transparent; border-bottom: none; border-top: 1px solid rgba(255,255,255,0.14);
+  background: transparent; border-bottom: none; border-top: none;
 }
 .svc-hero > .svc-marquee .svc-marquee-item { color: #fff; }
 .svc-hero > .svc-marquee .svc-marquee-item::after { background: var(--accent); }
@@ -920,7 +988,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .infographic-stat .stat-label { font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-blob, .hero-float-badge { animation: none !important; }
+  .hero-blob, .hero-float-badge, .hero-visual-card { animation: none !important; }
   .hero-illustration-slide { transition: none !important; }
 }
 @media (max-width: 900px) {
@@ -1009,6 +1077,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-dark { background: var(--navy-dark); color: #fff; }
 .svc-light { background: #fff; }
 .svc-cream { background: var(--seafoam-gradient); }
+.home-stats-band { background: var(--seafoam-gradient-soft); }
 
 .svc-pad { padding: 84px 0; }
 .svc-pad-sm { padding: 60px 0; }
@@ -1018,10 +1087,19 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
   letter-spacing: 0.01em; line-height: 1.06; margin: 0 0 16px;
 }
-.svc-display .tint { color: var(--accent); }
+/* Gradient tint — default treatment for headings on white/soft backgrounds */
+.svc-display .tint {
+  background: var(--seafoam-gradient-text);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
 .svc-display .ghost { color: rgba(13,19,95,0.16); }
 .svc-dark .svc-display { color: #fff; }
 .svc-dark .svc-display .ghost { color: rgba(255,255,255,0.18); }
+/* On navy backgrounds the gradient loses contrast — fall back to solid accent */
+.svc-dark .svc-display .tint,
+.svc-hero:not(.is-light) .svc-display .tint {
+  background: none; -webkit-text-fill-color: currentColor; color: var(--accent);
+}
 .svc-h2 { font-size: 2.3rem; }
 .svc-center { text-align: center; }
 .svc-center .svc-lede { margin-left: auto; margin-right: auto; }
@@ -1052,15 +1130,14 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-hero.is-light { background: linear-gradient(180deg, #f0f8fc 0%, #ffffff 100%); color: var(--navy); }
 .svc-hero.is-light h1 { color: var(--navy); }
 .svc-hero.is-light .svc-hero-intro { color: var(--muted); }
-.svc-hero.is-light .svc-display .tint {
-  background: var(--seafoam-gradient-text);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
 
 /* Freeform hero — text and graphic sit as a centred, contained flex row
    (graphic stays fully on-page, no bleed past the viewport edge). */
-.svc-hero-freeform { display: flex; align-items: center; justify-content: center; gap: 56px; }
-.svc-hero-copy { max-width: 560px; flex: 1 1 480px; }
+.svc-hero-freeform { display: flex; align-items: center; justify-content: center; gap: 44px; }
+.svc-hero-copy { max-width: 600px; flex: 1 1 420px; }
+/* Wider than the shared 15ch hero h1 cap, scoped to just this variant, so
+   "Electrician in Lewes." sits on its own line instead of wrapping again. */
+.svc-hero .svc-hero-copy h1 { max-width: none; }
 .hero-bleed-graphic { flex: 0 1 440px; display: flex; align-items: center; justify-content: center; }
 .hero-bleed-graphic img { display: block; width: 100%; max-width: 440px; height: auto; filter: drop-shadow(0 40px 70px rgba(13,19,95,0.18)); }
 @media (max-width: 900px) {
@@ -1069,7 +1146,23 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 }
 /* Extra breathing room left/right — hero only */
 .svc-hero > .wrap { max-width: 1080px; padding-left: 64px; padding-right: 64px; }
+.svc-hero.has-bleed-graphic > .wrap { max-width: 1100px; width: 100%; flex: 1 1 auto; }
 .svc-hero-inner { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 48px; align-items: center; position: relative; z-index: 2; }
+/* Mirrored variant — photo column first (left), copy second (right) */
+.svc-hero-inner.is-image-left { grid-template-columns: 0.92fr 1.08fr; }
+
+/* Single-column hero variant — badge icon beside the title instead of a
+   circular photo on the right (opt-in via svcHero frontmatter). */
+.svc-hero:has(.svc-hero-copy-icon) > .wrap { max-width: 1280px; }
+.svc-hero-copy-icon { position: relative; z-index: 2; max-width: 1140px; }
+.svc-hero-title-row { display: flex; align-items: center; gap: 36px; }
+.svc-hero-title-row > div { flex: 1 1 auto; min-width: 0; }
+.svc-hero .svc-hero-title-row h1 { max-width: none; }
+.svc-hero-badge-icon { width: 230px; height: auto; flex-shrink: 0; }
+@media (max-width: 700px) {
+  .svc-hero-title-row { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .svc-hero-badge-icon { width: 140px; }
+}
 
 /* Animated circuit background */
 .svc-circuit {
@@ -1133,6 +1226,143 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-stat-chip .stat-label { display: block; font-size: 0.64rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.09em; margin-top: 4px; }
 .svc-stat-1 { top: 6%; left: -2%; animation-delay: 0.6s; }
 .svc-stat-2 { bottom: 8%; right: -3%; animation-delay: 1.8s; }
+
+/* Plain rounded-rect hero photo — simpler alternative to .svc-ring for the
+   lean service-page template (no floating stat chips). Note: no overflow
+   clipping on the wrapper itself, so an offset corner badge (.svc-hero-photo-badge)
+   can sit partly outside the photo's edge — rounding/shadow live on the img instead. */
+.svc-hero-photo-simple {
+  position: relative; width: 100%; max-width: 460px; aspect-ratio: 4/3;
+}
+.svc-hero-photo-simple img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  border-radius: 20px; box-shadow: 0 24px 54px rgba(0,0,0,0.28);
+}
+/* Square variant, for pages that want the photo/badge pairing */
+.svc-hero-photo-simple.is-square { aspect-ratio: 1/1; }
+
+/* Corner badge — offset outside the bottom-left corner, echoing the
+   staggered/offset squares in the LH Electrical logo mark */
+.svc-hero-photo-badge {
+  position: absolute; left: -10px; bottom: -10px; aspect-ratio: 1/1;
+  /* Fixed/clamped, not percentage-of-image — stays a small accent at any
+     image or viewport size instead of scaling up on large screens. */
+  width: clamp(28px, 8%, 40px);
+  /* --navy-dark mixed with 7% white, so it lifts slightly off the navy hero background */
+  background: #1e246a; border-radius: 22%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 20px rgba(13,19,95,0.4);
+  z-index: 2;
+}
+.svc-hero-photo-badge svg { width: 46%; height: 46%; color: #fff; }
+@media (max-width: 620px) {
+  .svc-hero-photo-badge { width: 26px; left: -8px; bottom: -8px; }
+}
+
+/* Google/Trustpilot review lozenges — same pill footprint as .btn-pill-lg,
+   used in place of plain CTA buttons where the hero should lead with proof. */
+.btn-review-pill {
+  display: inline-flex; align-items: center; gap: 11px;
+  background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.22);
+  border-radius: 100px; padding: 8px 20px 8px 8px;
+  color: #fff; text-decoration: none;
+}
+.btn-review-pill:hover { background: rgba(255,255,255,0.14); text-decoration: none; }
+.review-pill-icon {
+  width: 32px; height: 32px; border-radius: 50%; background: #fff; padding: 6px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.review-pill-icon svg { width: 100%; height: 100%; display: block; }
+.review-pill-text { display: flex; flex-direction: column; line-height: 1.25; }
+.review-pill-text .review-pill-rating { font-family: var(--font-head); font-weight: 800; font-size: 0.95rem; }
+.review-pill-text .review-pill-rating .stars { color: var(--accent); letter-spacing: 1px; font-size: 0.7rem; margin-left: 4px; }
+.review-pill-text .review-pill-source { font-size: 0.68rem; color: #c6cfe2; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Standalone trust strip — its own section, sits directly under the hero */
+.svc-trust-strip-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px 48px;
+  margin: 0; padding: 0; list-style: none;
+}
+.svc-trust-strip-inner li {
+  font-family: var(--font-head); font-weight: 800; font-size: 1.15rem; color: var(--navy-dark);
+  letter-spacing: 0.01em;
+}
+.svc-trust-strip-inner .stars { color: var(--accent-dark); letter-spacing: 2px; margin-right: 4px; }
+
+/* ---------- SIMPLE CHECKLIST ("What's Included") — filled cards ---------- */
+.svc-check-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; list-style: none; padding: 0;
+  margin: 0 auto; max-width: 920px;
+}
+.svc-check-item {
+  display: flex; gap: 16px; padding: 24px 26px;
+  background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-sm);
+}
+.svc-check-icon {
+  flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--accent-tint);
+  display: flex; align-items: center; justify-content: center; color: var(--accent-dark);
+}
+.svc-check-icon svg { display: block; }
+.svc-check-item .title { display: block; font-family: var(--font-head); font-weight: 700; color: var(--navy-dark); font-size: 1.08rem; line-height: 1.35; }
+.svc-check-item .note { display: block; margin-top: 4px; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+
+/* Supporting photos dropped into a copy-heavy section */
+.svc-photo-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+.svc-photo-row img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); display: block; box-shadow: var(--shadow-sm); }
+
+/* ---------- "What's Included" band — checklist + sidebar cards on a pale
+   background. Designed to be the one consolidated section that replaces a
+   separate trust-strip + included-list + how-it-works stack, so pages stay
+   short. Reusable across every service page. ---------- */
+.svc-included-band { padding: 84px 0; background: var(--gray-bg); }
+.svc-included-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: start; }
+.svc-included-sidebar { display: flex; flex-direction: column; gap: 22px; }
+.svc-info-card, .svc-quote-card { border-radius: 20px; padding: 30px; }
+.svc-info-card { background: #fff; box-shadow: var(--shadow-sm); }
+.svc-info-card-eyebrow {
+  display: flex; align-items: center; gap: 9px; font-family: var(--font-head); font-weight: 700;
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--navy-dark); margin-bottom: 20px;
+}
+.svc-info-card-eyebrow svg { width: 16px; height: 16px; color: var(--accent-dark); flex-shrink: 0; }
+.svc-info-card-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.svc-info-card-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; font-weight: 600; color: var(--navy-dark); line-height: 1.4; }
+.svc-info-card-list svg { width: 18px; height: 18px; color: var(--accent-dark); flex-shrink: 0; margin-top: 2px; }
+.svc-quote-card { background: var(--seafoam-gradient-text); color: #fff; }
+.svc-quote-card h3 { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; margin: 0 0 10px; }
+.svc-quote-card p { color: rgba(255,255,255,0.9); font-size: 0.92rem; line-height: 1.6; margin: 0 0 22px; }
+
+/* Compact qualifications card — small logo tiles side by side, sits between
+   the "Why Choose" and "Get Your Free Quote" sidebar cards. */
+.svc-qual-text { font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0 0 18px; }
+.svc-qual-logos { display: flex; gap: 10px; }
+.svc-qual-logo-tile {
+  flex: 1 1 0; min-width: 0; background: var(--navy-dark); border-radius: 10px;
+  padding: 10px 8px; display: flex; align-items: center; justify-content: center;
+}
+.svc-qual-logo-tile img { height: 22px; width: auto; max-width: 100%; display: block; }
+@media (max-width: 900px) {
+  .svc-included-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+/* ---------- HOW IT WORKS ---------- */
+.svc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; list-style: none; padding: 0; margin: 0; }
+.svc-step-num {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--navy-dark); color: var(--accent);
+  font-family: var(--font-head); font-weight: 800; font-size: 1rem;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+}
+.svc-step h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; color: var(--navy-dark); margin-bottom: 8px; }
+.svc-step p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; margin: 0; }
+
+/* ---------- REVIEWS — light variant (for plain-background service pages) ---------- */
+.svc-rating-line.is-light { color: var(--muted); }
+.svc-rating-line.is-light strong { color: var(--navy-dark); }
+.svc-rating-google-icon { display: inline-flex; width: 20px; height: 20px; flex-shrink: 0; }
+.svc-rating-google-icon svg { width: 100%; height: 100%; display: block; }
+.svc-review-grid.is-light .svc-review { background: #fff; border-color: var(--border); }
+.svc-review-grid.is-light .svc-review p { color: var(--text); }
+.svc-review-grid.is-light .svc-review cite { color: var(--navy-dark); }
+.svc-review-grid.is-light .svc-avatar { background: var(--accent-tint); color: var(--accent-dark); }
 
 /* ---------- MARQUEE ---------- */
 .svc-marquee { background: var(--seafoam-gradient); padding: 20px 0; overflow: hidden; border-bottom: 1px solid #e4ebdd; }
@@ -1361,6 +1591,10 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-cta-band .svc-display { color: var(--navy-dark); }
 .svc-cta-band p { color: rgba(13,19,95,0.78); max-width: 560px; margin: 0 auto 30px; font-size: 1.02rem; }
 .svc-cta-band .svc-actions { justify-content: center; margin-bottom: 0; }
+/* Blue variant — solid navy background instead of the pale seafoam default */
+.svc-cta-band.is-dark { background: var(--navy-dark); }
+.svc-cta-band.is-dark .svc-display { color: #fff; }
+.svc-cta-band.is-dark p { color: rgba(255,255,255,0.78); }
 .btn-on-accent { background: var(--navy-dark); color: #fff; }
 .btn-on-accent:hover { background: var(--navy); text-decoration: none; }
 .btn-on-accent-ghost { background: transparent; border: 1.5px solid rgba(13,19,95,0.45); color: var(--navy-dark); }
@@ -1402,7 +1636,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 }
 @media (max-width: 980px) {
   .svc-hero > .wrap { padding-left: 40px; padding-right: 40px; }
-  .svc-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .svc-hero-inner, .svc-hero-inner.is-image-left { grid-template-columns: 1fr; gap: 40px; }
   .svc-hero h1 { font-size: 2.5rem; max-width: none; }
   .svc-hero-figure { order: -1; min-height: 300px; }
   .svc-about { grid-template-columns: 1fr; gap: 56px; }
@@ -1416,13 +1650,18 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .svc-about-head { margin-bottom: 40px; }
   .svc-price-grid, .svc-review-grid, .svc-gallery { grid-template-columns: repeat(2, 1fr); }
   .svc-h2 { font-size: 1.9rem; }
+  .svc-hero-photo-simple { max-width: none; }
+  .svc-steps { grid-template-columns: 1fr; gap: 28px; }
 }
 @media (max-width: 620px) {
   .svc-pad { padding: 56px 0; }
   .svc-hero > .wrap { padding-left: 24px; padding-right: 24px; }
   .svc-circuit { opacity: 0.32; }
   .svc-hero h1 { font-size: 2.05rem; }
-  .svc-price-grid, .svc-review-grid, .svc-gallery, .svc-ticks { grid-template-columns: 1fr; }
+  .svc-price-grid, .svc-review-grid, .svc-gallery, .svc-ticks, .svc-check-grid { grid-template-columns: 1fr; }
+  .svc-trust-strip-inner { gap: 12px 28px; }
+  .svc-trust-strip-inner li { font-size: 0.98rem; }
+  .svc-photo-row { grid-template-columns: 1fr; gap: 16px; }
   .svc-stat-1 { left: -4%; }
   .svc-stat-2 { right: -4%; }
   .svc-logos { gap: 14px; }
@@ -1469,7 +1708,19 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .blog-meta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .blog-back-link { color: var(--navy-dark); font-weight: 700; font-size: 0.92rem; text-decoration: none; }
 .blog-back-link:hover { color: var(--accent-dark); text-decoration: underline; }
-.blog-readtime { color: var(--muted); font-size: 0.88rem; }
+
+/* Optional icon + dark variant, opt-in per page via heroIcon / heroCardDark frontmatter */
+.blog-hero-card-inner { display: flex; align-items: center; gap: 22px; }
+.blog-hero-icon { height: 194px; width: auto; flex-shrink: 0; display: block; }
+.blog-hero-card.is-dark { background: var(--navy-dark); }
+.blog-hero-card.is-dark .svc-eyebrow { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.3); color: #fff; }
+.blog-hero-card.is-dark .blog-hero-title { color: #fff; }
+.blog-hero-card.is-dark .blog-back-link { color: #fff; }
+.blog-hero-card.is-dark .blog-back-link:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .blog-hero-card-inner { gap: 16px; }
+  .blog-hero-icon { height: 132px; }
+}
 
 /* Transparent header floating over the photo hero, solidifies once scrolled */
 body:has(.blog-hero-photo) .site-header { position: absolute; top: 0; left: 0; width: 100%; background: transparent; box-shadow: none; }
@@ -1502,6 +1753,7 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 .blog-prose a { color: var(--accent-dark); text-decoration: underline; }
 .blog-prose a:hover { color: var(--navy-dark); }
 .blog-prose hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+.blog-prose img { display: block; width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow-md); margin: 0 0 22px; }
 .blog-prose blockquote {
   margin: 30px 0; padding: 20px 26px; background: var(--seafoam-gradient); border-left: 4px solid var(--accent-dark);
   border-radius: 0 var(--radius) var(--radius) 0; font-style: italic; color: var(--navy-dark);
@@ -1541,6 +1793,11 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
   line-height: 1.35; margin: 0 0 10px;
 }
 .blog-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; margin: 0; }
+
+/* Homepage blog teaser — reuses the .blog-grid/.blog-card component */
+.home-blog-band { padding: 64px 0; background: var(--seafoam-gradient-soft); }
+.home-blog-head { text-align: center; margin-bottom: 40px; }
+.home-blog-cta { text-align: center; margin-top: 36px; }
 
 @media (max-width: 900px) {
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1671,6 +1928,92 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 .trust-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; margin: 0 0 16px; }
 .trust-card a { font-weight: 700; color: var(--accent-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
 .trust-card a:hover { color: var(--navy); }
+
+/* ---------- SERVICES SHOWCASE GRID ----------
+   8-up grid: square photo on top, title always visible, description
+   reveals on hover (desktop) by shrinking the image slightly and sliding
+   the title up. On touch devices (no real hover) the description is just
+   always shown. Card 8 is a distinct full-bleed CTA tile. */
+.services-intro { text-align: center; max-width: 560px; margin: 0 auto; }
+@media (min-width: 700px) {
+  .services-intro { max-width: none; white-space: nowrap; }
+}
+.showcase-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+  list-style: none; padding: 0; margin: 0;
+}
+.showcase-grid > li { min-width: 0; }
+.showcase-card {
+  position: relative; display: flex; flex-direction: column; height: 100%;
+  background: #fff; border: 1px solid var(--border); border-radius: 18px;
+  box-shadow: var(--shadow-sm); overflow: hidden; text-decoration: none; color: inherit;
+  transition: box-shadow 0.2s ease;
+}
+.showcase-card:hover, .showcase-card:focus-visible { box-shadow: var(--shadow-md); text-decoration: none; }
+
+.showcase-media-pad { padding: 8px; }
+.showcase-media-frame { position: relative; aspect-ratio: 1 / 1; }
+.showcase-media-inner {
+  position: absolute; left: 0; right: 0; top: 0; height: 100%; border-radius: 12px; overflow: hidden;
+}
+.showcase-media-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.showcase-text-row { position: relative; flex: 1; display: flex; align-items: center; padding: 0 16px; }
+.showcase-text-inner { position: relative; width: 100%; min-width: 0; }
+.showcase-title-row { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 5px 0 10px; }
+.showcase-icon { flex-shrink: 0; width: 19px; height: 19px; color: var(--accent-dark); }
+.showcase-icon svg { width: 100%; height: 100%; display: block; }
+.showcase-text-inner h3 {
+  font-family: var(--font-head); font-weight: 700; color: var(--navy-dark); font-size: 0.98rem;
+  margin: 0; min-width: 0; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.showcase-text-inner p {
+  position: absolute; left: 0; right: 0; top: 100%; margin: 6px 0 0; color: var(--muted);
+  font-size: 0.82rem; line-height: 1.5; opacity: 0;
+}
+
+/* Hover-reveal, desktop only (genuine hover support) */
+@media (hover: hover) and (pointer: fine) {
+  .showcase-media-inner {
+    transition: height 0.5s cubic-bezier(0.16,1,0.3,1);
+  }
+  .showcase-card:hover .showcase-media-inner,
+  .showcase-card:focus-within .showcase-media-inner { height: calc(100% - 50px); }
+  .showcase-text-inner {
+    transform: translateY(0);
+    transition: transform 0.25s ease-out;
+  }
+  .showcase-card:hover .showcase-text-inner,
+  .showcase-card:focus-within .showcase-text-inner { transform: translateY(-50px); }
+  .showcase-text-inner p { transition: opacity 0.25s ease-out 0.1s; }
+  .showcase-card:hover .showcase-text-inner p,
+  .showcase-card:focus-within .showcase-text-inner p { opacity: 1; }
+}
+/* Touch / no-hover — description always visible, laid out in normal flow */
+@media not all and (hover: hover) {
+  .showcase-text-inner p { position: static; opacity: 1; margin-top: 6px; }
+}
+
+/* Card 8 — solid-colour CTA tile, no photo, distinct treatment */
+.showcase-card-cta { background: var(--navy-dark); justify-content: center; align-items: center; }
+.showcase-cta-body {
+  position: relative; margin: auto; display: flex; flex-direction: column; align-items: center;
+  gap: 14px; padding: 24px; text-align: center;
+}
+.showcase-cta-body h3 { color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; margin: 0; }
+.showcase-cta-arrow {
+  flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.showcase-card-cta:hover .showcase-cta-arrow, .showcase-card-cta:focus-visible .showcase-cta-arrow {
+  transform: translateX(3px); background: rgba(255,255,255,0.24);
+}
+
+@media (min-width: 700px) {
+  .showcase-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+}
 
 @media (max-width: 900px) {
   .about-stats { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }

@@ -140,6 +140,138 @@ module.exports = function (eleventyConfig) {
 </section>`;
   });
 
+  // ---------------------------------------------------------------------
+  // Lean service-page template pieces. These four are designed to be
+  // dropped, unmodified, onto the bottom of any /electrical-services/*.md
+  // page so new service pages can be built at speed: hero + "what's
+  // included" + FAQ stay bespoke per page, everything below is shared.
+  // ---------------------------------------------------------------------
+
+  // Sidebar cards for the "What's Included" section — white/gradient cards
+  // on a pale background, paired together wherever that section appears.
+  eleventyConfig.addShortcode("svcWhyChooseCard", function () {
+    return `<div class="svc-info-card">
+  <span class="svc-info-card-eyebrow">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77 5.82 21 7 14.14l-5-4.87 7.1-1.01L12 2z"/></svg>
+    Why Choose LH Electrical
+  </span>
+  <ul class="svc-info-card-list">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg> Free written, no-obligation quotes</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg> Direct contact with your electrician</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg> Tidy, punctual, professional service</li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg> Fully insured &amp; certified work</li>
+  </ul>
+</div>`;
+  });
+
+  eleventyConfig.addShortcode("svcQualificationsCard", function () {
+    return `<div class="svc-info-card svc-qual-card">
+  <p class="svc-qual-text">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
+  <div class="svc-qual-logos">
+    <span class="svc-qual-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor" loading="lazy"></span>
+    <span class="svc-qual-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer" loading="lazy"></span>
+    <span class="svc-qual-logo-tile"><img src="/images/logos/recc-logo.png" alt="Renewable Energy Consumer Code member" loading="lazy"></span>
+  </div>
+</div>`;
+  });
+
+  eleventyConfig.addShortcode("svcQuoteCard", function (serviceLabel) {
+    const label = serviceLabel || "project";
+    return `<div class="svc-quote-card">
+  <h3>Get Your Free Quote</h3>
+  <p>Speak directly with Luke and the team about your ${label} needs.</p>
+  <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Request Quote &rarr;</a>
+</div>`;
+  });
+
+  eleventyConfig.addShortcode("svcHowItWorks", function (step3Title, step3Desc) {
+    const t3 = step3Title || "Installation &amp; Certification";
+    const d3 = step3Desc || "Full BS 7671 compliant work, tested, certified and notified to Building Control where needed.";
+    return `<section class="svc-cream svc-pad">
+  <div class="wrap">
+    <h2 class="svc-display svc-h2" style="text-align:center; margin-bottom:48px;">How It Works</h2>
+    <ul class="svc-steps">
+      <li class="svc-step reveal reveal-delay-1">
+        <div class="svc-step-num">1</div>
+        <h3>Free Survey</h3>
+        <p>We look at the job in person, or work from your drawings if the site isn't ready yet.</p>
+      </li>
+      <li class="svc-step reveal reveal-delay-2">
+        <div class="svc-step-num">2</div>
+        <h3>Fixed Written Quote</h3>
+        <p>One clear price agreed before any work starts &ndash; no hidden extras.</p>
+      </li>
+      <li class="svc-step reveal reveal-delay-3">
+        <div class="svc-step-num">3</div>
+        <h3>${t3}</h3>
+        <p>${d3}</p>
+      </li>
+    </ul>
+  </div>
+</section>`;
+  });
+
+  eleventyConfig.addShortcode("svcReviews", function () {
+    return `<section class="svc-light svc-pad">
+  <div class="wrap">
+    <div class="svc-center">
+      <p class="svc-rating-line is-light">
+        <span class="svc-rating-google-icon"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+        <strong>Excellent</strong> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Based on 24 Google reviews
+      </p>
+    </div>
+    <div class="svc-review-grid is-light">
+      <blockquote class="svc-review reveal reveal-delay-1">
+        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <p>Luke and his team are efficient, friendly and businesslike.</p>
+        <div class="svc-review-by"><span class="svc-avatar">C</span><cite>Colin Wibley</cite></div>
+      </blockquote>
+      <blockquote class="svc-review reveal reveal-delay-2">
+        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <p>Great service, prompt, keeps to his timetable, the work is excellent and he left my house clean and tidy. All for a very reasonable fee. I would always go to LH Electrical first and wholeheartedly recommend them.</p>
+        <div class="svc-review-by"><span class="svc-avatar">J</span><cite>Jean Gould</cite></div>
+      </blockquote>
+      <blockquote class="svc-review reveal reveal-delay-3">
+        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+        <p>Brilliant firm to deal with. Always answer your emails promptly. Come when they say. Always polite and friendly. I could recommend them to anybody.</p>
+        <div class="svc-review-by"><span class="svc-avatar">E</span><cite>Miss E Tattam</cite></div>
+      </blockquote>
+    </div>
+  </div>
+</section>`;
+  });
+
+  eleventyConfig.addShortcode("svcTrustLogos", function () {
+    return `<section class="svc-cream svc-pad-sm">
+  <div class="wrap svc-center">
+    <p class="svc-trust-intro">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
+    <div class="svc-logos">
+      <span class="svc-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor"></span>
+      <span class="svc-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer"></span>
+      <span class="svc-logo-tile"><img src="/images/logos/recc-logo.png" alt="Renewable Energy Consumer Code member"></span>
+    </div>
+  </div>
+</section>`;
+  });
+
+  eleventyConfig.addShortcode("svcLocation", function (heading, intro) {
+    const h = heading || "Based in Lewes &ndash; Serving East Sussex";
+    const p = intro || "We regularly work with homeowners, landlords and businesses in Lewes, Brighton, Uckfield, Ringmer, Seaford, Eastbourne, and across East Sussex.";
+    return `<section class="svc-light svc-pad">
+  <div class="wrap">
+    <div class="split-section split-reverse">
+      <div class="split-content reveal">
+        <h2 class="svc-display svc-h2">${h}</h2>
+        <p class="svc-lede" style="margin-left:0;">${p}</p>
+        <p>Planning a job or need urgent support? <a href="/contact/">Contact us</a> to speak with a qualified electrician.</p>
+        <a class="btn btn-primary btn-pill-lg" href="tel:01273443324">Call 01273 443324</a>
+      </div>
+      <iframe class="map-embed reveal reveal-delay-2" loading="lazy" src="https://www.google.com/maps?q=Lewes,+East+Sussex&output=embed" title="Map of Lewes, East Sussex"></iframe>
+    </div>
+  </div>
+</section>`;
+  });
+
   return {
     dir: {
       input: "src",

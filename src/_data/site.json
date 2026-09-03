@@ -27,17 +27,17 @@
     { "label": "Contact", "url": "/contact/" }
   ],
   "services": [
-    { "label": "Installations", "url": "/electrical-services/installations/" },
-    { "label": "Maintenance", "url": "/electrical-services/electrical-maintenance-services/" },
-    { "label": "Domestic", "url": "/electrical-services/domestic/" },
-    { "label": "Lighting", "url": "/electrical-services/lighting/" },
-    { "label": "Testing & Inspection", "url": "/electrical-services/testing-inspection/" },
-    { "label": "Landlords & EICR", "url": "/electrical-services/landlords/" },
-    { "label": "Commercial", "url": "/electrical-services/commercial-electrician/" },
-    { "label": "House Rewire", "url": "/electrical-services/house-rewire/" },
-    { "label": "Fuse Board Upgrades", "url": "/electrical-services/fuse-board-upgrades/" },
-    { "label": "EV Chargers", "url": "/electric-vehicle-chargers/" },
-    { "label": "Solar Panels", "url": "/solar-panels/" }
+    { "label": "Installations", "url": "/electrical-services/installations/", "desc": "New builds, renovations and full installations" },
+    { "label": "Maintenance", "url": "/electrical-services/electrical-maintenance-services/", "desc": "Reactive repairs and ongoing electrical cover" },
+    { "label": "Domestic Electrical", "url": "/electrical-services/domestic/", "desc": "Rewires, fault-finding, extra sockets and upgrades" },
+    { "label": "Lighting Installation", "url": "/electrical-services/lighting/", "desc": "LED downlights, dimmers, mood and outdoor lighting" },
+    { "label": "Testing & Inspection", "url": "/electrical-services/testing-inspection/", "desc": "Comprehensive electrical testing, EICRs and PAT" },
+    { "label": "Landlords & EICR", "url": "/electrical-services/landlords/", "desc": "Electrical Installation Condition Reports" },
+    { "label": "Commercial Electrician", "url": "/electrical-services/commercial-electrician/", "desc": "Installations, maintenance and compliance" },
+    { "label": "House Rewire", "url": "/electrical-services/house-rewire/", "desc": "Full and partial house rewires, fully certified" },
+    { "label": "Fuse Board Upgrades", "url": "/electrical-services/fuse-board-upgrades/", "desc": "Modern dual-RCD or RCBO metal consumer units" },
+    { "label": "EV Chargers", "url": "/electric-vehicle-chargers/", "desc": "MCS-certified home and commercial charge points" },
+    { "label": "Solar Panels & Storage", "url": "/solar-panels/", "desc": "Solar PV systems and battery storage" }
   ],
   "locations": [
     { "label": "Lewes", "url": "/electrician-lewes/" },
