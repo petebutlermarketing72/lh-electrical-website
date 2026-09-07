@@ -63,243 +63,92 @@ schema:
 
 <section class="svc-hero">
   {% heroCircuit %}
-  <div class="wrap svc-hero-inner">
+  <div class="wrap svc-hero-inner is-image-left">
+    <div class="svc-hero-figure">
+      <div class="svc-hero-photo-simple is-square">
+        <img src="/images/services/lighting/lighting-sphere-pendants-stairwell.jpg" alt="Feature sphere pendant lighting installed by LH Electrical">
+        <div class="svc-hero-photo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#svcBadgeGradient)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="svcBadgeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#55a47b"/><stop offset="100%" stop-color="#4f80c3"/></linearGradient></defs>
+            <path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 00-4 10.472V16h8v-2.528A6 6 0 0012 3z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
     <div>
       <h1 class="svc-display">Lighting Design, <span class="tint">Done Properly.</span></h1>
       <p class="svc-hero-intro">Indoor, outdoor and smart lighting, designed and installed properly the first time, across Lewes and East Sussex.</p>
       <div class="svc-actions">
-        <a class="btn btn-primary btn-pill-lg" href="{{ site.phoneHref }}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Call {{ site.phone }}
+        <a class="btn btn-review-pill" href="{{ site.reviewLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.reviewRating }} <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+            <span class="review-pill-source">Google Reviews</span>
+          </span>
         </a>
-        <a class="btn btn-ghost-light btn-pill-lg" href="/contact/">Get a Free Quote</a>
-      </div>
-    </div>
-    <div class="svc-hero-figure">
-      <div class="svc-ring">
-        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="LED lounge lighting upgrade installed by LH Electrical">
-      </div>
-      <div class="svc-stat-chip svc-stat-1">
-        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span>
-        <span class="stat-label">Google Rating</span>
-      </div>
-      <div class="svc-stat-chip svc-stat-2">
-        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span>
-        <span class="stat-label">5-Star Reviews</span>
+        <a class="btn btn-review-pill" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77 5.82 21 7 14.14l-5-4.87 7.1-1.01L12 2z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.trustpilotRating }} <span class="stars"><span class="star-full">&#9733;&#9733;&#9733;&#9733;</span><span class="star-half">&#9733;</span></span></span>
+            <span class="review-pill-source">Trustpilot</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="svc-marquee" aria-hidden="true">
-  <div class="svc-marquee-track">
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">Smart Systems</span>
-      <span class="svc-marquee-item">Fixed Written Quotes</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">No Hidden Costs</span>
-      <span class="svc-marquee-item">Clean &amp; Tidy Finish</span>
-    </div>
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">Smart Systems</span>
-      <span class="svc-marquee-item">Fixed Written Quotes</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">No Hidden Costs</span>
-      <span class="svc-marquee-item">Clean &amp; Tidy Finish</span>
-    </div>
-  </div>
-</div>
-
-<section class="svc-light svc-pad">
-  <div class="wrap svc-center">
-    <h2 class="svc-display svc-h2">Lighting Pricing, <span class="ghost">Up Front</span></h2>
-    <p class="svc-lede">Guide prices so you can budget before you call. Every job gets a fixed written quote after a free survey.</p>
-    <ul class="svc-price-grid">
-      <li class="svc-price-card is-featured reveal reveal-delay-1">
-        <span class="svc-price-flag">Most Popular</span>
-        <h3>LED Lighting Upgrade</h3>
-        <span class="svc-price">&pound;150&ndash;&pound;350</span>
-        <p>Per room. Modern, energy-efficient lighting design and installation.</p>
-        <a class="btn btn-primary btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Outdoor &amp; Security Lighting</h3>
-        <span class="svc-price">POA</span>
-        <p>Garden, driveway and security lighting on its own weatherproof circuit.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Smart Lighting System</h3>
-        <span class="svc-price">POA</span>
-        <p>App or voice control, scenes and scheduling, priced to what you need.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-1">
-        <h3>Kitchen &amp; Bathroom Lighting</h3>
-        <span class="svc-price">POA</span>
-        <p>Task, ambient and feature lighting for higher-use rooms.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/electrical-services/domestic/">Find out more</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Office &amp; Retail Lighting Scheme</h3>
-        <span class="svc-price">POA</span>
-        <p>Commercial lighting design, scheduled around your trading hours.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/electrical-services/commercial-electrician/">Find out more</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Emergency Lighting</h3>
-        <span class="svc-price">POA</span>
-        <p>Designed and installed to current safety legislation for businesses.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-    </ul>
-    <p class="svc-price-foot">Guide prices for budgeting only &ndash; your final cost is confirmed in a fixed written quote after a free survey. No hidden extras.</p>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad svc-offer-band">
+<section class="svc-included-band">
   <div class="wrap">
-    <div class="svc-offer-head reveal">
-      <h2 class="svc-display svc-h2">Lighting Work <span class="tint">We Cover</span></h2>
-      <p class="svc-offer-lede">Good lighting is as much about layout as it is wiring &ndash; where switches sit, how a room is zoned, what needs to be dimmable. We work through this before anything's installed.</p>
-    </div>
-  </div>
-
-  <div class="svc-carousel svc-carousel-full reveal" data-svc-carousel role="group" aria-label="Recent lighting work">
-    <div class="svc-carousel-viewport">
-      <div class="svc-carousel-track">
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Lounge LED lighting upgrade by LH Electrical" draggable="false">
-          <figcaption>Lounge LED Upgrade</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-bathroom-lighting.jpg" alt="Bathroom mirror lighting installation by LH Electrical" draggable="false">
-          <figcaption>Bathroom Lighting</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Kitchen lighting design by LH Electrical" draggable="false">
-          <figcaption>Kitchen Lighting</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Landing and stairway lighting by LH Electrical" draggable="false">
-          <figcaption>Landing Lighting</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="svc-carousel-controls">
-      <button type="button" class="svc-carousel-btn is-prev" aria-label="Previous image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="svc-carousel-dots"></div>
-      <button type="button" class="svc-carousel-btn is-next" aria-label="Next image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <p class="svc-offer-kicker">Lighting services we provide</p>
-    <ul class="svc-offer-list reveal">
-        <li><span><span class="title">Domestic Lighting Upgrades</span><span class="note">New installations and full room upgrades</span></span></li>
-        <li><span><span class="title">LED Conversions</span><span class="note">Energy-saving retrofits for existing fittings</span></span></li>
-        <li><span><span class="title">Outdoor, Garden &amp; Security Lighting</span><span class="note">On its own weatherproof circuit</span></span></li>
-        <li><span><span class="title">Smart Lighting</span><span class="note">App or voice control, scenes and scheduling</span></span></li>
-        <li><span><span class="title">Office &amp; Retail Lighting Schemes</span><span class="note">Commercial spaces, designed to spec</span></span></li>
-        <li><span><span class="title">Smart System Support</span><span class="note">Rako, Lutron, Lightwave and similar</span></span></li>
-        <li><span><span class="title">Emergency Lighting</span><span class="note">Compliant with current safety legislation</span></span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="svc-eco-section">
-  <div class="wrap">
-    <div class="svc-eco reveal">
-      <div class="svc-eco-body">
-        <span class="svc-eco-tag">Smart Control</span>
-        <h2 class="svc-display svc-eco-title">Light It <span>Smarter.</span></h2>
-        <p>Looking to modernise your space? Smart lighting gives you full control over ambience, security and energy use &ndash; from your phone, a voice assistant, or a wall-mounted panel.</p>
-        <ul class="svc-eco-list">
-          <li>Scenes &amp; scheduling</li>
-          <li>Occupancy sensors save energy</li>
-          <li>Presence simulation for security</li>
-          <li>App &amp; voice control</li>
+    <div class="svc-included-grid">
+      <div>
+        <h2 class="svc-display svc-h2">What&rsquo;s Included</h2>
+        <p class="svc-lede">From a single LED upgrade to a full smart lighting system, we design and install lighting that works for the space.</p>
+        <ul class="svc-check-grid">
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Domestic Lighting Upgrades</span><span class="note">New installations and full room upgrades</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">LED Conversions</span><span class="note">Energy-saving retrofits for existing fittings</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Outdoor, Garden &amp; Security Lighting</span><span class="note">On its own weatherproof circuit</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Smart Lighting</span><span class="note">App or voice control, scenes and scheduling</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Office &amp; Retail Lighting Schemes</span><span class="note">Commercial spaces, designed to spec</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Smart System Support</span><span class="note">Rako, Lutron, Lightwave and similar</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Emergency Lighting</span><span class="note">Compliant with current safety legislation</span></div>
+          </li>
         </ul>
-        <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Talk to us about your lighting</a>
-      </div>
-      <div class="svc-eco-figure">
-        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Smart lighting control installed by LH Electrical">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="svc-light svc-pad svc-about-band">
-  <div class="wrap">
-    <div class="svc-center svc-about-head reveal">
-      <h2 class="svc-display svc-h2">Designed For Looks, <span class="ghost">Installed For Performance</span></h2>
-      <p class="svc-lede">Whether it's a straightforward LED upgrade or a smart system with app and voice control, we work through layout and zoning with you before anything's installed.</p>
-    </div>
-    <div class="svc-about">
-      <div class="svc-about-figure reveal">
-        <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="LH Electrical electrician carrying out a lighting installation">
-        <div class="svc-float-card">
-          <span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span>
-          <span class="stat-label">Years of<br>Experience</span>
+        <div class="svc-photo-row">
+          <img src="/images/services/lighting/lighting-rattan-pendant-balcony.jpg" alt="Statement pendant lighting installed by LH Electrical">
+          <img src="/images/services/lighting/lighting-outdoor-garden-steps.jpg" alt="Outdoor garden step lighting installed by LH Electrical">
         </div>
       </div>
-      <div class="reveal reveal-delay-2">
-        <p>The most common regret we see with lighting is switches and circuits that don't match how a room's actually used. We'll talk through zoning and dimming at the planning stage, so the finished result works for the space rather than just lighting it.</p>
-        <ul class="svc-ticks">
-          <li>Fully qualified, NAPIT-registered</li>
-          <li>Considered layout &amp; zoning</li>
-          <li>Smart system experience</li>
-          <li>Clean work, minimal disruption</li>
-          <li>Transparent pricing, no extras</li>
-          <li>Handover &amp; ongoing support</li>
-        </ul>
+      <div class="svc-included-sidebar">
+        {% svcWhyChooseCard %}
+        {% svcQualificationsCard %}
+        {% svcQuoteCard "lighting" %}
       </div>
     </div>
   </div>
 </section>
 
-<section class="svc-cream svc-pad-sm">
-  <div class="wrap svc-center">
-    <p class="svc-trust-intro">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
-    <div class="svc-logos">
-      <span class="svc-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/recc-logo.png" alt="Renewable Energy Consumer Code member"></span>
-    </div>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad">
-  <div class="wrap">
-    <div class="svc-center">
-      <h2 class="svc-display svc-h2">What Our <span class="tint">Customers Say</span></h2>
-      <p class="svc-rating-line"><strong>Excellent</strong> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Based on {{ site.reviewCount }} Google reviews</p>
-    </div>
-    <div class="svc-review-grid">
-      <blockquote class="svc-review reveal reveal-delay-1">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Luke and his team are efficient, friendly and businesslike.</p>
-        <div class="svc-review-by"><span class="svc-avatar">C</span><cite>Colin Wibley</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-2">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Great service, prompt, keeps to his timetable, the work is excellent and he left my house clean and tidy. All for a very reasonable fee. I would always go to LH Electrical first and wholeheartedly recommend them.</p>
-        <div class="svc-review-by"><span class="svc-avatar">J</span><cite>Jean Gould</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-3">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Brilliant firm to deal with. Always answer your emails promptly. Come when they say. Always polite and friendly. I could recommend them to anybody.</p>
-        <div class="svc-review-by"><span class="svc-avatar">E</span><cite>Miss E Tattam</cite></div>
-      </blockquote>
-    </div>
-  </div>
-</section>
+{% svcReviews %}
 
 <section class="svc-light svc-pad">
   <div class="wrap">

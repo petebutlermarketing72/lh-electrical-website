@@ -64,7 +64,7 @@
       <nav class="main-nav" id="main-nav">
         <ul>
           {% for item in site.nav %}
-          {% if item.label == "Services" %}
+          {% if item.url == "/electrical-services/" %}
           <li class="has-dropdown has-dropdown-wide">
             <a href="{{ item.url }}">{{ item.label }} <span class="caret">&#9662;</span></a>
             <div class="dropdown-menu dropdown-wide">
@@ -72,18 +72,13 @@
               <div class="dropdown-grid">
                 {% for s in site.services %}{% if s.label != "EV Chargers" and s.label != "Solar Panels & Storage" %}<a class="drop-card" href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-card-text"><span class="drop-title">{{ s.label }}</span><span class="drop-desc">{{ s.desc }}</span></span></a>{% endif %}{% endfor %}
               </div>
-              <div class="dropdown-divider"></div>
-              <p class="dropdown-section-label">Renewable &amp; Green Energy <span class="dropdown-badge">MCS Certified</span></p>
-              <div class="dropdown-grid">
-                {% for s in site.services %}{% if s.label == "EV Chargers" or s.label == "Solar Panels & Storage" %}<a class="drop-card" href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-card-text"><span class="drop-title">{{ s.label }}</span><span class="drop-desc">{{ s.desc }}</span></span></a>{% endif %}{% endfor %}
-              </div>
             </div>
           </li>
-          {% elif item.label == "Locations" %}
+          {% elif item.url == "/solar-panels/" %}
           <li class="has-dropdown">
             <a href="{{ item.url }}">{{ item.label }} <span class="caret">&#9662;</span></a>
             <div class="dropdown-menu">
-              {% for l in site.locations %}<a href="{{ l.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="drop-text">{{ l.label }}</span></a>{% endfor %}
+              {% for s in site.services %}{% if s.label == "EV Chargers" or s.label == "Solar Panels & Storage" %}<a href="{{ s.url }}"><span class="drop-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span><span class="drop-text">{{ s.label }}</span></a>{% endif %}{% endfor %}
             </div>
           </li>
           {% else %}
@@ -108,10 +103,10 @@
     <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">&times;</button>
     <span class="mobile-nav-section">Main</span>
     {% for item in site.nav %}<a href="{{ item.url }}">{{ item.label }}</a>{% endfor %}
-    <span class="mobile-nav-section">Services</span>
-    {% for s in site.services %}<a href="{{ s.url }}">{{ s.label }}</a>{% endfor %}
-    <span class="mobile-nav-section">Locations</span>
-    {% for l in site.locations %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+    <span class="mobile-nav-section">Electrical</span>
+    {% for s in site.services %}{% if s.label != "EV Chargers" and s.label != "Solar Panels & Storage" %}<a href="{{ s.url }}">{{ s.label }}</a>{% endif %}{% endfor %}
+    <span class="mobile-nav-section">Solar / EV</span>
+    {% for s in site.services %}{% if s.label == "EV Chargers" or s.label == "Solar Panels & Storage" %}<a href="{{ s.url }}">{{ s.label }}</a>{% endif %}{% endfor %}
     <a class="btn btn-primary mobile-nav-cta" href="{{ site.phoneHref }}">{{ site.phone }}</a>
   </div>
 

@@ -63,243 +63,92 @@ schema:
 
 <section class="svc-hero">
   {% heroCircuit %}
-  <div class="wrap svc-hero-inner">
+  <div class="wrap svc-hero-inner is-image-left">
+    <div class="svc-hero-figure">
+      <div class="svc-hero-photo-simple is-square">
+        <img src="/images/services/commercial-electrician/commercial-tablet-panel-inspection.jpg" alt="LH Electrical carrying out a commercial electrical inspection">
+        <div class="svc-hero-photo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#svcBadgeGradient)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="svcBadgeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#55a47b"/><stop offset="100%" stop-color="#4f80c3"/></linearGradient></defs>
+            <rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/>
+          </svg>
+        </div>
+      </div>
+    </div>
     <div>
       <h1 class="svc-display">Commercial Electrics, <span class="tint">Done Properly.</span></h1>
       <p class="svc-hero-intro">Periodic inspections, fit-outs and installations for businesses across East Sussex, scheduled around your trading hours.</p>
       <div class="svc-actions">
-        <a class="btn btn-primary btn-pill-lg" href="{{ site.phoneHref }}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Call {{ site.phone }}
+        <a class="btn btn-review-pill" href="{{ site.reviewLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.reviewRating }} <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+            <span class="review-pill-source">Google Reviews</span>
+          </span>
         </a>
-        <a class="btn btn-ghost-light btn-pill-lg" href="/contact/">Get a Free Quote</a>
-      </div>
-    </div>
-    <div class="svc-hero-figure">
-      <div class="svc-ring">
-        <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Commercial electrical fit-out lighting installed by LH Electrical">
-      </div>
-      <div class="svc-stat-chip svc-stat-1">
-        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span>
-        <span class="stat-label">Google Rating</span>
-      </div>
-      <div class="svc-stat-chip svc-stat-2">
-        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span>
-        <span class="stat-label">5-Star Reviews</span>
+        <a class="btn btn-review-pill" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77 5.82 21 7 14.14l-5-4.87 7.1-1.01L12 2z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.trustpilotRating }} <span class="stars"><span class="star-full">&#9733;&#9733;&#9733;&#9733;</span><span class="star-half">&#9733;</span></span></span>
+            <span class="review-pill-source">Trustpilot</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="svc-marquee" aria-hidden="true">
-  <div class="svc-marquee-track">
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">BS 7671 Compliant</span>
-      <span class="svc-marquee-item">Fixed Written Quotes</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">Minimal Downtime</span>
-      <span class="svc-marquee-item">Clean &amp; Tidy Finish</span>
-    </div>
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">BS 7671 Compliant</span>
-      <span class="svc-marquee-item">Fixed Written Quotes</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">Minimal Downtime</span>
-      <span class="svc-marquee-item">Clean &amp; Tidy Finish</span>
-    </div>
-  </div>
-</div>
-
-<section class="svc-light svc-pad">
-  <div class="wrap svc-center">
-    <h2 class="svc-display svc-h2">Commercial Pricing, <span class="ghost">Up Front</span></h2>
-    <p class="svc-lede">Commercial jobs vary too much for off-the-shelf pricing, so every quote is confirmed after a quick site visit or a look at your circuit schedule.</p>
-    <ul class="svc-price-grid">
-      <li class="svc-price-card is-featured reveal reveal-delay-1">
-        <span class="svc-price-flag">Most Common</span>
-        <h3>Commercial EICR</h3>
-        <span class="svc-price">POA</span>
-        <p>Priced per circuit and distribution board &ndash; send your last report and we'll quote fast.</p>
-        <a class="btn btn-primary btn-pill-lg" href="/electrical-services/testing-inspection/">Find out more</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Retail &amp; Hospitality Fit-Outs</h3>
-        <span class="svc-price">POA</span>
-        <p>Full electrical fit-out for shops, cafes and hospitality units, scheduled around your opening date.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Three-Phase Installations</h3>
-        <span class="svc-price">POA</span>
-        <p>Three-phase supply, distribution boards and machinery circuits for commercial and light industrial units.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-1">
-        <h3>Emergency Lighting &amp; Fire Alarm</h3>
-        <span class="svc-price">POA</span>
-        <p>Designed, installed and tested to current commercial safety legislation.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Fault-Finding &amp; Maintenance</h3>
-        <span class="svc-price">POA</span>
-        <p>Call-out diagnostics and ongoing maintenance contracts for commercial premises.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Commercial EV &amp; Solar</h3>
-        <span class="svc-price">POA</span>
-        <p>EV charge points and solar PV for staff, fleet or customer parking &ndash; MCS-certified.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-    </ul>
-    <p class="svc-price-foot">All commercial work is priced with a fixed written quote after a site visit or review of your plans. No hidden extras.</p>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad svc-offer-band">
+<section class="svc-included-band">
   <div class="wrap">
-    <div class="svc-offer-head reveal">
-      <h2 class="svc-display svc-h2">Commercial Work <span class="tint">We Cover</span></h2>
-      <p class="svc-offer-lede">From a single periodic inspection to a full unit fit-out, we work to the timeline your business needs.</p>
-    </div>
-  </div>
-
-  <div class="svc-carousel svc-carousel-full reveal" data-svc-carousel role="group" aria-label="Recent commercial electrical work">
-    <div class="svc-carousel-viewport">
-      <div class="svc-carousel-track">
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Commercial fit-out lighting installed by LH Electrical" draggable="false">
-          <figcaption>Fit-Out Lighting</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Office lighting installation by LH Electrical" draggable="false">
-          <figcaption>Office Lighting</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Distribution board work by LH Electrical" draggable="false">
-          <figcaption>Distribution Boards</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-bathroom-lighting.jpg" alt="Facilities electrical upgrade by LH Electrical" draggable="false">
-          <figcaption>Facilities Upgrades</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="svc-carousel-controls">
-      <button type="button" class="svc-carousel-btn is-prev" aria-label="Previous image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="svc-carousel-dots"></div>
-      <button type="button" class="svc-carousel-btn is-next" aria-label="Next image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <p class="svc-offer-kicker">Commercial services include</p>
-    <ul class="svc-offer-list reveal">
-        <li><span><span class="title">Commercial Periodic Inspections</span><span class="note">EICRs for insurance and compliance purposes</span></span></li>
-        <li><span><span class="title">Retail, Hospitality &amp; Office Fit-Outs</span><span class="note">Full electrical fit-out, scheduled to your opening date</span></span></li>
-        <li><span><span class="title">Three-Phase Installations</span><span class="note">Distribution boards and machinery circuits</span></span></li>
-        <li><span><span class="title">Emergency Lighting &amp; Fire Alarms</span><span class="note">Designed to current safety legislation</span></span></li>
-        <li><span><span class="title">General Maintenance &amp; Fault-Finding</span><span class="note">Call-out diagnostics and ongoing contracts</span></span></li>
-        <li><span><span class="title">Commercial Solar &amp; EV Chargers</span><span class="note">MCS-certified installs for staff and fleet parking</span></span></li>
-        <li><span><span class="title">Multi-Site &amp; Portfolio Coordination</span><span class="note">Scheduled inspections across several units</span></span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="svc-eco-section">
-  <div class="wrap">
-    <div class="svc-eco reveal">
-      <div class="svc-eco-body">
-        <span class="svc-eco-tag">Working Around Your Business</span>
-        <h2 class="svc-display svc-eco-title">Minimal Downtime, <span>Maximum Care.</span></h2>
-        <p>We know downtime costs money. Where possible, we schedule commercial work outside trading hours, or in phases that let you keep operating. For multi-site businesses or letting agents managing several properties, we coordinate inspections together to keep things efficient.</p>
-        <ul class="svc-eco-list">
-          <li>Retail &amp; hospitality</li>
-          <li>Offices &amp; co-working spaces</li>
-          <li>Warehouses &amp; light industrial</li>
-          <li>Letting agents &amp; portfolios</li>
+    <div class="svc-included-grid">
+      <div>
+        <h2 class="svc-display svc-h2">What&rsquo;s Included</h2>
+        <p class="svc-lede">From a single periodic inspection to a full unit fit-out, we work to the timeline your business needs.</p>
+        <ul class="svc-check-grid">
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Commercial Periodic Inspections</span><span class="note">EICRs for insurance and compliance purposes</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Retail, Hospitality &amp; Office Fit-Outs</span><span class="note">Full electrical fit-out, scheduled to your opening date</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Three-Phase Installations</span><span class="note">Distribution boards and machinery circuits</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Emergency Lighting &amp; Fire Alarms</span><span class="note">Designed to current safety legislation</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">General Maintenance &amp; Fault-Finding</span><span class="note">Call-out diagnostics and ongoing contracts</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Commercial Solar &amp; EV Chargers</span><span class="note">MCS-certified installs for staff and fleet parking</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Multi-Site &amp; Portfolio Coordination</span><span class="note">Scheduled inspections across several units</span></div>
+          </li>
         </ul>
-        <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Talk to us about your business</a>
-      </div>
-      <div class="svc-eco-figure">
-        <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="LH Electrical carrying out commercial electrical work">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="svc-light svc-pad svc-about-band">
-  <div class="wrap">
-    <div class="svc-center svc-about-head reveal">
-      <h2 class="svc-display svc-h2">Trusted Commercial <span class="ghost">Electricians</span></h2>
-      <p class="svc-lede">We work with small businesses, landlords and letting agents who need electrical work done reliably, quoted clearly, and scheduled to suit the business.</p>
-    </div>
-    <div class="svc-about">
-      <div class="svc-about-figure reveal">
-        <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="LH Electrical electrician carrying out commercial work">
-        <div class="svc-float-card">
-          <span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span>
-          <span class="stat-label">Years of<br>Experience</span>
+        <div class="svc-photo-row">
+          <img src="/images/services/commercial-electrician/commercial-eicr-clipboard-signing.jpg" alt="LH Electrical completing an EICR for a commercial client">
+          <img src="/images/services/commercial-electrician/commercial-panel-servicing-east-sussex.jpg" alt="LH Electrical servicing a commercial electrical panel in East Sussex">
         </div>
       </div>
-      <div class="reveal reveal-delay-2">
-        <p>Whether it's a periodic inspection for insurance purposes or a full fit-out for a new unit, we quote clearly up front and work to the timeline your business needs.</p>
-        <ul class="svc-ticks">
-          <li>NAPIT-registered, fully insured</li>
-          <li>BS 7671 compliant work</li>
-          <li>Scheduled around trading hours</li>
-          <li>Fixed written quotes</li>
-          <li>Multi-site &amp; portfolio experience</li>
-          <li>Clean, tidy, professional finish</li>
-        </ul>
+      <div class="svc-included-sidebar">
+        {% svcWhyChooseCard %}
+        {% svcQualificationsCard %}
+        {% svcQuoteCard "commercial" %}
       </div>
     </div>
   </div>
 </section>
 
-<section class="svc-cream svc-pad-sm">
-  <div class="wrap svc-center">
-    <p class="svc-trust-intro">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
-    <div class="svc-logos">
-      <span class="svc-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/recc-logo.png" alt="Renewable Energy Consumer Code member"></span>
-    </div>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad">
-  <div class="wrap">
-    <div class="svc-center">
-      <h2 class="svc-display svc-h2">What Our <span class="tint">Customers Say</span></h2>
-      <p class="svc-rating-line"><strong>Excellent</strong> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Based on {{ site.reviewCount }} Google reviews</p>
-    </div>
-    <div class="svc-review-grid">
-      <blockquote class="svc-review reveal reveal-delay-1">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Luke and his team are efficient, friendly and businesslike.</p>
-        <div class="svc-review-by"><span class="svc-avatar">C</span><cite>Colin Wibley</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-2">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Great service, prompt, keeps to his timetable, the work is excellent and he left my house clean and tidy. All for a very reasonable fee. I would always go to LH Electrical first and wholeheartedly recommend them.</p>
-        <div class="svc-review-by"><span class="svc-avatar">J</span><cite>Jean Gould</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-3">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Brilliant firm to deal with. Always answer your emails promptly. Come when they say. Always polite and friendly. I could recommend them to anybody.</p>
-        <div class="svc-review-by"><span class="svc-avatar">E</span><cite>Miss E Tattam</cite></div>
-      </blockquote>
-    </div>
-  </div>
-</section>
+{% svcReviews %}
 
 <section class="svc-light svc-pad">
   <div class="wrap">

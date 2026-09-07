@@ -7,8 +7,11 @@ hideCtaBand: true
 
 <div class="hero-fold">
 <section class="svc-hero has-bleed-graphic">
+  <div class="hero-bleed-photo">
+    <img src="/images/hero/homepage-hero-consumer-unit.jpg" alt="Modern FuseBox consumer unit and surge protection device installed by LH Electrical">
+  </div>
   {% heroCircuit %}
-  <div class="wrap svc-hero-freeform">
+  <div class="wrap svc-hero-freeform is-photo-bleed">
     <div class="svc-hero-copy">
       <div class="hero-rating-badge">
         <span class="hero-review-icon-wrap">
@@ -85,15 +88,6 @@ hideCtaBand: true
       </form>
       <p class="quote-bar-note"><span id="quote-typewriter"></span><span class="typewriter-cursor">&#124;</span></p>
     </div>
-    <div class="hero-visual-card">
-      <div class="hero-visual-frame">
-        <div class="hero-visual-carousel">
-          <img class="hero-illustration-slide is-active" src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Recent electrical installation by LH Electrical in East Sussex">
-          <img class="hero-illustration-slide" src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Recent electrical installation by LH Electrical in East Sussex">
-          <img class="hero-illustration-slide" src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Recent electrical installation by LH Electrical in East Sussex">
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="svc-marquee" aria-hidden="true">
@@ -131,11 +125,32 @@ hideCtaBand: true
 </section>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap" style="max-width:980px;">
     <div style="text-align:center;"><span class="svc-eyebrow">What We Do</span></div>
-    <div class="split-section" style="margin-top:40px;">
-      <div class="split-image reveal">
-        <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="LH Electrical carrying out electrical work in East Sussex">
+    <div class="split-section" style="margin-top:40px; gap:58px;">
+      <div class="hero-visual-card is-on-light reveal">
+        <span class="soft-shape hero-shape-1" aria-hidden="true"></span>
+        <span class="soft-shape hero-shape-2" aria-hidden="true"></span>
+        <span class="soft-shape hero-shape-3" aria-hidden="true"></span>
+        <div class="hero-visual-frame">
+          <div class="hero-visual-carousel">
+            <img class="hero-illustration-slide is-active" src="/images/services/domestic/domestic-kitchen-pendant-lighting.jpg" alt="Recent domestic electrical work by LH Electrical in East Sussex">
+            <img class="hero-illustration-slide" src="/images/services/ev-chargers/ev-chargers-driveway-installation.jpg" alt="EV charger installation by LH Electrical in East Sussex">
+            <img class="hero-illustration-slide" src="/images/services/solar/solar-panel-roof-installation-east-sussex.jpg" alt="Solar panel installation by LH Electrical in East Sussex">
+          </div>
+        </div>
+        <div class="hero-stat-float">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Years<br>Experience</span>
+        </div>
+        <div class="hero-quote-float">
+          <div class="hero-quote-top">
+            <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+          <p>&ldquo;Efficient, friendly and businesslike.&rdquo;</p>
+          <cite>Colin Wibley, Google</cite>
+        </div>
       </div>
       <div class="split-content reveal reveal-delay-2">
         <h2 class="svc-display" style="margin-bottom:16px;">Complete Electrical <span class="tint">Solutions.</span></h2>
@@ -153,11 +168,51 @@ hideCtaBand: true
     <p class="services-intro">Everything from a single fault to a full rewire, carried out by NAPIT-registered electricians.</p>
     <ul class="showcase-grid" style="margin-top:44px;">
       <li class="reveal">
+        <a class="showcase-card" href="/electrical-services/installations/">
+          <div class="showcase-media-pad">
+            <div class="showcase-media-frame">
+              <div class="showcase-media-inner">
+                <img src="/images/services/installations/installations-kitchen-lighting-sockets.jpg" alt="Electrical installation work carried out by LH Electrical" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text-row">
+            <div class="showcase-text-inner">
+              <div class="showcase-title-row">
+                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+                <h3>Installations</h3>
+              </div>
+              <p>New builds, renovations and full installation projects.</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="reveal reveal-delay-1">
+        <a class="showcase-card" href="/electrical-services/electrical-maintenance-services/">
+          <div class="showcase-media-pad">
+            <div class="showcase-media-frame">
+              <div class="showcase-media-inner">
+                <img src="/images/services/maintenance/maintenance-switchboard-fault-finding.jpg" alt="Electrical maintenance and fault finding by LH Electrical" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text-row">
+            <div class="showcase-text-inner">
+              <div class="showcase-title-row">
+                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span>
+                <h3>Maintenance</h3>
+              </div>
+              <p>Reactive repairs and ongoing electrical cover.</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="reveal reveal-delay-2">
         <a class="showcase-card" href="/electrical-services/domestic/">
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Domestic electrical work by LH Electrical" loading="lazy">
+                <img src="/images/services/domestic/domestic-kitchen-pendant-lighting.jpg" alt="Kitchen extension pendant lighting installed by LH Electrical" loading="lazy">
               </div>
             </div>
           </div>
@@ -172,12 +227,52 @@ hideCtaBand: true
           </div>
         </a>
       </li>
+      <li class="reveal reveal-delay-3">
+        <a class="showcase-card" href="/electrical-services/lighting/">
+          <div class="showcase-media-pad">
+            <div class="showcase-media-frame">
+              <div class="showcase-media-inner">
+                <img src="/images/services/lighting/lighting-sphere-pendants-stairwell.jpg" alt="Feature sphere pendant lighting installed by LH Electrical" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text-row">
+            <div class="showcase-text-inner">
+              <div class="showcase-title-row">
+                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 00-4 10.472V16h8v-2.528A6 6 0 0012 3z"/></svg></span>
+                <h3>Lighting Installation</h3>
+              </div>
+              <p>LED downlights, dimmers, mood and outdoor lighting.</p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="reveal">
+        <a class="showcase-card" href="/electrical-services/testing-inspection/">
+          <div class="showcase-media-pad">
+            <div class="showcase-media-frame">
+              <div class="showcase-media-inner">
+                <img src="/images/services/testing-inspection/testing-inspection-panel-check.jpg" alt="Electrical testing and inspection carried out by LH Electrical" loading="lazy">
+              </div>
+            </div>
+          </div>
+          <div class="showcase-text-row">
+            <div class="showcase-text-inner">
+              <div class="showcase-title-row">
+                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></span>
+                <h3>Testing &amp; Inspection</h3>
+              </div>
+              <p>Comprehensive electrical testing, EICRs and PAT.</p>
+            </div>
+          </div>
+        </a>
+      </li>
       <li class="reveal reveal-delay-1">
         <a class="showcase-card" href="/electrical-services/commercial-electrician/">
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/blog/local-electrician-at-work-in-east-sussex.jpg" alt="Commercial electrical work by LH Electrical" loading="lazy">
+                <img src="/images/services/commercial-electrician/commercial-tablet-panel-inspection.jpg" alt="LH Electrical carrying out a commercial electrical inspection" loading="lazy">
               </div>
             </div>
           </div>
@@ -197,7 +292,7 @@ hideCtaBand: true
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Landlord EICR electrical inspection by LH Electrical" loading="lazy">
+                <img src="/images/services/landlords/landlord-eicr-testing-checklist.jpg" alt="LH Electrical carrying out an EICR test and completing a landlord compliance checklist" loading="lazy">
               </div>
             </div>
           </div>
@@ -217,7 +312,7 @@ hideCtaBand: true
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/blog/house-rewiring.jpg" alt="House rewiring work by LH Electrical" loading="lazy">
+                <img src="/images/services/house-rewire/house-rewire-exposed-wiring-east-sussex.jpg" alt="Exposed wiring during a house rewire carried out by LH Electrical in East Sussex" loading="lazy">
               </div>
             </div>
           </div>
@@ -237,7 +332,7 @@ hideCtaBand: true
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/blog/consumer-unit-replacement-east-sussex.jpg" alt="Fuse board upgrade by LH Electrical" loading="lazy">
+                <img src="/images/services/fuse-board-upgrades/fuse-board-rcbo-installation-close-up.jpg" alt="Fuse board upgrade by LH Electrical" loading="lazy">
               </div>
             </div>
           </div>
@@ -257,7 +352,7 @@ hideCtaBand: true
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/blog/home-ev-charging-lewes-east-sussex.jpg" alt="EV charger installation by LH Electrical" loading="lazy">
+                <img src="/images/services/ev-chargers/ev-chargers-driveway-installation.jpg" alt="EV charger installation by LH Electrical" loading="lazy">
               </div>
             </div>
           </div>
@@ -277,7 +372,7 @@ hideCtaBand: true
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/blog/solar-panel-installation-east-sussex.jpg" alt="Solar panel installation by LH Electrical" loading="lazy">
+                <img src="/images/services/solar/solar-panel-roof-installation-east-sussex.jpg" alt="LH Electrical installer fitting solar panels on a pitched roof in East Sussex" loading="lazy">
               </div>
             </div>
           </div>
@@ -402,7 +497,6 @@ hideCtaBand: true
         <div class="blog-card-body">
           <span class="blog-card-cat">{{ post.data.category }}</span>
           <h3>{{ post.data.heading }}</h3>
-          <p>{{ post.data.excerpt }}</p>
         </div>
       </a>
     {%- endfor %}</div>

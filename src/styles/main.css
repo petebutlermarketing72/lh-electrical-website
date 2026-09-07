@@ -25,6 +25,11 @@
   --seafoam-gradient-pale: linear-gradient(100deg, rgba(227,250,233,0.35) 0%, rgba(219,230,251,0.35) 100%);
   /* Deeper green-to-blue variant, for text that needs to stay readable on a pale background */
   --seafoam-gradient-text: linear-gradient(100deg, #55a47b 0%, #4f80c3 100%);
+  /* Same two anchor colours plus a pale midpoint, so a solid-fill surface
+     (not text) reads like a subtle metallic/satin sheen rather than a flat gradient.
+     Lightened versions of the green/blue anchors so the card reads pastel,
+     with dark text sitting on top rather than white. */
+  --seafoam-gradient-metallic: linear-gradient(115deg, #91c4a9 0%, #f3f8f6 50%, #8dacd8 100%);
   --gray-bg: #f5fcf3;
   --text: #0d135f;
   --muted: #474d8d;
@@ -892,14 +897,80 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .hero-illustration-slide.is-active { opacity: 1; }
 
 /* Homepage hero visual — rotating photo card + trust caption + stat pills */
-.hero-visual-card { width: 100%; max-width: 380px; flex: 0 1 380px; animation: hero-card-bob 6s ease-in-out infinite; }
+.hero-visual-card { position: relative; width: 100%; max-width: 450px; flex: 0 1 450px; animation: hero-card-bob 6s ease-in-out infinite; }
 @keyframes hero-card-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .hero-visual-frame {
-  position: relative; border-radius: 20px; overflow: hidden;
+  position: relative; z-index: 1; border-radius: 22px; overflow: hidden;
   background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.16);
   box-shadow: 0 30px 60px rgba(0,0,0,0.35);
 }
-.hero-visual-carousel { position: relative; aspect-ratio: 3 / 2.1; }
+/* Same card, reused on a light (white) section background — the
+   frosted-glass treatment above only reads against the dark hero. */
+.hero-visual-card.is-on-light .hero-visual-frame {
+  background: #fff; border: 1px solid var(--border); box-shadow: var(--shadow-md);
+}
+.hero-visual-carousel { position: relative; aspect-ratio: 1 / 1; }
+
+/* Soft decorative rounded squares — reusable "bobbing" accent shapes used
+   behind the homepage hero photo card and the "What We Do" figure below it.
+   Purely decorative (aria-hidden in the markup). */
+.soft-shape { position: absolute; z-index: 0; pointer-events: none; border-radius: 26px; animation: shape-bob 7s ease-in-out infinite; }
+@keyframes shape-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(5deg); }
+}
+/* Solid (not pale-tint) colours here — the pastel tint variants used
+   elsewhere on light backgrounds disappear against the navy hero. */
+.hero-shape-1 { width: 130px; height: 130px; top: -20px; left: -24px; background: var(--accent); opacity: 0.4; }
+.hero-shape-2 { width: 84px; height: 84px; bottom: -16px; right: 10%; border-radius: 22px; background: #3f7fd1; opacity: 0.4; animation-delay: 1.6s; }
+.hero-shape-3 { width: 42px; height: 42px; top: 42%; right: -18px; border-radius: 14px; background: var(--accent); opacity: 0.6; animation-delay: 3s; }
+
+/* Floating stat + client-quote cards, overlapping the photo card corners */
+.hero-stat-float, .hero-quote-float {
+  position: absolute; z-index: 3; background: #fff; border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(13,19,95,0.18); animation: hero-card-bob 6s ease-in-out infinite;
+}
+.hero-stat-float { top: -22px; left: -22px; padding: 16px 20px; text-align: center; min-width: 104px; animation-delay: 0.4s; }
+.hero-stat-float .stat-num { display: block; font-family: var(--font-head); font-weight: 800; font-size: 1.65rem; color: var(--accent-dark); line-height: 1; }
+.hero-stat-float .stat-label { display: block; font-size: 0.63rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin-top: 5px; line-height: 1.35; }
+.hero-quote-float { bottom: -24px; right: -26px; padding: 16px 18px; max-width: 208px; animation-delay: 1.6s; }
+.hero-quote-top { display: flex; align-items: center; gap: 7px; margin-bottom: 8px; }
+.hero-quote-top svg { width: 15px; height: 15px; flex-shrink: 0; }
+.hero-quote-top .stars { color: #f5a623; font-size: 0.7rem; letter-spacing: 1px; }
+.hero-quote-float p { margin: 0 0 6px; font-size: 0.78rem; line-height: 1.4; color: var(--navy); font-style: italic; }
+.hero-quote-float cite { font-size: 0.66rem; color: var(--muted); font-style: normal; font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .soft-shape, .hero-stat-float, .hero-quote-float { animation: none !important; }
+}
+@media (max-width: 900px) {
+  .hero-stat-float { top: -14px; left: -14px; padding: 11px 14px; min-width: 84px; }
+  .hero-stat-float .stat-num { font-size: 1.3rem; }
+  .hero-quote-float { bottom: -16px; right: -12px; max-width: 156px; padding: 11px 13px; }
+  .hero-shape-1 { width: 90px; height: 90px; }
+  .hero-shape-2 { width: 56px; height: 56px; }
+  .hero-shape-3 { display: none; }
+}
+
+/* Full-bleed hero photo — fills the hero section edge to edge (ignoring
+   the section's own padding, since inset positions relative to its
+   padding box). The source image is pre-graded by the client to our exact
+   --navy (#0d135f) with its own diagonal fade baked in, so rather than
+   cropping a strip and layering a CSS fade on top (which would double up
+   and risk cropping into the subject), we let it sit at its native
+   proportions — object-fit:contain, anchored left — against a matching
+   navy background. Any leftover space (there always is some, on the
+   right) is filled by that identical navy, so the seam is invisible. */
+.hero-bleed-photo { position: absolute; inset: 0; z-index: 0; background: var(--navy); }
+.hero-bleed-photo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; display: block; }
+.svc-hero-freeform.is-photo-bleed { position: relative; z-index: 2; justify-content: flex-end; }
+@media (max-width: 900px) {
+  /* Drop the photo entirely on mobile rather than a short cropped strip —
+     tightens the whole hero up considerably. */
+  .hero-bleed-photo { display: none; }
+  .svc-hero-freeform.is-photo-bleed { justify-content: center; }
+}
+
 /* Standalone trust badge above the H1 — replaces the old 3 text pills.
    Reuses the same rotating Google/Trustpilot markup that used to live in
    the visual card's caption strip (now removed, card is just the photo). */
@@ -957,6 +1028,14 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .hero-fold .svc-hero { flex: 1; display: flex; flex-direction: column; padding-top: 40px; padding-bottom: 0; }
 .hero-fold .svc-hero > .wrap { flex: 1; display: flex; align-items: center; }
 .hero-fold .svc-hero > .svc-marquee { flex-shrink: 0; margin-top: 40px; }
+@media (max-width: 900px) {
+  /* No photo to balance against on mobile any more, so the fold no
+     longer needs to stretch to fill the viewport — let it size to its
+     content so there's no dead space above the marquee. */
+  .hero-fold { min-height: auto; }
+  .hero-fold .svc-hero { padding-top: 28px; }
+  .hero-fold .svc-hero > .svc-marquee { margin-top: 28px; }
+}
 /* Marquee sitting inside the dark hero itself — white text, transparent
    background (no separate coloured band), brighter accent separators. */
 .svc-hero > .svc-marquee {
@@ -1077,7 +1156,9 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-dark { background: var(--navy-dark); color: #fff; }
 .svc-light { background: #fff; }
 .svc-cream { background: var(--seafoam-gradient); }
-.home-stats-band { background: var(--seafoam-gradient-soft); }
+/* Full-strength seafoam gradient (green to blue) rather than the 35%-
+   opacity "soft" version, which washed both colours out to near-white. */
+.home-stats-band { background: var(--seafoam-gradient); }
 
 .svc-pad { padding: 84px 0; }
 .svc-pad-sm { padding: 60px 0; }
@@ -1234,8 +1315,8 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-hero-photo-simple {
   position: relative; width: 100%; max-width: 460px; aspect-ratio: 4/3;
 }
-.svc-hero-photo-simple img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+.svc-hero-photo-simple img, .svc-hero-photo-simple iframe {
+  width: 100%; height: 100%; object-fit: cover; display: block; border: 0;
   border-radius: 20px; box-shadow: 0 24px 54px rgba(0,0,0,0.28);
 }
 /* Square variant, for pages that want the photo/badge pairing */
@@ -1244,19 +1325,18 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 /* Corner badge — offset outside the bottom-left corner, echoing the
    staggered/offset squares in the LH Electrical logo mark */
 .svc-hero-photo-badge {
-  position: absolute; left: -10px; bottom: -10px; aspect-ratio: 1/1;
-  /* Fixed/clamped, not percentage-of-image — stays a small accent at any
-     image or viewport size instead of scaling up on large screens. */
-  width: clamp(28px, 8%, 40px);
-  /* --navy-dark mixed with 7% white, so it lifts slightly off the navy hero background */
-  background: #1e246a; border-radius: 22%;
+  position: absolute; left: -30px; bottom: -30px; aspect-ratio: 1/1;
+  /* Fixed/clamped, not percentage-of-image — stays a consistent accent at any
+     image or viewport size instead of scaling up uncontrolled on large screens. */
+  width: clamp(84px, 24%, 120px);
+  background: #fff; border-radius: 22%;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 10px 20px rgba(13,19,95,0.4);
+  box-shadow: 0 16px 32px rgba(13,19,95,0.35);
   z-index: 2;
 }
-.svc-hero-photo-badge svg { width: 46%; height: 46%; color: #fff; }
+.svc-hero-photo-badge svg { width: 46%; height: 46%; }
 @media (max-width: 620px) {
-  .svc-hero-photo-badge { width: 26px; left: -8px; bottom: -8px; }
+  .svc-hero-photo-badge { width: 78px; left: -24px; bottom: -24px; }
 }
 
 /* Google/Trustpilot review lozenges — same pill footprint as .btn-pill-lg,
@@ -1316,6 +1396,7 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
    short. Reusable across every service page. ---------- */
 .svc-included-band { padding: 84px 0; background: var(--gray-bg); }
 .svc-included-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: start; }
+.svc-included-grid > * { min-width: 0; }
 .svc-included-sidebar { display: flex; flex-direction: column; gap: 22px; }
 .svc-info-card, .svc-quote-card { border-radius: 20px; padding: 30px; }
 .svc-info-card { background: #fff; box-shadow: var(--shadow-sm); }
@@ -1327,9 +1408,9 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .svc-info-card-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
 .svc-info-card-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.94rem; font-weight: 600; color: var(--navy-dark); line-height: 1.4; }
 .svc-info-card-list svg { width: 18px; height: 18px; color: var(--accent-dark); flex-shrink: 0; margin-top: 2px; }
-.svc-quote-card { background: var(--seafoam-gradient-text); color: #fff; }
-.svc-quote-card h3 { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; margin: 0 0 10px; }
-.svc-quote-card p { color: rgba(255,255,255,0.9); font-size: 0.92rem; line-height: 1.6; margin: 0 0 22px; }
+.svc-quote-card { background: var(--seafoam-gradient-metallic); color: var(--navy-dark); }
+.svc-quote-card h3 { font-family: var(--font-head); font-weight: 800; font-size: 1.3rem; margin: 0 0 10px; color: var(--navy-dark); }
+.svc-quote-card p { color: rgba(13,19,95,0.82); font-size: 0.92rem; line-height: 1.6; margin: 0 0 22px; }
 
 /* Compact qualifications card — small logo tiles side by side, sits between
    the "Why Choose" and "Get Your Free Quote" sidebar cards. */
@@ -1343,6 +1424,30 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 @media (max-width: 900px) {
   .svc-included-grid { grid-template-columns: 1fr; gap: 36px; }
 }
+
+/* Sidebar "Blog Articles" link list — plain links, not the checklist-with-icon
+   treatment used by .svc-info-card-list elsewhere. */
+.svc-blog-list { list-style: none; margin: 0; padding: 0; max-height: 340px; overflow-y: auto; }
+.svc-blog-list li { border-bottom: 1px solid var(--border); }
+.svc-blog-list li:last-child { border-bottom: none; }
+.svc-blog-list a {
+  display: flex; align-items: flex-start; gap: 9px; padding: 12px 0;
+  color: var(--navy-dark); font-weight: 700; font-size: 0.92rem; line-height: 1.4;
+}
+.svc-blog-list a:hover { color: var(--accent-dark); }
+.svc-blog-list svg {
+  width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; color: var(--accent-dark);
+}
+
+/* ---------- SINGLE-COLUMN PROSE — location pages (and similar text-led
+   pages) that want typeset body copy with occasional highlight cards,
+   rather than the two-column included-band layout. ---------- */
+.svc-prose h2 { font-size: 1.7rem; margin: 52px 0 18px; }
+.svc-prose h2:first-child { margin-top: 0; }
+.svc-prose p { color: var(--muted); font-size: 1.03rem; line-height: 1.75; margin: 0 0 22px; }
+.svc-prose p strong { color: var(--navy-dark); }
+.svc-prose .svc-info-card { margin: 12px 0 34px; }
+.svc-prose .svc-info-card-list li { font-weight: 500; }
 
 /* ---------- HOW IT WORKS ---------- */
 .svc-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; list-style: none; padding: 0; margin: 0; }
@@ -1687,18 +1792,28 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
    service page template.
    ============================================================ */
 
-/* Blog post hero — full-bleed photo behind the nav, white content card on top */
-.blog-hero-photo { position: relative; min-height: 100vh; display: flex; align-items: flex-end; overflow: hidden; }
-.blog-hero-photo-bg { position: absolute; inset: 0; z-index: 0; }
+/* Blog post hero — full-bleed photo behind the nav, white content card on top.
+   ~65vh rather than a full-viewport photo, so the article itself isn't
+   pushed below the fold. */
+.blog-hero-photo { position: relative; min-height: 65vh; display: flex; align-items: flex-end; overflow: visible; }
+.blog-hero-photo-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
 .blog-hero-photo-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .blog-hero-photo-bg::after {
   content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 10%, rgba(0,0,0,0.2) 26%, rgba(0,0,0,0.06) 55%, rgba(0,0,0,0.32) 100%);
+  /* Seafoam colour wash on top of a navy vignette — knocks the photo back
+     so it reads as tinted/brand-coloured rather than a plain dark scrim.
+     Kept fairly dark throughout so the header nav stays legible over it. */
+  background:
+    linear-gradient(100deg, rgba(85,164,123,0.4) 0%, rgba(79,128,195,0.4) 100%),
+    linear-gradient(180deg, rgba(13,19,95,0.9) 0%, rgba(13,19,95,0.62) 25%, rgba(13,19,95,0.42) 50%, rgba(13,19,95,0.7) 100%);
 }
-.blog-hero-photo > .wrap { position: relative; z-index: 1; padding: 160px 24px 64px; width: 100%; }
+.blog-hero-photo > .wrap { position: relative; z-index: 1; padding: 160px 24px 0; width: 100%; }
 .blog-hero-card {
   background: #fff; border-radius: var(--radius); box-shadow: var(--shadow-md);
   padding: 30px 34px; max-width: 560px;
+  /* Shifts down by exactly half its own (variable) height, so the card's
+     centre lands precisely on the hero's bottom edge regardless of content length. */
+  transform: translateY(50%);
 }
 .blog-hero-card .svc-eyebrow { margin-bottom: 0; }
 .blog-hero-title {
@@ -1729,14 +1844,21 @@ body:has(.blog-hero-photo) .site-header.is-scrolled { position: fixed; backgroun
 body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--navy-dark); border-bottom: none; }
 
 @media (max-width: 640px) {
-  .blog-hero-photo { min-height: 80vh; }
-  .blog-hero-photo > .wrap { padding: 130px 20px 44px; }
+  .blog-hero-photo { min-height: 60vh; }
+  .blog-hero-photo > .wrap { padding: 130px 20px 0; }
   .blog-hero-card { padding: 24px 22px; max-width: none; }
   .blog-hero-title { font-size: 1.35rem; }
 }
 
-/* Article body — clean, single column, no sidebar */
-.blog-prose { max-width: 720px; margin: 0 auto; padding: 64px 0; }
+/* Extra clearance below the hero so the overlapping card doesn't crowd the
+   first line of the article. */
+.blog-hero-photo + .svc-included-band { padding-top: 150px; }
+@media (max-width: 640px) {
+  .blog-hero-photo + .svc-included-band { padding-top: 130px; }
+}
+
+/* Article body — now the left column of the same included-band/sidebar
+   layout used on service and location pages, so no standalone max-width. */
 .blog-prose > *:first-child { margin-top: 0; }
 .blog-prose p { font-size: 1.06rem; line-height: 1.8; color: var(--text); margin: 0 0 22px; }
 .blog-prose h2 {
@@ -1903,8 +2025,11 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 .home-stats .stat-num { font-size: 3.1rem; font-weight: 600; color: rgba(13,19,95,0.78); }
 .home-stats .stat-label { font-weight: 600; }
 @media (max-width: 700px) {
-  .home-stats li { flex: 0 0 50%; padding: 0 16px; margin-bottom: 20px; }
-  .home-stats li:nth-child(2n+1) { padding-left: 0; }
+  /* Switch to grid here — flex-basis:50% on these items was wrapping to
+     one per row regardless of available width, so grid replaces it with
+     an explicit, predictable 2-column layout. */
+  .home-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 16px; max-width: 420px; }
+  .home-stats li { padding: 0; }
   .home-stats li + li::before { display: none; }
 }
 

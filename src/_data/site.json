@@ -21,8 +21,8 @@
   "nav": [
     { "label": "Home", "url": "/" },
     { "label": "About", "url": "/about/" },
-    { "label": "Services", "url": "/electrical-services/" },
-    { "label": "Locations", "url": "/local-electrician/" },
+    { "label": "Electrical", "url": "/electrical-services/" },
+    { "label": "Solar / EV", "url": "/solar-panels/" },
     { "label": "Reviews", "url": "/reviews/" },
     { "label": "Contact", "url": "/contact/" }
   ],

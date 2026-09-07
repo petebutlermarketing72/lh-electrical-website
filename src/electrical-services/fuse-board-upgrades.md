@@ -63,242 +63,92 @@ schema:
 
 <section class="svc-hero">
   {% heroCircuit %}
-  <div class="wrap svc-hero-inner">
+  <div class="wrap svc-hero-inner is-image-left">
+    <div class="svc-hero-figure">
+      <div class="svc-hero-photo-simple is-square">
+        <img src="/images/services/fuse-board-upgrades/fuse-board-rcbo-installation-close-up.jpg" alt="Close-up of a modern RCBO-protected consumer unit fitted by LH Electrical">
+        <div class="svc-hero-photo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#svcBadgeGradient)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="svcBadgeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#55a47b"/><stop offset="100%" stop-color="#4f80c3"/></linearGradient></defs>
+            <rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7v4M12 7v4M16 7v4M8 15h.01M12 15h.01M16 15h.01"/>
+          </svg>
+        </div>
+      </div>
+    </div>
     <div>
       <h1 class="svc-display">Fuse Board Upgrades, <span class="tint">Done Properly.</span></h1>
       <p class="svc-hero-intro">Modern, RCBO-protected consumer units fitted to current regulations, for homes and businesses across East Sussex.</p>
       <div class="svc-actions">
-        <a class="btn btn-primary btn-pill-lg" href="{{ site.phoneHref }}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Call {{ site.phone }}
+        <a class="btn btn-review-pill" href="{{ site.reviewLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.reviewRating }} <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+            <span class="review-pill-source">Google Reviews</span>
+          </span>
         </a>
-        <a class="btn btn-ghost-light btn-pill-lg" href="/contact/">Get a Free Quote</a>
-      </div>
-    </div>
-    <div class="svc-hero-figure">
-      <div class="svc-ring">
-        <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Fuse board and consumer unit upgrade by LH Electrical">
-      </div>
-      <div class="svc-stat-chip svc-stat-1">
-        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span>
-        <span class="stat-label">Google Rating</span>
-      </div>
-      <div class="svc-stat-chip svc-stat-2">
-        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span>
-        <span class="stat-label">5-Star Reviews</span>
+        <a class="btn btn-review-pill" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77 5.82 21 7 14.14l-5-4.87 7.1-1.01L12 2z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.trustpilotRating }} <span class="stars"><span class="star-full">&#9733;&#9733;&#9733;&#9733;</span><span class="star-half">&#9733;</span></span></span>
+            <span class="review-pill-source">Trustpilot</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="svc-marquee" aria-hidden="true">
-  <div class="svc-marquee-track">
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">Part P Compliant</span>
-      <span class="svc-marquee-item">Fixed Written Quotes</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">Same-Day Turnaround</span>
-      <span class="svc-marquee-item">Clean &amp; Tidy Finish</span>
-    </div>
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">Part P Compliant</span>
-      <span class="svc-marquee-item">Fixed Written Quotes</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">Same-Day Turnaround</span>
-      <span class="svc-marquee-item">Clean &amp; Tidy Finish</span>
-    </div>
-  </div>
-</div>
-
-<section class="svc-light svc-pad">
-  <div class="wrap svc-center">
-    <h2 class="svc-display svc-h2">Upgrade Pricing, <span class="ghost">Up Front</span></h2>
-    <p class="svc-lede">Guide prices so you can budget before you call. Every upgrade gets a fixed written quote after a free survey.</p>
-    <ul class="svc-price-grid">
-      <li class="svc-price-card is-featured reveal reveal-delay-1">
-        <span class="svc-price-flag">Most Common</span>
-        <h3>Fuse Board / Consumer Unit Upgrade</h3>
-        <span class="svc-price">&pound;450&ndash;&pound;850</span>
-        <p>Modern, RCD-protected consumer unit fitted to current safety standards.</p>
-        <a class="btn btn-primary btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>EV Charger Installation</h3>
-        <span class="svc-price">&pound;750&ndash;&pound;1,200</span>
-        <p>Includes unit and standard installation &ndash; sometimes needs a board upgrade first.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/electric-vehicle-chargers/">Find out more</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Additional Socket or Light Point</h3>
-        <span class="svc-price">&pound;90&ndash;&pound;180</span>
-        <p>Per point, depending on cable routing and access.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-1">
-        <h3>Smoke &amp; Heat Detector</h3>
-        <span class="svc-price">&pound;60&ndash;&pound;120</span>
-        <p>Per unit, compliant with current fire safety standards.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Earthing &amp; Bonding Upgrade</h3>
-        <span class="svc-price">POA</span>
-        <p>Often required alongside a board upgrade on older installations.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Full House Rewire</h3>
-        <span class="svc-price">&pound;3,500&ndash;&pound;9,500+</span>
-        <p>If the board condition points to wider issues &ndash; see our <a href="/electrical-services/house-rewire/">house rewire guide</a>.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/electrical-services/house-rewire/">Find out more</a>
-      </li>
-    </ul>
-    <p class="svc-price-foot">Guide prices for budgeting only &ndash; your final cost is confirmed in a fixed written quote after a free survey. No hidden extras.</p>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad svc-offer-band">
+<section class="svc-included-band">
   <div class="wrap">
-    <div class="svc-offer-head reveal">
-      <h2 class="svc-display svc-h2">Signs Your Board <span class="tint">Needs Attention</span></h2>
-      <p class="svc-offer-lede">An old fuse board is one of the more common reasons we get called out &ndash; here's what to look for.</p>
-    </div>
-  </div>
-
-  <div class="svc-carousel svc-carousel-full reveal" data-svc-carousel role="group" aria-label="Recent fuse board upgrade work">
-    <div class="svc-carousel-viewport">
-      <div class="svc-carousel-track">
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Consumer unit upgrade by LH Electrical" draggable="false">
-          <figcaption>Consumer Unit Upgrade</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Kitchen circuit protection upgrade by LH Electrical" draggable="false">
-          <figcaption>Circuit Protection</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-bathroom-lighting.jpg" alt="RCD-protected circuits fitted by LH Electrical" draggable="false">
-          <figcaption>RCD Protection</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Board testing and certification by LH Electrical" draggable="false">
-          <figcaption>Testing &amp; Certification</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="svc-carousel-controls">
-      <button type="button" class="svc-carousel-btn is-prev" aria-label="Previous image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="svc-carousel-dots"></div>
-      <button type="button" class="svc-carousel-btn is-next" aria-label="Next image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <p class="svc-offer-kicker">Time for an upgrade if you have</p>
-    <ul class="svc-offer-list reveal">
-        <li><span><span class="title">Rewireable Fuses</span><span class="note">Instead of modern circuit breakers</span></span></li>
-        <li><span><span class="title">No RCD Or RCBO Protection</span><span class="note">Leaves circuits without modern safety cut-off</span></span></li>
-        <li><span><span class="title">Frequent Tripping</span><span class="note">Especially with multiple appliances running</span></span></li>
-        <li><span><span class="title">An Unsatisfactory EICR</span><span class="note">Your report has flagged the board directly</span></span></li>
-        <li><span><span class="title">A Full Board</span><span class="note">Adding an EV charger, extension or outbuilding circuit</span></span></li>
-        <li><span><span class="title">Split-Load &amp; Dual RCD Boards</span><span class="note">Individual RCBO protection per circuit where appropriate</span></span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="svc-eco-section">
-  <div class="wrap">
-    <div class="svc-eco reveal">
-      <div class="svc-eco-body">
-        <span class="svc-eco-tag">Same-Day Turnaround</span>
-        <h2 class="svc-display svc-eco-title">Old Board Out, <span>New Board In.</span></h2>
-        <p>Most upgrades are completed in a day, with a planned power cut during the work. We'll talk you through what's being replaced, fit a board with individual RCBO protection per circuit where appropriate, and provide the certification you need once it's done.</p>
-        <ul class="svc-eco-list">
-          <li>Planned power-off window</li>
-          <li>Individual RCBO protection per circuit</li>
-          <li>Full testing &amp; certification</li>
-          <li>Tidy, same-day completion</li>
+    <div class="svc-included-grid">
+      <div>
+        <h2 class="svc-display svc-h2">What&rsquo;s Included</h2>
+        <p class="svc-lede">Whatever condition your current board's in, we'll fit a modern, RCBO-protected consumer unit and get it certified the same day.</p>
+        <ul class="svc-check-grid">
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Modern Consumer Unit Fitted</span><span class="note">RCBO-protected board to current regulations</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Full Circuit Testing</span><span class="note">Every circuit tested before and after</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Building Control Notification</span><span class="note">Self-certified and registered on your behalf</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Old Board Removed &amp; Disposed</span><span class="note">Safely removed and recycled</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Same-Day Completion</span><span class="note">Most upgrades finished in a single day</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Certification Provided</span><span class="note">Full paperwork on completion</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Earthing &amp; Bonding Checked</span><span class="note">Upgraded where required on older installations</span></div>
+          </li>
         </ul>
-        <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Talk to us about your board</a>
-      </div>
-      <div class="svc-eco-figure">
-        <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="LH Electrical fitting a new consumer unit">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="svc-light svc-pad svc-about-band">
-  <div class="wrap">
-    <div class="svc-center svc-about-head reveal">
-      <h2 class="svc-display svc-h2">Qualified, Local <span class="ghost">Electricians</span></h2>
-      <p class="svc-lede">Upgrading to a modern consumer unit improves safety, reduces nuisance trips, and is often required before other work can be added safely.</p>
-    </div>
-    <div class="svc-about">
-      <div class="svc-about-figure reveal">
-        <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="LH Electrical electrician fitting a consumer unit">
-        <div class="svc-float-card">
-          <span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span>
-          <span class="stat-label">Years of<br>Experience</span>
+        <div class="svc-photo-row">
+          <img src="/images/services/fuse-board-upgrades/fuse-board-upgrade-in-lewes.jpg" alt="Fuse board upgrade carried out by LH Electrical in Lewes">
+          <img src="/images/services/fuse-board-upgrades/fuse-board-consumer-unit-replacement.jpg" alt="LH Electrical fitting a new consumer unit during a fuse board upgrade">
         </div>
       </div>
-      <div class="reveal reveal-delay-2">
-        <p>Our NAPIT-registered electricians carry out every upgrade with precision and professionalism, and provide full certification once the job is signed off.</p>
-        <ul class="svc-ticks">
-          <li>Fully qualified, NAPIT-registered</li>
-          <li>Meets Part P building regs</li>
-          <li>Prompt, polite, professional</li>
-          <li>Clean work, minimal disruption</li>
-          <li>Transparent pricing, no extras</li>
-          <li>We handle building control</li>
-        </ul>
+      <div class="svc-included-sidebar">
+        {% svcWhyChooseCard %}
+        {% svcQualificationsCard %}
+        {% svcQuoteCard "fuse board" %}
       </div>
     </div>
   </div>
 </section>
 
-<section class="svc-cream svc-pad-sm">
-  <div class="wrap svc-center">
-    <p class="svc-trust-intro">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
-    <div class="svc-logos">
-      <span class="svc-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/recc-logo.png" alt="Renewable Energy Consumer Code member"></span>
-    </div>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad">
-  <div class="wrap">
-    <div class="svc-center">
-      <h2 class="svc-display svc-h2">What Our <span class="tint">Customers Say</span></h2>
-      <p class="svc-rating-line"><strong>Excellent</strong> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Based on {{ site.reviewCount }} Google reviews</p>
-    </div>
-    <div class="svc-review-grid">
-      <blockquote class="svc-review reveal reveal-delay-1">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Luke and his team are efficient, friendly and businesslike.</p>
-        <div class="svc-review-by"><span class="svc-avatar">C</span><cite>Colin Wibley</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-2">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Great service, prompt, keeps to his timetable, the work is excellent and he left my house clean and tidy. All for a very reasonable fee. I would always go to LH Electrical first and wholeheartedly recommend them.</p>
-        <div class="svc-review-by"><span class="svc-avatar">J</span><cite>Jean Gould</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-3">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Brilliant firm to deal with. Always answer your emails promptly. Come when they say. Always polite and friendly. I could recommend them to anybody.</p>
-        <div class="svc-review-by"><span class="svc-avatar">E</span><cite>Miss E Tattam</cite></div>
-      </blockquote>
-    </div>
-  </div>
-</section>
+{% svcReviews %}
 
 <section class="svc-light svc-pad">
   <div class="wrap">

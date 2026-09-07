@@ -63,242 +63,88 @@ schema:
 
 <section class="svc-hero">
   {% heroCircuit %}
-  <div class="wrap svc-hero-inner">
+  <div class="wrap svc-hero-inner is-image-left">
+    <div class="svc-hero-figure">
+      <div class="svc-hero-photo-simple is-square">
+        <img src="/images/services/landlords/landlord-eicr-testing-checklist.jpg" alt="LH Electrical carrying out an EICR test and completing a landlord compliance checklist">
+        <div class="svc-hero-photo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#svcBadgeGradient)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="svcBadgeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#55a47b"/><stop offset="100%" stop-color="#4f80c3"/></linearGradient></defs>
+            <path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9.5 14.5l1.8 1.8L15 12.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
     <div>
       <h1 class="svc-display">Landlord Compliance, <span class="tint">Done Properly.</span></h1>
       <p class="svc-hero-intro">EICRs and remedial work that keeps you compliant and your tenants safe, across single properties and portfolios in East Sussex.</p>
       <div class="svc-actions">
-        <a class="btn btn-primary btn-pill-lg" href="{{ site.phoneHref }}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Call {{ site.phone }}
+        <a class="btn btn-review-pill" href="{{ site.reviewLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.reviewRating }} <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></span>
+            <span class="review-pill-source">Google Reviews</span>
+          </span>
         </a>
-        <a class="btn btn-ghost-light btn-pill-lg" href="/contact/">Get a Free Quote</a>
-      </div>
-    </div>
-    <div class="svc-hero-figure">
-      <div class="svc-ring">
-        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Landlord electrical compliance work carried out by LH Electrical">
-      </div>
-      <div class="svc-stat-chip svc-stat-1">
-        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span>
-        <span class="stat-label">Google Rating</span>
-      </div>
-      <div class="svc-stat-chip svc-stat-2">
-        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span>
-        <span class="stat-label">5-Star Reviews</span>
+        <a class="btn btn-review-pill" href="{{ site.trustpilotLink }}" target="_blank" rel="noopener">
+          <span class="review-pill-icon"><svg viewBox="0 0 24 24" fill="#00b67a"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.86L12 17.77 5.82 21 7 14.14l-5-4.87 7.1-1.01L12 2z"/></svg></span>
+          <span class="review-pill-text">
+            <span class="review-pill-rating">{{ site.trustpilotRating }} <span class="stars"><span class="star-full">&#9733;&#9733;&#9733;&#9733;</span><span class="star-half">&#9733;</span></span></span>
+            <span class="review-pill-source">Trustpilot</span>
+          </span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="svc-marquee" aria-hidden="true">
-  <div class="svc-marquee-track">
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">Part P Compliant</span>
-      <span class="svc-marquee-item">Fast Turnaround Reports</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">No Hidden Costs</span>
-      <span class="svc-marquee-item">Portfolio Coordination</span>
-    </div>
-    <div class="svc-marquee-group">
-      <span class="svc-marquee-item">NAPIT Registered</span>
-      <span class="svc-marquee-item">Part P Compliant</span>
-      <span class="svc-marquee-item">Fast Turnaround Reports</span>
-      <span class="svc-marquee-item">15+ Years&rsquo; Experience</span>
-      <span class="svc-marquee-item">No Hidden Costs</span>
-      <span class="svc-marquee-item">Portfolio Coordination</span>
-    </div>
-  </div>
-</div>
-
-<section class="svc-light svc-pad">
-  <div class="wrap svc-center">
-    <h2 class="svc-display svc-h2">Landlord Pricing, <span class="ghost">Up Front</span></h2>
-    <p class="svc-lede">Every landlord job is different, so pricing is confirmed with a fixed quote after we know the property or portfolio size.</p>
-    <ul class="svc-price-grid">
-      <li class="svc-price-card is-featured reveal reveal-delay-1">
-        <span class="svc-price-flag">Most Common</span>
-        <h3>Landlord EICR</h3>
-        <span class="svc-price">POA</span>
-        <p>Priced on property size and circuit count &ndash; a report you can hand straight to your agent.</p>
-        <a class="btn btn-primary btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Remedial Work (C1/C2)</h3>
-        <span class="svc-price">POA</span>
-        <p>Quoted directly from your report and completed inside the 28-day window.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Consumer Unit Upgrade</h3>
-        <span class="svc-price">&pound;450&ndash;&pound;850</span>
-        <p>Modern, RCBO-protected board &ndash; a common remedial requirement.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/electrical-services/fuse-board-upgrades/">Find out more</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-1">
-        <h3>Rewire Between Tenancies</h3>
-        <span class="svc-price">POA</span>
-        <p>Timed to fit a void period &ndash; see our <a href="/electrical-services/house-rewire/">house rewire guide</a>.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/electrical-services/house-rewire/">Find out more</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-2">
-        <h3>Portfolio Inspection Programme</h3>
-        <span class="svc-price">POA</span>
-        <p>Coordinated inspections across multiple properties, scheduled together.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-      <li class="svc-price-card reveal reveal-delay-3">
-        <h3>Fast-Turnaround Report</h3>
-        <span class="svc-price">POA</span>
-        <p>Priority reporting for agents against a tight tenancy deadline.</p>
-        <a class="btn btn-outline-dark btn-pill-lg" href="/contact/">Get a quote</a>
-      </li>
-    </ul>
-    <p class="svc-price-foot">All landlord work is priced with a fixed written quote before booking. No hidden extras.</p>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad svc-offer-band">
+<section class="svc-included-band">
   <div class="wrap">
-    <div class="svc-offer-head reveal">
-      <h2 class="svc-display svc-h2">Landlord Compliance <span class="tint">We Cover</span></h2>
-      <p class="svc-offer-lede">Since 2020, private landlords in England have been legally required to hold a current EICR &ndash; every five years, or at change of tenancy.</p>
-    </div>
-  </div>
-
-  <div class="svc-carousel svc-carousel-full reveal" data-svc-carousel role="group" aria-label="Recent landlord compliance work">
-    <div class="svc-carousel-viewport">
-      <div class="svc-carousel-track">
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="Landlord EICR inspection by LH Electrical" draggable="false">
-          <figcaption>Landlord EICR</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-landing-lighting.jpg" alt="Remedial electrical work by LH Electrical" draggable="false">
-          <figcaption>Remedial Work</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Rewire between tenancies by LH Electrical" draggable="false">
-          <figcaption>Rewire Between Tenancies</figcaption>
-        </figure>
-        <figure class="svc-slide">
-          <img src="/images/services/domestic/domestic-bathroom-lighting.jpg" alt="Consumer unit upgrade for a rental property by LH Electrical" draggable="false">
-          <figcaption>Consumer Unit Upgrade</figcaption>
-        </figure>
-      </div>
-    </div>
-    <div class="svc-carousel-controls">
-      <button type="button" class="svc-carousel-btn is-prev" aria-label="Previous image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="svc-carousel-dots"></div>
-      <button type="button" class="svc-carousel-btn is-next" aria-label="Next image">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <p class="svc-offer-kicker">Landlord services include</p>
-    <ul class="svc-offer-list reveal">
-        <li><span><span class="title">Landlord EICRs</span><span class="note">For single properties and full portfolios</span></span></li>
-        <li><span><span class="title">C1/C2 Remedial Work</span><span class="note">Completed inside the legal 28-day window</span></span></li>
-        <li><span><span class="title">Consumer Unit &amp; Fuse Board Upgrades</span><span class="note">A common remedial requirement</span></span></li>
-        <li><span><span class="title">Rewires Between Tenancies</span><span class="note">Timed to fit around void periods</span></span></li>
-        <li><span><span class="title">Coordinated Multi-Property Inspections</span><span class="note">Scheduled together for efficiency</span></span></li>
-        <li><span><span class="title">Fast-Turnaround Reports</span><span class="note">For letting agents against tight deadlines</span></span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="svc-eco-section">
-  <div class="wrap">
-    <div class="svc-eco reveal">
-      <div class="svc-eco-body">
-        <span class="svc-eco-tag">Portfolio Landlords</span>
-        <h2 class="svc-display svc-eco-title">Short Void Periods, <span>Zero Chasing.</span></h2>
-        <p>For portfolio landlords and letting agents, timing matters. We coordinate inspections across multiple properties to keep access visits efficient, and prioritise remedial work so void periods between tenancies stay as short as possible.</p>
-        <ul class="svc-eco-list">
-          <li>Coordinated multi-property visits</li>
-          <li>Priority remedial scheduling</li>
-          <li>Reports sent straight to your agent</li>
-          <li>Single point of contact</li>
+    <div class="svc-included-grid">
+      <div>
+        <h2 class="svc-display svc-h2">What&rsquo;s Included</h2>
+        <p class="svc-lede">From a single EICR to a coordinated portfolio programme, we keep landlords compliant and tenants safe.</p>
+        <ul class="svc-check-grid">
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Landlord EICRs</span><span class="note">For single properties and full portfolios</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">C1/C2 Remedial Work</span><span class="note">Completed inside the legal 28-day window</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Consumer Unit &amp; Fuse Board Upgrades</span><span class="note">A common remedial requirement</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Rewires Between Tenancies</span><span class="note">Timed to fit around void periods</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Coordinated Multi-Property Inspections</span><span class="note">Scheduled together for efficiency</span></div>
+          </li>
+          <li class="svc-check-item">
+            <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
+            <div><span class="title">Fast-Turnaround Reports</span><span class="note">For letting agents against tight deadlines</span></div>
+          </li>
         </ul>
-        <a class="btn btn-on-accent btn-pill-lg" href="/contact/">Talk to us about your portfolio</a>
-      </div>
-      <div class="svc-eco-figure">
-        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="LH Electrical carrying out landlord compliance work">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="svc-light svc-pad svc-about-band">
-  <div class="wrap">
-    <div class="svc-center svc-about-head reveal">
-      <h2 class="svc-display svc-h2">Reports Landlords <span class="ghost">Trust</span></h2>
-      <p class="svc-lede">The more common frustration we hear from landlords is patchy quality of reports from other contractors. We provide an EICR that's actually useful.</p>
-    </div>
-    <div class="svc-about">
-      <div class="svc-about-figure reveal">
-        <img src="/images/services/domestic/domestic-lounge-lighting.jpg" alt="LH Electrical electrician carrying out a landlord EICR">
-        <div class="svc-float-card">
-          <span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span>
-          <span class="stat-label">Years of<br>Experience</span>
+        <div class="svc-photo-row">
+          <img src="/images/services/landlords/landlord-rental-property-kitchen.jpg" alt="Rental property kitchen with electrical work completed by LH Electrical">
+          <img src="/images/services/landlords/landlord-consumer-unit-inspection.jpg" alt="Close-up of a consumer unit inspected as part of a landlord EICR by LH Electrical">
         </div>
       </div>
-      <div class="reveal reveal-delay-2">
-        <p>A clear classification, a written report you can hand straight to your letting agent, and a fixed quote for any remedial work needed &ndash; no jargon, no surprises.</p>
-        <ul class="svc-ticks">
-          <li>Fully qualified, NAPIT-registered</li>
-          <li>Meets Part P building regs</li>
-          <li>Clear, coded reports</li>
-          <li>Fixed quotes for remedial work</li>
-          <li>Fast turnaround for agents</li>
-          <li>Portfolio &amp; multi-site experience</li>
-        </ul>
+      <div class="svc-included-sidebar">
+        {% svcWhyChooseCard %}
+        {% svcQualificationsCard %}
+        {% svcQuoteCard "landlord compliance" %}
       </div>
     </div>
   </div>
 </section>
 
-<section class="svc-cream svc-pad-sm">
-  <div class="wrap svc-center">
-    <p class="svc-trust-intro">Fully insured, fully qualified, and part of government-recognised schemes for compliance of our work and business practices.</p>
-    <div class="svc-logos">
-      <span class="svc-logo-tile"><img src="/images/logos/napit-logo.png" alt="NAPIT registered electrical contractor"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/mcs-logo.png" alt="MCS certified installer"></span>
-      <span class="svc-logo-tile"><img src="/images/logos/recc-logo.png" alt="Renewable Energy Consumer Code member"></span>
-    </div>
-  </div>
-</section>
-
-<section class="svc-dark svc-pad">
-  <div class="wrap">
-    <div class="svc-center">
-      <h2 class="svc-display svc-h2">What Our <span class="tint">Customers Say</span></h2>
-      <p class="svc-rating-line"><strong>Excellent</strong> <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Based on {{ site.reviewCount }} Google reviews</p>
-    </div>
-    <div class="svc-review-grid">
-      <blockquote class="svc-review reveal reveal-delay-1">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Luke and his team are efficient, friendly and businesslike.</p>
-        <div class="svc-review-by"><span class="svc-avatar">C</span><cite>Colin Wibley</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-2">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Great service, prompt, keeps to his timetable, the work is excellent and he left my house clean and tidy. All for a very reasonable fee. I would always go to LH Electrical first and wholeheartedly recommend them.</p>
-        <div class="svc-review-by"><span class="svc-avatar">J</span><cite>Jean Gould</cite></div>
-      </blockquote>
-      <blockquote class="svc-review reveal reveal-delay-3">
-        <div class="svc-review-top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
-        <p>Brilliant firm to deal with. Always answer your emails promptly. Come when they say. Always polite and friendly. I could recommend them to anybody.</p>
-        <div class="svc-review-by"><span class="svc-avatar">E</span><cite>Miss E Tattam</cite></div>
-      </blockquote>
-    </div>
-  </div>
-</section>
+{% svcReviews %}
 
 <section class="svc-light svc-pad">
   <div class="wrap">

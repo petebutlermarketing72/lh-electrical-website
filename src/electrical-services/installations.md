@@ -66,9 +66,12 @@ schema:
   <div class="wrap svc-hero-inner is-image-left">
     <div class="svc-hero-figure">
       <div class="svc-hero-photo-simple is-square">
-        <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Electrical installation work carried out by LH Electrical in a Lewes home">
+        <img src="/images/services/installations/installations-kitchen-lighting-sockets.jpg" alt="Electrical installation work carried out by LH Electrical in a Lewes home">
         <div class="svc-hero-photo-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#svcBadgeGradient)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="svcBadgeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#55a47b"/><stop offset="100%" stop-color="#4f80c3"/></linearGradient></defs>
+            <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>
+          </svg>
         </div>
       </div>
     </div>
@@ -131,6 +134,10 @@ schema:
             <div><span class="title">Testing, Certification &amp; Notification</span><span class="note">Building control handled on your behalf</span></div>
           </li>
         </ul>
+        <div class="svc-photo-row">
+          <img src="/images/services/installations/installations-bathroom-led-mirror.jpg" alt="Bathroom renovation electrics and LED mirror installed by LH Electrical">
+          <img src="/images/services/installations/installations-chandelier-stairwell.jpg" alt="Feature lighting installation in a stairwell by LH Electrical">
+        </div>
       </div>
       <div class="svc-included-sidebar">
         {% svcWhyChooseCard %}
@@ -143,9 +150,7 @@ schema:
 
 {% svcReviews %}
 
-{% svcLocation "Installations Across East Sussex", "We take on new build, renovation and commercial installation projects for homeowners, developers, letting agents and businesses throughout Lewes and East Sussex." %}
-
-<section class="svc-cream svc-pad">
+<section class="svc-light svc-pad">
   <div class="wrap">
     <div class="svc-center">
       <h2 class="svc-display svc-h2">Common <span class="ghost">Questions</span></h2>
