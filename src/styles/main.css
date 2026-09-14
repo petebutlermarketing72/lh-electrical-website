@@ -93,7 +93,7 @@ main section p { max-width: 720px; }
 .site-header { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 20; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
 .site-header.is-scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.35); }
 .topbar { background: var(--navy-tint); font-size: 0.8rem; }
-.topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 7px 24px; color: rgba(255,255,255,0.65); }
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 7px 24px; color: rgba(255,255,255,0.65); }
 .topbar-inner a { color: rgba(255,255,255,0.75); display: inline-flex; align-items: center; gap: 6px; transition: color 0.16s ease; }
 .topbar-inner a:hover { color: var(--accent); text-decoration: none; }
 .topbar-right { display: flex; align-items: center; gap: 10px; }
@@ -108,13 +108,21 @@ main section p { max-width: 720px; }
 .topbar-social a:hover { color: var(--accent); background: rgba(255,255,255,0.1); }
 .topbar-social svg { display: block; }
 
-/* Strapline + credential lozenges (top left) */
+/* Strapline + certification logos (top left) */
 .topbar-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .topbar-brand {
   white-space: nowrap; color: #fff;
   font-family: var(--font-head); font-weight: 800; text-transform: uppercase;
   font-size: 0.74rem; letter-spacing: 0.1em;
 }
+.topbar-cert-logos { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.topbar-cert-logos img { height: 20px; width: auto; display: block; }
+
+/* Trustpilot rating badge, centred in the topbar */
+.topbar-center { display: inline-flex; align-items: center; gap: 10px; }
+.topbar-center img { display: block; }
+.topbar-center img:first-child { height: 16px; width: auto; }
+.topbar-center img:last-child { height: 15px; width: auto; }
 
 /* One lozenge visible at a time, cycling on a loop. Grid-stacking keeps
    the container as wide as the widest badge so nothing shifts around. */
@@ -629,13 +637,21 @@ ul.checklist li::before { content: "\2713"; position: absolute; left: 0; color: 
 .footer-grid h4 { font-size: 0.92rem; letter-spacing: 0.03em; text-transform: uppercase; }
 .footer-grid a { color: #dbe2e8; font-family: var(--font-head); font-weight: 600; font-size: 0.92rem; }
 .footer-grid a:hover { color: var(--accent); }
+.footer-links a { font-weight: 500; }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
 .footer-grid li { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; line-height: 1.4; }
 .footer-icon { color: var(--accent); flex-shrink: 0; }
-.footer-contact { margin-bottom: 26px; }
+.footer-logo { height: 42px; width: auto; display: block; margin-bottom: 18px; }
+.footer-grid .footer-contact { margin-bottom: 30px; }
 .footer-contact li { color: #c6d0da; font-size: 0.92rem; }
 .footer-credentials-head { margin-top: 0; }
 .credentials-list { font-size: 0.9rem; color: #9fb0c0; }
+.footer-cert-logos { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.footer-cert-logos img {
+  height: 48px; width: 48px; object-fit: cover; border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3); display: block; transition: transform 0.2s ease;
+}
+.footer-cert-logos a:hover img { transform: translateY(-2px); }
 .footer-bottom { border-top: 1px solid #23285f; margin-top: 28px; padding-top: 18px; font-size: 0.85rem; line-height: 1.7; }
 .footer-bottom a { color: #fff; text-decoration: underline; }
 .footer-bottom a:hover { color: var(--accent); }
@@ -677,14 +693,15 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
   .nav-toggle { display: flex; }
   .main-nav { display: none; }
   .topbar-inner { font-size: 0.75rem; }
-  .topbar-badges { display: none; }
+  /* Trustpilot lockup is the widest piece — drop it first, cert logos stay */
+  .topbar-badges, .topbar-center, .topbar-center-divider { display: none; }
 }
-/* Mobile: strapline only, centred — email, hours and socials drop away */
+/* Mobile: just the cert logos, centred — email, hours and socials drop
+   away to keep the bar to one tidy line */
 @media (max-width: 700px) {
   .topbar-right { display: none; }
-  .topbar-inner { justify-content: center; padding: 8px 16px; }
-  .topbar-left { justify-content: center; gap: 0; }
-  .topbar-brand { white-space: normal; text-align: center; letter-spacing: 0.08em; }
+  .topbar-inner { display: flex; justify-content: center; padding: 8px 16px; }
+  .topbar-left { justify-content: center; }
 }
 @media (max-width: 480px) {
   .topbar-right span:not(.topbar-divider) { display: none; }
@@ -2046,9 +2063,20 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 .about-timeline-item p { color: var(--muted); font-size: 0.86rem; line-height: 1.55; margin: 0; max-width: 220px; }
 
 /* Trust cards (3-up) */
-.trust-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 44px; }
+.trust-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 100px; }
 .trust-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 34px 28px; text-align: center; box-shadow: var(--shadow-sm); }
-.trust-card-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--seafoam-gradient); color: var(--navy-dark); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+/* Dark tile, not the seafoam gradient — same treatment as the logo tiles
+   elsewhere on the site, needed because these logo files are white/transparent
+   (designed to sit on a dark background) and would vanish on pale mint.
+   Negative top margin lifts it so it straddles the card's top edge — half
+   floating above the card, half sitting inside it. */
+.trust-card-icon {
+  width: 100px; height: 100px; border-radius: 22px; background: var(--navy-dark);
+  display: flex; align-items: center; justify-content: center;
+  margin: -84px auto 22px; padding: 16px; box-shadow: var(--shadow-md);
+  position: relative; z-index: 1;
+}
+.trust-card-icon img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
 .trust-card h3 { font-family: var(--font-head); font-weight: 700; color: var(--navy); font-size: 1.05rem; margin: 0 0 10px; }
 .trust-card p { color: var(--muted); font-size: 0.92rem; line-height: 1.6; margin: 0 0 16px; }
 .trust-card a { font-weight: 700; color: var(--accent-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -2138,6 +2166,49 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 
 @media (min-width: 700px) {
   .showcase-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+}
+
+/* Renewables promo panels — deliberately a different, more graphical
+   treatment to the plain white service cards above: full-bleed photo,
+   gradient-scrim text, hover zoom. First pass — to be refined further. */
+.promo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 28px; }
+.promo-panel {
+  position: relative; display: block; min-height: 380px; border-radius: 20px;
+  overflow: hidden; box-shadow: var(--shadow-md); text-decoration: none;
+}
+.promo-panel:hover, .promo-panel:focus { text-decoration: none; }
+.promo-panel img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  display: block; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.promo-panel::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,19,95,0) 28%, rgba(13,19,95,0.82) 100%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .promo-panel:hover img { transform: scale(1.07); }
+}
+.promo-panel-body {
+  position: relative; z-index: 1; height: 100%;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 32px; min-height: 380px;
+}
+.promo-panel-icon {
+  width: 52px; height: 52px; border-radius: 14px; background: var(--seafoam-gradient);
+  color: var(--navy-dark); display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+}
+.promo-panel-icon svg { width: 24px; height: 24px; }
+.promo-panel-body h3 { color: #fff; font-family: var(--font-head); font-size: 1.5rem; margin: 0 0 8px; }
+.promo-panel-body p { color: rgba(255,255,255,0.85); margin: 0 0 18px; font-size: 0.95rem; }
+.promo-panel-cta {
+  display: inline-flex; align-items: center; gap: 8px; color: #fff;
+  font-family: var(--font-head); font-weight: 700; font-size: 0.9rem;
+}
+.promo-panel-cta svg { transition: transform 0.2s ease; }
+.promo-panel:hover .promo-panel-cta svg { transform: translateX(3px); }
+@media (max-width: 800px) {
+  .promo-grid { grid-template-columns: 1fr; }
+  .promo-panel, .promo-panel-body { min-height: 300px; }
 }
 
 @media (max-width: 900px) {

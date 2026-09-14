@@ -9,7 +9,7 @@
   {% if noindex %}
   <meta name="robots" content="noindex, nofollow">
   {% endif %}
-  <link rel="icon" href="https://lhelectrical.co.uk/wp-content/uploads/2025/04/cropped-LH-Electrical-Favicon-270x270.png">
+  <link rel="icon" href="/images/brand/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -29,9 +29,15 @@
     <div class="topbar">
       <div class="wrap topbar-inner">
         <div class="topbar-left">
-          <span class="topbar-brand">{{ site.strapline }}</span>
-          <span class="topbar-badges">
-            {% for b in site.topbarBadges %}<span class="topbar-badge">{{ b }}</span>{% endfor %}
+          <span class="topbar-cert-logos">
+            <img src="/images/logos/napit-logo.png" alt="NAPIT registered">
+            <img src="/images/logos/recc-logo.png" alt="RECC certified">
+            <img src="/images/logos/mcs-logo.png" alt="MCS certified">
+          </span>
+          <span class="topbar-divider topbar-center-divider"></span>
+          <span class="topbar-center">
+            <img src="/images/logos/trustpilot-stars-white.png" alt="Trustpilot: Excellent, rated {{ site.trustpilotRating }} out of 5">
+            <img src="/images/logos/trustpilot-wordmark-white.png" alt="Trustpilot">
           </span>
         </div>
         <div class="topbar-right">
@@ -60,7 +66,7 @@
       </div>
     </div>
     <div class="wrap header-inner">
-      <a class="logo" href="/"><img src="https://lhelectrical.co.uk/wp-content/uploads/2025/03/LH-Electrical-Logo-white.png" alt="{{ site.companyName }}" height="40" style="display:block"></a>
+      <a class="logo" href="/"><img src="/images/brand/lh-electrical-logo-white.png" alt="{{ site.companyName }}" height="40" style="display:block"></a>
       <nav class="main-nav" id="main-nav">
         <ul>
           {% for item in site.nav %}
@@ -132,24 +138,24 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div>
-        <h3>{{ site.companyName }}</h3>
+        <img class="footer-logo" src="/images/brand/lh-electrical-logo-white.png" alt="{{ site.companyName }}">
         <ul class="footer-contact">
           <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="{{ site.phoneHref }}">{{ site.phone }}</a></li>
           <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>{{ site.hours }}</li>
         </ul>
         <h4 class="footer-credentials-head">Credentials</h4>
-        <ul class="credentials-list">
-          {% for c in site.credentials %}
-          <li>{{ c }}</li>
-          {% endfor %}
-        </ul>
+        <div class="footer-cert-logos">
+          <a href="https://www.recc.org.uk/scheme/members/00078267-lh-electrical-south-east-limited" target="_blank" rel="noopener nofollow"><img src="/images/logos/recc-badge.jpg" alt="Renewable Energy Consumer Code member"></a>
+          <a href="https://search.napit.org.uk/member/23182/lh-electrical-south-east-limited" target="_blank" rel="noopener nofollow"><img src="/images/logos/napit-badge.jpg" alt="NAPIT registered electrical contractor"></a>
+          <a href="https://mcscertified.com/" target="_blank" rel="noopener nofollow"><img src="/images/logos/mcs-badge.jpg" alt="MCS certified installer"></a>
+        </div>
       </div>
       <div>
         <h4>Services</h4>
         <ul class="footer-links">
           {% for s in site.services %}
-          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ s.url }}">{{ s.label }}</a></li>
+          <li><a href="{{ s.url }}">{{ s.label }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -157,7 +163,7 @@
         <h4>Locations</h4>
         <ul class="footer-links">
           {% for l in site.locations %}
-          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ l.url }}">{{ l.label }}</a></li>
+          <li><a href="{{ l.url }}">{{ l.label }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -165,9 +171,9 @@
         <h4>Site</h4>
         <ul class="footer-links">
           {% for item in site.nav %}
-          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="{{ item.url }}">{{ item.label }}</a></li>
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
           {% endfor %}
-          <li><svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg><a href="/blog/">Blog</a></li>
+          <li><a href="/blog/">Blog</a></li>
         </ul>
       </div>
     </div>

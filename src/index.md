@@ -164,50 +164,10 @@ hideCtaBand: true
 
 <section class="section">
   <div class="wrap">
-    <h2 style="text-align:center; text-transform:uppercase;">Our Services</h2>
+    <h2 style="text-align:center; text-transform:uppercase;">Electrical Services</h2>
     <p class="services-intro">Everything from a single fault to a full rewire, carried out by NAPIT-registered electricians.</p>
     <ul class="showcase-grid" style="margin-top:44px;">
       <li class="reveal">
-        <a class="showcase-card" href="/electrical-services/installations/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/installations/installations-kitchen-lighting-sockets.jpg" alt="Electrical installation work carried out by LH Electrical" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
-                <h3>Installations</h3>
-              </div>
-              <p>New builds, renovations and full installation projects.</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="reveal reveal-delay-1">
-        <a class="showcase-card" href="/electrical-services/electrical-maintenance-services/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/maintenance/maintenance-switchboard-fault-finding.jpg" alt="Electrical maintenance and fault finding by LH Electrical" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></span>
-                <h3>Maintenance</h3>
-              </div>
-              <p>Reactive repairs and ongoing electrical cover.</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="reveal reveal-delay-2">
         <a class="showcase-card" href="/electrical-services/domestic/">
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
@@ -227,67 +187,7 @@ hideCtaBand: true
           </div>
         </a>
       </li>
-      <li class="reveal reveal-delay-3">
-        <a class="showcase-card" href="/electrical-services/lighting/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/lighting/lighting-sphere-pendants-stairwell.jpg" alt="Feature sphere pendant lighting installed by LH Electrical" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 00-4 10.472V16h8v-2.528A6 6 0 0012 3z"/></svg></span>
-                <h3>Lighting Installation</h3>
-              </div>
-              <p>LED downlights, dimmers, mood and outdoor lighting.</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="reveal">
-        <a class="showcase-card" href="/electrical-services/testing-inspection/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/testing-inspection/testing-inspection-panel-check.jpg" alt="Electrical testing and inspection carried out by LH Electrical" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg></span>
-                <h3>Testing &amp; Inspection</h3>
-              </div>
-              <p>Comprehensive electrical testing, EICRs and PAT.</p>
-            </div>
-          </div>
-        </a>
-      </li>
       <li class="reveal reveal-delay-1">
-        <a class="showcase-card" href="/electrical-services/commercial-electrician/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/commercial-electrician/commercial-tablet-panel-inspection.jpg" alt="LH Electrical carrying out a commercial electrical inspection" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></span>
-                <h3>Commercial</h3>
-              </div>
-              <p>Installations and periodic inspections for local businesses.</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="reveal reveal-delay-2">
         <a class="showcase-card" href="/electrical-services/landlords/">
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
@@ -307,90 +207,30 @@ hideCtaBand: true
           </div>
         </a>
       </li>
-      <li class="reveal reveal-delay-3">
-        <a class="showcase-card" href="/electrical-services/house-rewire/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/house-rewire/house-rewire-exposed-wiring-east-sussex.jpg" alt="Exposed wiring during a house rewire carried out by LH Electrical in East Sussex" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
-                <h3>House Rewire</h3>
-              </div>
-              <p>Full and partial rewires, planned around your home.</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="reveal">
-        <a class="showcase-card" href="/electrical-services/fuse-board-upgrades/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/fuse-board-upgrades/fuse-board-rcbo-installation-close-up.jpg" alt="Fuse board upgrade by LH Electrical" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7v4M12 7v4M16 7v4M8 15h.01M12 15h.01M16 15h.01"/></svg></span>
-                <h3>Fuse Board Upgrades</h3>
-              </div>
-              <p>Modern consumer units fitted to current regulations.</p>
-            </div>
-          </div>
-        </a>
-      </li>
-      <li class="reveal reveal-delay-1">
-        <a class="showcase-card" href="/electric-vehicle-chargers/">
-          <div class="showcase-media-pad">
-            <div class="showcase-media-frame">
-              <div class="showcase-media-inner">
-                <img src="/images/services/ev-chargers/ev-chargers-driveway-installation.jpg" alt="EV charger installation by LH Electrical" loading="lazy">
-              </div>
-            </div>
-          </div>
-          <div class="showcase-text-row">
-            <div class="showcase-text-inner">
-              <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8V4M11 8V4"/><rect x="5" y="8" width="8" height="7" rx="1"/><path d="M9 15v2a3 3 0 003 3h1a3 3 0 003-3v-1h1a1 1 0 001-1v-2h-2"/></svg></span>
-                <h3>EV Chargers</h3>
-              </div>
-              <p>MCS-certified home and commercial charger installs.</p>
-            </div>
-          </div>
-        </a>
-      </li>
       <li class="reveal reveal-delay-2">
-        <a class="showcase-card" href="/solar-panels/">
+        <a class="showcase-card" href="/electrical-services/commercial-electrician/">
           <div class="showcase-media-pad">
             <div class="showcase-media-frame">
               <div class="showcase-media-inner">
-                <img src="/images/services/solar/solar-panel-roof-installation-east-sussex.jpg" alt="LH Electrical installer fitting solar panels on a pitched roof in East Sussex" loading="lazy">
+                <img src="/images/services/commercial-electrician/commercial-tablet-panel-inspection.jpg" alt="LH Electrical carrying out a commercial electrical inspection" loading="lazy">
               </div>
             </div>
           </div>
           <div class="showcase-text-row">
             <div class="showcase-text-inner">
               <div class="showcase-title-row">
-                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
-                <h3>Solar Panels</h3>
+                <span class="showcase-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></span>
+                <h3>Commercial</h3>
               </div>
-              <p>Solar PV and battery storage, installed to MCS standards.</p>
+              <p>Installations and periodic inspections for local businesses.</p>
             </div>
           </div>
         </a>
       </li>
       <li class="reveal reveal-delay-3">
-        <a class="showcase-card showcase-card-cta" href="/contact/">
+        <a class="showcase-card showcase-card-cta" href="/electrical-services/">
           <div class="showcase-cta-body">
-            <h3>Get In Touch</h3>
+            <h3>View All Services</h3>
             <span class="showcase-cta-arrow" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </span>
@@ -401,6 +241,32 @@ hideCtaBand: true
   </div>
 </section>
 
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div style="text-align:center;"><span class="svc-eyebrow">Renewables</span></div>
+    <div class="promo-grid">
+      <a class="promo-panel" href="/electric-vehicle-chargers/">
+        <img src="/images/services/ev-chargers/ev-chargers-driveway-installation.jpg" alt="EV charger installation by LH Electrical">
+        <div class="promo-panel-body">
+          <span class="promo-panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8V4M11 8V4"/><rect x="5" y="8" width="8" height="7" rx="1"/><path d="M9 15v2a3 3 0 003 3h1a3 3 0 003-3v-1h1a1 1 0 001-1v-2h-2"/></svg></span>
+          <h3>EV Chargers</h3>
+          <p>MCS-certified home and commercial charge points.</p>
+          <span class="promo-panel-cta">Explore EV Chargers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+      <a class="promo-panel" href="/solar-panels/">
+        <img src="/images/services/solar/solar-panel-roof-installation-east-sussex.jpg" alt="LH Electrical installer fitting solar panels on a pitched roof in East Sussex">
+        <div class="promo-panel-body">
+          <span class="promo-panel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
+          <h3>Solar Panels &amp; Storage</h3>
+          <p>Solar PV and battery storage, installed to MCS standards.</p>
+          <span class="promo-panel-cta">Explore Solar Panels <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section class="svc-light svc-pad">
   <div class="wrap svc-center">
     <span class="svc-eyebrow">Standards &amp; Certifications</span>
@@ -408,28 +274,22 @@ hideCtaBand: true
     <p class="svc-lede">Our accreditations aren't decorative &ndash; they're the standards we're held to on every job.</p>
     <div class="trust-cards">
       <div class="trust-card">
-        <div class="trust-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
+        <div class="trust-card-icon"><img src="/images/logos/napit-logo.png" alt="NAPIT"></div>
         <h3>NAPIT Registered</h3>
         <p>Every notifiable job is self-certified and registered with building control, so your paperwork is in order from day one.</p>
         <a href="https://search.napit.org.uk/member/23182/lh-electrical-south-east-limited" target="_blank" rel="noopener">View NAPIT Profile &rarr;</a>
       </div>
       <div class="trust-card">
-        <div class="trust-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-        </div>
+        <div class="trust-card-icon"><img src="/images/logos/mcs-logo.png" alt="MCS"></div>
         <h3>MCS Certified</h3>
         <p>Independently assessed for EV charger and solar PV installation, so you're eligible for schemes like the Smart Export Guarantee.</p>
         <a href="https://mcscertified.com/" target="_blank" rel="noopener">About MCS Certification &rarr;</a>
       </div>
       <div class="trust-card">
-        <div class="trust-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M20.6 12l-8.6 8.6a2 2 0 01-2.8 0l-6.2-6.2a2 2 0 010-2.8L11.6 3H20a1 1 0 011 1v8z"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
-        </div>
-        <h3>Fully Insured &amp; REC Certified</h3>
-        <p>Fully insured on every job, and REC certified for renewable energy consumer protection standards.</p>
-        <a href="https://www.recc.org.uk/scheme/members/00078267-lh-electrical-south-east-limited" target="_blank" rel="noopener">View REC Profile &rarr;</a>
+        <div class="trust-card-icon"><img src="/images/logos/recc-logo.png" alt="RECC"></div>
+        <h3>Fully Insured &amp; RECC Certified</h3>
+        <p>Fully insured on every job, and RECC certified for renewable energy consumer protection standards.</p>
+        <a href="https://www.recc.org.uk/scheme/members/00078267-lh-electrical-south-east-limited" target="_blank" rel="noopener">View RECC Profile &rarr;</a>
       </div>
     </div>
   </div>
