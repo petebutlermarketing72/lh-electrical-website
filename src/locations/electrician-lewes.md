@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Your Trusted Electrician in Lewes, East Sussex | LH Electrical (South East)
+title: Your Trusted Electrician in Lewes, East Sussex | LH Electrical
 description: NAPIT-registered electrician based in Lewes, East Sussex — domestic, commercial, EV charger and solar work. MCS-certified, 15+ years' experience.
 hideCtaBand: true
 ---

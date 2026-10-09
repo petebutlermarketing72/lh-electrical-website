@@ -1,5 +1,5 @@
 ---
-title: Commercial Electrician In East Sussex | LH Electrical (South East)
+title: Commercial Electrician In East Sussex | LH Electrical
 description: NAPIT-registered commercial electrician covering East Sussex — periodic inspections, fit-outs and three-phase work for local businesses. Free no-obligation quote.
 hideCtaBand: true
 schema:

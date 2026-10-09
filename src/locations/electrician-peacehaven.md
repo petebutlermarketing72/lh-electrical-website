@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Reliable Electricians in Peacehaven | LH Electrical (South East)
+title: Reliable Electricians in Peacehaven | LH Electrical
 description: NAPIT-registered electrician covering Peacehaven — domestic, landlord and EV charger work. MCS-certified, 15+ years' experience.
 hideCtaBand: true
 ---

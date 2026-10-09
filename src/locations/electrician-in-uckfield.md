@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Electrician in Uckfield, East Sussex | LH Electrical (South East)
+title: Electrician in Uckfield, East Sussex | LH Electrical
 description: NAPIT-registered electrician covering Uckfield — EV chargers, EICRs, rewires and commercial inspections including Bellbrook. MCS-certified, based in Lewes.
 hideCtaBand: true
 ---

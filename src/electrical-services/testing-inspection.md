@@ -1,5 +1,5 @@
 ---
-title: Electrical Testing & Inspection In East Sussex | LH Electrical (South East)
+title: Electrical Testing & Inspection In East Sussex | LH Electrical
 description: NAPIT-registered electrical testing and inspection across East Sussex — EICRs, PAT testing and pre-purchase inspections for homes and businesses.
 hideCtaBand: true
 schema:

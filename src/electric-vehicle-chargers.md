@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: EV Charger Installation | LH Electrical (South East)
+title: EV Charger Installation | LH Electrical
 description: MCS-certified EV charger installation across East Sussex — home, fleet and landlord charge points fitted by NAPIT-registered electricians. Free no-obligation quote.
 permalink: /electric-vehicle-chargers/index.html
 hideCtaBand: true

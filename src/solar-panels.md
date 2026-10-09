@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Solar Panel Installation & Battery Storage | LH Electrical (South East)
+title: Solar Panel Installation & Battery Storage | LH Electrical
 description: MCS-certified solar panel installation and battery storage across East Sussex — SEG-eligible systems for homes and businesses. Free no-obligation quote.
 permalink: /solar-panels/index.html
 hideCtaBand: true

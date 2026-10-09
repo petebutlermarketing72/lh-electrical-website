@@ -1,5 +1,5 @@
 ---
-title: Domestic Electrical Services In Lewes | LH Electrical (South East)
+title: Domestic Electrical Services In Lewes | LH Electrical
 description: NAPIT-registered domestic electrician covering Lewes and East Sussex — fuse board upgrades, full rewires, lighting, sockets and more. Free no-obligation quote.
 hideCtaBand: true
 schema:

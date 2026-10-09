@@ -1,5 +1,5 @@
 ---
-title: House Rewire Services In East Sussex | LH Electrical (South East)
+title: House Rewire Services In East Sussex | LH Electrical
 description: Full and partial house rewires across East Sussex. NAPIT-registered, careful planning to minimise disruption in occupied homes. Free no-obligation quote.
 hideCtaBand: true
 schema:

@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Electrician in Hailsham | LH Electrical (South East)
+title: Electrician in Hailsham | LH Electrical
 description: NAPIT-registered electrician covering Hailsham — landlord EICRs, rewires, EV chargers and commercial inspections around Ropemaker Park. MCS-certified.
 hideCtaBand: true
 ---

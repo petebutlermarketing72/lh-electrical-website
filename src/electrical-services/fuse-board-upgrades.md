@@ -1,5 +1,5 @@
 ---
-title: Fuse Board & Consumer Unit Upgrades | LH Electrical (South East)
+title: Fuse Board & Consumer Unit Upgrades | LH Electrical
 description: Consumer unit and fuse board upgrades across East Sussex. NAPIT-registered, modern boards fitted to current wiring regulations. Free no-obligation quote.
 hideCtaBand: true
 schema:

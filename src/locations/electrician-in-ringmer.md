@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Trusted Electrician in Ringmer | LH Electrical (South East)
+title: Trusted Electrician in Ringmer | LH Electrical
 description: NAPIT-registered electrician covering Ringmer — EICRs, rewires, consumer unit upgrades, EV chargers and solar. MCS-certified, based in Lewes.
 hideCtaBand: true
 ---

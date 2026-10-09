@@ -1,5 +1,5 @@
 ---
-title: Landlord EICR & Compliance In East Sussex | LH Electrical (South East)
+title: Landlord EICR & Compliance In East Sussex | LH Electrical
 description: NAPIT-registered landlord EICRs and remedial electrical work across East Sussex. Fast turnaround, clear reports, portfolio coordination.
 hideCtaBand: true
 schema:

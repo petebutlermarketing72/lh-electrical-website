@@ -1,5 +1,5 @@
 ---
-title: Electrical Maintenance & Fault Finding In East Sussex | LH Electrical (South East)
+title: Electrical Maintenance & Fault Finding In East Sussex | LH Electrical
 description: NAPIT-registered electrical maintenance across East Sussex — fault finding, reactive repairs and scheduled testing for homes, landlords and businesses.
 hideCtaBand: true
 schema:

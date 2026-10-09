@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Expert Electricians in Seaford, East Sussex | LH Electrical (South East)
+title: Expert Electricians in Seaford, East Sussex | LH Electrical
 description: NAPIT-registered electrician covering Seaford — domestic, landlord and EV charger work. MCS-certified, 15+ years' experience.
 hideCtaBand: true
 ---
