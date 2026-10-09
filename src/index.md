@@ -44,30 +44,7 @@ hideCtaBand: true
                 <button type="button" class="service-picker-close" id="service-picker-close" aria-label="Close">&times;</button>
               </div>
 
-              <div class="service-picker-step" id="service-picker-step-category">
-                <ul class="service-picker-list">
-                  <li>
-                    <button type="button" class="service-picker-option service-picker-category" data-category="domestic">
-                      <span class="service-picker-option-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1v-9"/></svg></span>
-                      <span class="service-picker-option-label">Domestic</span>
-                      <svg class="service-picker-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" class="service-picker-option service-picker-category" data-category="commercial">
-                      <span class="service-picker-option-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg></span>
-                      <span class="service-picker-option-label">Commercial</span>
-                      <svg class="service-picker-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="service-picker-step is-hidden" id="service-picker-step-services">
-                <button type="button" class="service-picker-back" id="service-picker-back">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><polyline points="15 18 9 12 15 6"/></svg>
-                  Back
-                </button>
+              <div class="service-picker-step" id="service-picker-step-services">
                 <ul class="service-picker-list">
                   {%- for s in site.services -%}
                   <li>
