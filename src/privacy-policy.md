@@ -15,7 +15,7 @@ hideCtaBand: true
     <h2>Copyright Notice</h2>
     <p>Any redistribution or reproduction of part or all of the contents of this website, in any form, is prohibited. You may not, except with our express written permission, distribute or commercially exploit the content, nor transmit it or store it in any other website or other form of electronic retrieval system.</p>
 
-    <h2>Cookies And How They Benefit You</h2>
+    <h2 id="cookies">Cookies And How They Benefit You</h2>
     <p>Our website uses cookies, as almost all websites do, to help provide you with the best experience we can. Cookies are small text files that are placed on your computer or mobile phone when you browse websites. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>
     <p>Our cookies help us:</p>
     <ul>
@@ -31,6 +31,8 @@ hideCtaBand: true
       <li>Pass data to advertising networks</li>
       <li>Pass personally identifiable data to third parties (without your express permission)</li>
     </ul>
+
+    <p>When you first visit, a banner asks whether you accept optional (analytics and marketing) cookies. Essential cookies that make the site work are always on. Optional cookies are only used if you click Accept, and you can change your choice at any time using the &ldquo;Cookie settings&rdquo; link in the footer or the cookie button in the corner of the page. We remember your choice for six months.</p>
 
     <h2>Granting Us Permission To Use Cookies</h2>
     <p>If the settings on the software you are using to view this website (your browser) are adjusted to accept cookies, we take this, and your continued use of our website, to mean that you are fine with this. Should you wish to remove or not use cookies from our site you can learn how to do this at <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">aboutcookies.org</a>, however doing so will likely mean that our site will not work as you would expect.</p>
