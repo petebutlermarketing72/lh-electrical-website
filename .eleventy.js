@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
+  eleventyConfig.addFilter("dateISO", (d) => new Date(d).toISOString().slice(0, 10));
 
   // Reusable content blocks shared across service pages (and available to any
   // page/layout in either Liquid or Nunjucks) — trust badges, "why choose us",

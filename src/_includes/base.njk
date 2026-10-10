@@ -23,6 +23,22 @@
   <script type="application/ld+json">{{ s | dump | safe }}</script>
   {% endfor %}
   {% endif %}
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "@id": "{{ site.domain }}/#business",
+    "name": "{{ site.companyName }}",
+    "url": "{{ site.domain }}/",
+    "telephone": "+441273443324",
+    "email": "{{ site.email }}",
+    "image": "{{ site.domain }}/images/hero/homepage-hero-consumer-unit.jpg",
+    "logo": "{{ site.domain }}/images/brand/favicon.png",
+    "address": {"@type": "PostalAddress", "streetAddress": "Cowlease Farm, North End Lane", "addressLocality": "Lewes", "addressRegion": "East Sussex", "postalCode": "BN8 5TE", "addressCountry": "GB"},
+    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "17:00"}],
+    "areaServed": ["Lewes", "Ringmer", "Uckfield", "Hailsham", "Peacehaven", "Seaford", "East Sussex"],
+    "sameAs": ["https://www.facebook.com/lhelectricalsussex", "{{ site.trustpilotLink }}"],
+    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "{{ site.reviewRating }}", "reviewCount": "{{ site.reviewCount }}"}
+  }</script>
 </head>
 <body>
   <header class="site-header" id="site-header">

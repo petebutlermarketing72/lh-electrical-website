@@ -2,36 +2,6 @@
 layout: base.njk
 title: Electrician Lewes East Sussex | 15 Yrs Exp. | LH Electrical
 description: NAPIT-certified electrician in Lewes, East Sussex with 15 years' experience. Trusted for solar, EV chargers, lighting, testing and more. Get your free no-obligation quote today.
-schema:
-  - "@context": "https://schema.org"
-    "@type": "Electrician"
-    "@id": "https://lhelectrical.co.uk/#business"
-    name: "LH Electrical (South East) Ltd"
-    url: "https://lhelectrical.co.uk/"
-    telephone: "+441273443324"
-    email: "info@lhelectrical.co.uk"
-    image: "https://lhelectrical.co.uk/images/hero/homepage-hero-consumer-unit.jpg"
-    logo: "https://lhelectrical.co.uk/images/brand/favicon.png"
-    address:
-      "@type": "PostalAddress"
-      streetAddress: "Cowlease Farm, North End Lane"
-      addressLocality: "Lewes"
-      addressRegion: "East Sussex"
-      postalCode: "BN8 5TE"
-      addressCountry: "GB"
-    openingHoursSpecification:
-      - "@type": "OpeningHoursSpecification"
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-        opens: "08:00"
-        closes: "17:00"
-    areaServed: ["Lewes", "Ringmer", "Uckfield", "Hailsham", "Peacehaven", "Seaford", "East Sussex"]
-    sameAs:
-      - "https://www.facebook.com/lhelectricalsussex"
-      - "https://uk.trustpilot.com/review/lhelectrical.co.uk"
-    aggregateRating:
-      "@type": "AggregateRating"
-      ratingValue: "5.0"
-      reviewCount: "24"
 hideCtaBand: true
 ---
 
