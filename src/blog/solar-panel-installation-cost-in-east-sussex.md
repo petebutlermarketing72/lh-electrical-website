@@ -1,5 +1,5 @@
 ---
-title: Solar Panel Installation Cost in East Sussex (2025 Guide) | LH Electrical
+title: Solar Panel Installation Cost in East Sussex (2025)
 heading: Solar Panel Installation Cost in East Sussex (2025 Guide)
 description: Discover the real solar panel installation cost in East Sussex and how much you could save with expert local help in 2025.
 date: 2025-07-06

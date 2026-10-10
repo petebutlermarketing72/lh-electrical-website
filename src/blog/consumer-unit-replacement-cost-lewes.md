@@ -1,5 +1,5 @@
 ---
-title: Consumer Unit Replacement Cost in Lewes | 2025 Guide | LH Electrical
+title: Consumer Unit Replacement Cost Lewes | From £500
 heading: Consumer Unit Replacement Cost in Lewes — 2025 Guide
 description: Consumer Unit Replacement Cost in Lewes £500-£1,500. Get honest pricing, what's included, and expert advice from local NAPIT electricians. Call 01273 443324.
 date: 2025-11-09

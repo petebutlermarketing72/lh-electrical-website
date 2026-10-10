@@ -1,5 +1,5 @@
 ---
-title: Why Every Lewes Landlord Needs an Up-to-Date EICR in 2025 | LH Electrical
+title: "EICR Lewes: Electrical Safety Certificates for Landlords"
 heading: Why Every Lewes Landlord Needs an Up-to-Date EICR in 2025
 description: Landlords in Lewes must renew their EICR every 5 years. Stay compliant, protect tenants, and avoid fines with expert inspections from LH Electrical.
 date: 2025-07-27

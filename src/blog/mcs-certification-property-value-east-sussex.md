@@ -1,5 +1,5 @@
 ---
-title: How MCS Certification Boosts Property Value in East Sussex | LH Electrical
+title: How MCS Certification Boosts Property Value in East Sussex
 heading: How MCS Certification Boosts Property Value in East Sussex
 description: Discover how MCS-certified solar panels can boost your East Sussex home's value, improve EPC ratings, and unlock SEG payments when it's time to sell.
 date: 2025-07-05

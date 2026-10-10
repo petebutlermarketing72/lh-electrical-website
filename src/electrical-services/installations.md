@@ -1,5 +1,5 @@
 ---
-title: Electrical Installations In Lewes & East Sussex | LH Electrical
+title: Electrical Installations Lewes & East Sussex | LH Electrical
 description: NAPIT-registered electrical installations across East Sussex — new builds, renovations, extensions and commercial fit-outs, designed and certified to BS 7671.
 hideCtaBand: true
 schema:

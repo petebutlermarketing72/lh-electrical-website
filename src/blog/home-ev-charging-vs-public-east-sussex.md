@@ -1,5 +1,5 @@
 ---
-title: The Real Cost of Home EV Charging vs Public Charging in East Sussex | LH Electrical
+title: Real Cost of Home EV Charging vs Public in East Sussex
 heading: The Real Cost of Home EV Charging vs Public Charging in East Sussex
 description: Discover the real cost of home EV charging vs public in East Sussex. Learn how home EV charging saves money and boosts convenience for local drivers.
 date: 2025-07-05

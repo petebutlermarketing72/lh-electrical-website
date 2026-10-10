@@ -1,5 +1,5 @@
 ---
-title: Lighting Design & Installation In East Sussex | LH Electrical
+title: Lighting Design & Installation East Sussex | LH Electrical
 description: Indoor, outdoor and smart lighting design and installation across East Sussex. NAPIT-registered electricians, from LED upgrades to full smart lighting systems.
 hideCtaBand: true
 schema:
