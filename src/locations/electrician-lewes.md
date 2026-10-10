@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: Your Trusted Electrician in Lewes, East Sussex | LH Electrical
-description: NAPIT-registered electrician based in Lewes, East Sussex — domestic, commercial, EV charger and solar work. MCS-certified, 15+ years' experience.
+title: Lewes Electrical Services | Rewires & EICRs | LH Electrical
+description: Rewires, consumer units, EICRs, EV chargers and repairs for Lewes homes, landlords and businesses. NAPIT-registered, based in Lewes, fixed written quotes.
 hideCtaBand: true
 ---
 
@@ -14,8 +14,8 @@ hideCtaBand: true
       </div>
     </div>
     <div>
-      <h1 class="svc-display">Your Trusted <span class="tint">Electrician in Lewes.</span></h1>
-      <p class="svc-hero-intro">Looking for a reliable electrician in Lewes? LH Electrical provides certified, trusted electrical services for homes, landlords and businesses across East Sussex.</p>
+      <h1 class="svc-display">Electrical Services <span class="tint">Across Lewes.</span></h1>
+      <p class="svc-hero-intro">Rewires, consumer unit upgrades, EICRs, EV chargers and repairs for homes, landlords and businesses in Lewes and the surrounding villages. NAPIT-registered, with fixed written quotes.</p>
       <div class="svc-actions">
         <a class="btn btn-review-pill" href="{{ site.reviewLink }}" target="_blank" rel="noopener">
           <span class="review-pill-icon"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.9-2.26 5.36-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
@@ -40,8 +40,8 @@ hideCtaBand: true
   <div class="wrap">
     <div class="svc-included-grid">
       <div class="svc-prose">
-        <h2 class="svc-display">Professional Electrical Services <span class="tint">Across Lewes.</span></h2>
-        <p>Based right here in Lewes, LH Electrical proudly serves the town and surrounding areas with safe, reliable, and compliant electrical services.</p>
+        <h2 class="svc-display">Rewires, Testing &amp; Repairs <span class="tint">For Lewes Properties.</span></h2>
+        <p>LH Electrical is based in Lewes, so the town and the villages around it are our home patch. Every job is safe, compliant and certified.</p>
         <p>From period properties in the historic town centre to new builds in the surrounding villages, we understand the unique needs of local homes, landlords and businesses and deliver expert electrical solutions tailored to every property.</p>
         <div class="svc-info-card">
           <span class="svc-info-card-eyebrow">
@@ -59,7 +59,7 @@ hideCtaBand: true
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg> Emergency Callouts &ndash; responsive support (subject to availability)</li>
           </ul>
         </div>
-        <h2 class="svc-display">Your Local, Reliable <span class="tint">Lewes Electrician.</span></h2>
+        <h2 class="svc-display">Local Team, <span class="tint">Based In Lewes.</span></h2>
         <p>With over 15 years of experience and full NAPIT registration, LH Electrical brings professional standards and a personal touch to every job in Lewes.</p>
         <div class="svc-info-card">
           <span class="svc-info-card-eyebrow">
@@ -74,6 +74,7 @@ hideCtaBand: true
           </ul>
         </div>
         <p>Whether you're planning a renovation, need a safety check, or want to install solar or EV charging &ndash; we're here to help.</p>
+        <p><strong>Planning work in Lewes?</strong> Our pricing guides cover the most common jobs: <a href="/cost-to-rewire-a-house-in-lewes/">the cost to rewire a house in Lewes</a>, <a href="/consumer-unit-replacement-cost-lewes/">consumer unit replacement costs in Lewes</a> and <a href="/lewes-landlord-need-up-to-date-eicr-2025/">EICR requirements for Lewes landlords</a>. Looking for something else? <a href="/">See all of our electrical services</a>.</p>
         <p><strong>Proudly serving all areas of Lewes and nearby:</strong> Wallands, South Malling, Winterbourne, Offham, Ringmer, Cooksbridge, Barcombe and Glynde.</p>
       </div>
       <div class="svc-included-sidebar">
@@ -93,7 +94,7 @@ hideCtaBand: true
     <div class="svc-faq">
       <details open>
         <summary>How quickly can you get to us in Lewes?</summary>
-        <p>As we're based just outside the town, urgent jobs usually get same-day attention, with planned work booking in within a few working days.</p>
+        <p>As we're based in Lewes, urgent jobs usually get same-day attention, with planned work booking in within a few working days.</p>
       </details>
       <details>
         <summary>Do you work on period properties in the older parts of Lewes?</summary>
