@@ -32,7 +32,7 @@ hideCtaBand: true
       <li>Pass personally identifiable data to third parties (without your express permission)</li>
     </ul>
 
-    <p>When you first visit, a banner asks whether you accept optional (analytics and marketing) cookies. Essential cookies that make the site work are always on. Optional cookies are only used if you click Accept, and you can change your choice at any time using the &ldquo;Cookie settings&rdquo; link in the footer or the cookie button in the corner of the page. We remember your choice for six months.</p>
+    <p>When you first visit, a banner asks whether you accept optional (analytics and marketing) cookies. Essential cookies that make the site work are always on. If you accept, we use Google Analytics to count visits and see which pages are useful, and to count phone and email clicks. Optional cookies are only used if you click Accept, and you can change your choice at any time using the &ldquo;Cookie settings&rdquo; link in the footer or the cookie button in the corner of the page. We remember your choice for six months.</p>
 
     <h2>Granting Us Permission To Use Cookies</h2>
     <p>If the settings on the software you are using to view this website (your browser) are adjusted to accept cookies, we take this, and your continued use of our website, to mean that you are fine with this. Should you wish to remove or not use cookies from our site you can learn how to do this at <a href="https://www.aboutcookies.org" target="_blank" rel="noopener">aboutcookies.org</a>, however doing so will likely mean that our site will not work as you would expect.</p>

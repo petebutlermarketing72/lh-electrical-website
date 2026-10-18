@@ -3,9 +3,9 @@
  * - Nothing optional (analytics/marketing) loads until the visitor clicks Accept.
  * - "Reject" is as easy as "Accept". The choice is remembered for 6 months.
  * - Footer "Cookie settings" button reopens the banner so people can change their mind.
- * - To add an analytics or marketing tool later (e.g. Google Analytics, Meta Pixel),
- *   put its loader inside loadMarketing(). It only runs after consent, and is not
- *   loaded on a fresh page load if consent has been withdrawn.
+ * - Google Analytics (GA4) loads inside loadMarketing(). To add another tool later
+ *   (e.g. Meta Pixel), put its loader there too. It only runs after consent, and is
+ *   not loaded on a fresh page load if consent has been withdrawn.
  */
 (function () {
   var KEY = 'lh_cookie_consent';
@@ -29,7 +29,24 @@
   function loadMarketing() {
     if (marketingLoaded) return;
     marketingLoaded = true;
-    // No analytics or marketing tools are installed yet. Add their loaders here.
+    // Google Analytics 4. Only runs after the visitor clicks Accept.
+    var GA_ID = 'G-V3GHEQXGTZ';
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+
+    // Count phone taps and email clicks as events (they appear in GA4 under Events).
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+      if (!a) return;
+      var isTel = a.getAttribute('href').indexOf('tel:') === 0;
+      window.gtag('event', isTel ? 'phone_click' : 'email_click', { link_url: a.getAttribute('href') });
+    });
   }
 
   function apply(choice) {
