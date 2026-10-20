@@ -14,3 +14,7 @@
 /category/uncategorized/   /blog/                           301
 /elementskit-content/*     /                                301
 /metform-form/*            /contact/                        301
+
+# Old Lewes domestic page -> domestic services page
+/electrician-lewes/domestic    /electrical-services/domestic/   301
+/electrician-lewes/domestic/   /electrical-services/domestic/   301
