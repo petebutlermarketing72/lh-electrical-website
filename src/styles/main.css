@@ -2263,3 +2263,8 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 @media (max-width: 900px) { .cc-tab { bottom: 84px; } .cc-banner { bottom: 84px; } }
 
 .footer-link-button { background: none; border: 0; padding: 0; margin: 0; cursor: pointer; font: inherit; color: inherit; text-decoration: underline; }
+
+/* Plain bullet lists inside service/prose pages */
+.svc-prose ul.svc-bullets { margin: 0 0 24px; padding-left: 1.2em; color: var(--muted); font-size: 1.03rem; line-height: 1.75; }
+.svc-prose ul.svc-bullets li { margin-bottom: 6px; }
+.svc-prose ul.svc-bullets strong { color: var(--navy-dark); }

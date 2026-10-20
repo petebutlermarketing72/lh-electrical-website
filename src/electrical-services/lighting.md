@@ -115,7 +115,7 @@ schema:
           </li>
           <li class="svc-check-item">
             <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>
-            <div><span class="title">Outdoor, Garden &amp; Security Lighting</span><span class="note">On its own weatherproof circuit</span></div>
+            <div><span class="title"><a href="/outdoor-lighting/">Outdoor, Garden &amp; Security Lighting</a></span><span class="note">On its own weatherproof circuit</span></div>
           </li>
           <li class="svc-check-item">
             <span class="svc-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5L9.5 18L20 6"/></svg></span>

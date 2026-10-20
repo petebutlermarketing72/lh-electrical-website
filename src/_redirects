@@ -1,10 +1,6 @@
 # Permanent (301) redirects from old WordPress URLs that have no identical page on the new site.
 # Pages whose URL is unchanged (most of the site) need no redirect.
 
-# Outdoor lighting page -> merged into the main lighting service page
-/outdoor-lighting          /electrical-services/lighting/   301
-/outdoor-lighting/         /electrical-services/lighting/   301
-
 # Burgess Hill location page -> areas we cover (no Burgess Hill page on the new site)
 /electrician-burgess-hill  /local-electrician/              301
 /electrician-burgess-hill/ /local-electrician/              301
