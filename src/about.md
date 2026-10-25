@@ -169,25 +169,19 @@ permalink: /about/index.html
     <p class="svc-lede">Our accreditations aren't decorative &ndash; they're the standards we're held to on every job.</p>
     <div class="trust-cards">
       <div class="trust-card">
-        <div class="trust-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
+        <div class="trust-card-icon"><img src="/images/logos/napit-logo.png" alt="NAPIT"></div>
         <h3>NAPIT Registered</h3>
         <p>Every notifiable job is self-certified and registered with building control, so your paperwork is in order from day one.</p>
         <a href="https://search.napit.org.uk/member/23182/lh-electrical-south-east-limited" target="_blank" rel="noopener">View NAPIT Profile &rarr;</a>
       </div>
       <div class="trust-card">
-        <div class="trust-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
-        </div>
+        <div class="trust-card-icon"><img src="/images/logos/mcs-logo.png" alt="MCS"></div>
         <h3>MCS Certified</h3>
         <p>Independently assessed for EV charger and solar PV installation, so you're eligible for schemes like the Smart Export Guarantee.</p>
         <a href="https://mcscertified.com/" target="_blank" rel="noopener">About MCS Certification &rarr;</a>
       </div>
       <div class="trust-card">
-        <div class="trust-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M20.6 12l-8.6 8.6a2 2 0 01-2.8 0l-6.2-6.2a2 2 0 010-2.8L11.6 3H20a1 1 0 011 1v8z"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
-        </div>
+        <div class="trust-card-icon"><img src="/images/logos/recc-logo.png" alt="RECC"></div>
         <h3>Fully Insured &amp; RECC Certified</h3>
         <p>Fully insured on every job, and RECC certified for renewable energy consumer protection standards.</p>
         <a href="https://www.recc.org.uk/scheme/members/00078267-lh-electrical-south-east-limited" target="_blank" rel="noopener">View RECC Profile &rarr;</a>
