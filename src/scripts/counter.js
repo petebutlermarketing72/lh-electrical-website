@@ -2,8 +2,13 @@
   var counters = document.querySelectorAll("[data-counter-target]");
   if (!counters.length) return;
 
+  // The correct values are already in the page HTML, so the animation is only an
+  // enhancement. Skip it for visitors who ask for reduced motion.
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
   function animateCounter(el) {
     var target = parseFloat(el.getAttribute("data-counter-target"));
+    if (isNaN(target)) return;
     var suffix = el.getAttribute("data-counter-suffix") || "";
     var decimals = el.getAttribute("data-counter-decimals") ? parseInt(el.getAttribute("data-counter-decimals"), 10) : 0;
     var duration = 1200;

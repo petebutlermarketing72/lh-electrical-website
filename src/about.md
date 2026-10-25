@@ -23,11 +23,11 @@ permalink: /about/index.html
         <img src="/images/hero/electrician-at-work.jpg" alt="LH Electrical carrying out electrical work in East Sussex">
       </div>
       <div class="svc-stat-chip svc-stat-1">
-        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span>
+        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">{{ site.reviewRating }}&#9733;</span>
         <span class="stat-label">Google Rating</span>
       </div>
       <div class="svc-stat-chip svc-stat-2">
-        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span>
+        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">{{ site.reviewCount }}</span>
         <span class="stat-label">5-Star Reviews</span>
       </div>
     </div>
@@ -58,10 +58,10 @@ permalink: /about/index.html
 <section class="svc-light svc-pad-sm">
   <div class="wrap">
     <ul class="about-stats">
-      <li><span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span><span class="stat-label">Years Trading</span></li>
-      <li><span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span><span class="stat-label">Google Rating</span></li>
-      <li><span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span><span class="stat-label">Google Reviews</span></li>
-      <li><span class="stat-num" data-counter-target="3">0</span><span class="stat-label">Team Members</span></li>
+      <li><span class="stat-num" data-counter-target="15" data-counter-suffix="+">15+</span><span class="stat-label">Years Trading</span></li>
+      <li><span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">{{ site.reviewRating }}&#9733;</span><span class="stat-label">Google Rating</span></li>
+      <li><span class="stat-num" data-counter-target="{{ site.reviewCount }}">{{ site.reviewCount }}</span><span class="stat-label">Google Reviews</span></li>
+      <li><span class="stat-num" data-counter-target="3">3</span><span class="stat-label">Team Members</span></li>
     </ul>
   </div>
 </section>

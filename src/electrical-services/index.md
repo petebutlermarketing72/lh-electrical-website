@@ -25,11 +25,11 @@ hideCtaBand: true
         <img src="/images/services/domestic/domestic-kitchen-lighting.jpg" alt="Kitchen lighting installation by LH Electrical in a Lewes home">
       </div>
       <div class="svc-stat-chip svc-stat-1">
-        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span>
+        <span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">{{ site.reviewRating }}&#9733;</span>
         <span class="stat-label">Google Rating</span>
       </div>
       <div class="svc-stat-chip svc-stat-2">
-        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span>
+        <span class="stat-num" data-counter-target="{{ site.reviewCount }}">{{ site.reviewCount }}</span>
         <span class="stat-label">5-Star Reviews</span>
       </div>
     </div>

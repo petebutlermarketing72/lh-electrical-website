@@ -93,10 +93,10 @@ hideCtaBand: true
 <section class="home-stats-band svc-pad-sm">
   <div class="wrap">
     <ul class="about-stats home-stats">
-      <li><span class="stat-num" data-counter-target="15" data-counter-suffix="+">0</span><span class="stat-label">Years Trading</span></li>
-      <li><span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">0</span><span class="stat-label">Google Rating</span></li>
-      <li><span class="stat-num" data-counter-target="{{ site.reviewCount }}">0</span><span class="stat-label">Google Reviews</span></li>
-      <li><span class="stat-num" data-counter-target="3">0</span><span class="stat-label">Team Members</span></li>
+      <li><span class="stat-num" data-counter-target="15" data-counter-suffix="+">15+</span><span class="stat-label">Years Trading</span></li>
+      <li><span class="stat-num" data-counter-target="{{ site.reviewRating }}" data-counter-decimals="1" data-counter-suffix="&#9733;">{{ site.reviewRating }}&#9733;</span><span class="stat-label">Google Rating</span></li>
+      <li><span class="stat-num" data-counter-target="{{ site.reviewCount }}">{{ site.reviewCount }}</span><span class="stat-label">Google Reviews</span></li>
+      <li><span class="stat-num" data-counter-target="3">3</span><span class="stat-label">Team Members</span></li>
     </ul>
   </div>
 </section>
