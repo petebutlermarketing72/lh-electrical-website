@@ -322,13 +322,35 @@ hideCtaBand: true
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="home-blog-head">
+      <span class="svc-eyebrow">Our Work</span>
+      <h2 style="text-align:center; margin-top:14px;">Recent Projects</h2>
+    </div>
+    <div class="blog-grid is-two">{%- assign pshown = 0 -%}{%- for post in collections.post reversed -%}{%- if post.data.categorySlug == "projects" and pshown < 2 -%}{%- assign pshown = pshown | plus: 1 %}
+      <a class="blog-card" href="{{ post.url }}">
+        <div class="blog-card-img"><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-cat">{{ post.data.category }}</span>
+          <h3>{{ post.data.heading }}</h3>
+          <p>{{ post.data.excerpt }}</p>
+        </div>
+      </a>
+    {%- endif -%}{%- endfor %}</div>
+    <div class="home-blog-cta">
+      <a class="btn btn-outline-dark btn-pill" href="/category/projects/">View All Projects</a>
+    </div>
+  </div>
+</section>
+
 <section class="section home-blog-band">
   <div class="wrap">
     <div class="home-blog-head">
       <span class="svc-eyebrow">From The Blog</span>
       <h2 style="text-align:center; margin-top:14px;">Guides &amp; Advice</h2>
     </div>
-    <div class="blog-grid">{%- for post in collections.post reversed limit:3 -%}
+    <div class="blog-grid">{%- assign shown = 0 -%}{%- for post in collections.post reversed -%}{%- if post.data.categorySlug != "projects" and shown < 3 -%}{%- assign shown = shown | plus: 1 %}
       <a class="blog-card" href="{{ post.url }}">
         <div class="blog-card-img"><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy"></div>
         <div class="blog-card-body">
@@ -336,7 +358,7 @@ hideCtaBand: true
           <h3>{{ post.data.heading }}</h3>
         </div>
       </a>
-    {%- endfor %}</div>
+    {%- endif -%}{%- endfor %}</div>
     <div class="home-blog-cta">
       <a class="btn btn-outline-dark btn-pill" href="/blog/">View All Posts</a>
     </div>

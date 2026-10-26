@@ -144,6 +144,7 @@ schema:
           <img src="/images/services/ev-chargers/ev-chargers-charging-connector-closeup.jpg" alt="Close-up of an EV charging connector fitted by LH Electrical">
           <img src="/images/services/ev-chargers/ev-chargers-app-control.jpg" alt="Smart EV charger app control monitored on a smartphone">
         </div>
+        <p class="svc-lede" style="margin-top:28px;">See a recent example: our <a href="/blog/hypervolt-ev-charger-installation/">Hypervolt EV charger installation with a dedicated consumer unit</a>.</p>
       </div>
       <div class="svc-included-sidebar">
         {% svcWhyChooseCard %}

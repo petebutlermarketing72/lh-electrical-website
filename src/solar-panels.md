@@ -144,6 +144,7 @@ schema:
           <img src="/images/services/solar/solar-panel-team-installation-east-sussex.jpg" alt="Two LH Electrical installers fitting solar panels on a house roof">
           <img src="/images/services/solar/solar-panel-cell-close-up.jpg" alt="Close-up detail of monocrystalline solar cells">
         </div>
+        <p class="svc-lede" style="margin-top:28px;">See a recent example: our <a href="/blog/solar-tesla-powerwall-installation/">5.5kW solar PV installation with Tesla Powerwall and EV charging</a>.</p>
       </div>
       <div class="svc-included-sidebar">
         {% svcWhyChooseCard %}

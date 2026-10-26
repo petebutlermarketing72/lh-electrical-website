@@ -2268,3 +2268,14 @@ body:has(.blog-hero-photo) .site-header.is-scrolled .topbar { background: var(--
 .svc-prose ul.svc-bullets { margin: 0 0 24px; padding-left: 1.2em; color: var(--muted); font-size: 1.03rem; line-height: 1.75; }
 .svc-prose ul.svc-bullets li { margin-bottom: 6px; }
 .svc-prose ul.svc-bullets strong { color: var(--navy-dark); }
+
+/* Project case studies — photo gallery inside blog posts */
+.project-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 8px 0 32px; }
+.project-gallery figure { margin: 0; }
+.project-gallery img { width: 100%; height: auto; display: block; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.project-gallery figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+@media (max-width: 640px) { .project-gallery { grid-template-columns: 1fr; } }
+
+/* Two-card variant of the blog grid (homepage Recent Projects) */
+.blog-grid.is-two { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; }
+@media (max-width: 640px) { .blog-grid.is-two { grid-template-columns: 1fr; } }
