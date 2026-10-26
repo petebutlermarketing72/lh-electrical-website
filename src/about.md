@@ -178,13 +178,13 @@ permalink: /about/index.html
         <div class="trust-card-icon"><img src="/images/logos/mcs-logo.png" alt="MCS"></div>
         <h3>MCS Certified</h3>
         <p>Independently assessed for EV charger and solar PV installation, so you're eligible for schemes like the Smart Export Guarantee.</p>
-        <a href="https://mcscertified.com/" target="_blank" rel="noopener">About MCS Certification &rarr;</a>
+        <a href="https://mcscertified.com/find-an-installer/lh-electrical-south-east-limited/" target="_blank" rel="noopener">View MCS Profile &rarr;</a>
       </div>
       <div class="trust-card">
         <div class="trust-card-icon"><img src="/images/logos/recc-logo.png" alt="RECC"></div>
         <h3>Fully Insured &amp; RECC Certified</h3>
         <p>Fully insured on every job, and RECC certified for renewable energy consumer protection standards.</p>
-        <a href="https://www.recc.org.uk/scheme/members/00078267-lh-electrical-south-east-limited" target="_blank" rel="noopener">View RECC Profile &rarr;</a>
+        <a href="https://members.recc.org.uk/member/3109/certificate" target="_blank" rel="noopener">View RECC Profile &rarr;</a>
       </div>
     </div>
   </div>
