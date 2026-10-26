@@ -1,6 +1,25 @@
 require("dotenv").config();
 const markdownIt = require("markdown-it");
 const site = require("./src/_data/site.json");
+const { execFileSync } = require("child_process");
+
+// Date a page's own source file was last changed in git (YYYY-MM-DD). Used for the
+// sitemap <lastmod>. It only moves when that page's file is committed with changes,
+// never on a plain redeploy. Returns "" (so no lastmod is written) if the date can't
+// be known accurately: no git, a shallow clone, or a file with no history.
+function git(args) {
+  return execFileSync("git", args, { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+}
+let gitUsable = null;
+function gitLastmod(inputPath) {
+  try {
+    if (gitUsable === null) gitUsable = git(["rev-parse", "--is-shallow-repository"]) === "false";
+    if (!gitUsable) return "";
+    return git(["log", "-1", "--format=%cs", "--", inputPath]);
+  } catch (e) {
+    return "";
+  }
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt({ html: true, breaks: false, linkify: true }));
@@ -11,6 +30,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/scripts");
   eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
+  eleventyConfig.addFilter("gitLastmod", gitLastmod);
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
   eleventyConfig.addFilter("dateISO", (d) => new Date(d).toISOString().slice(0, 10));
 

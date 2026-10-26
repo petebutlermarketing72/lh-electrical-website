@@ -4,7 +4,9 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{#- lastmod = date the page's own source file last changed in git. Listing pages (blog index, category pages) are built from other pages, so they get no lastmod. -#}
 {%- for p in collections.all %}{% if not p.data.noindex and p.url and p.url != "/sitemap.xml" and p.url != "/robots.txt" and p.url != "/404.html" %}
-  <url><loc>{{ site.domain }}{{ p.url }}</loc></url>
+  {%- set lm = "" %}{% if p.url != "/blog/" and p.url.indexOf("/category/") != 0 %}{% set lm = p.inputPath | gitLastmod %}{% endif %}
+  <url><loc>{{ site.domain }}{{ p.url }}</loc>{% if lm %}<lastmod>{{ lm }}</lastmod>{% endif %}</url>
 {%- endif %}{% endfor %}
 </urlset>
