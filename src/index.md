@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Electrician Lewes East Sussex | 15 Yrs Exp. | LH Electrical
-description: NAPIT-certified electrician in Lewes, East Sussex with 15 years' experience. Trusted for solar, EV chargers, lighting, testing and more. Get your free no-obligation quote today.
+description: NAPIT-certified electrician in Lewes, East Sussex with 15 years' experience. Trusted for solar, EV chargers, lighting and testing. Get a free quote today.
 hideCtaBand: true
 ---
 
