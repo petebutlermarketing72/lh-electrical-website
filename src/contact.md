@@ -86,27 +86,43 @@ permalink: /contact/index.html
     <div class="contact-form-card">
       <h2>Send Us A Message</h2>
       <p>Describe the job or ask a question. We'll get back to you within 2 working hours during business hours.</p>
-      <iframe
-        src="https://api.leadconnectorhq.com/widget/form/tqsC5bedhSPSpbM9Hlta"
-        style="width:100%;height:1000px;border:none;border-radius:8px;display:block"
-        scrolling="no"
-        id="inline-tqsC5bedhSPSpbM9Hlta"
-        data-layout="{'id':'INLINE'}"
-        data-trigger-type="alwaysShow"
-        data-trigger-value=""
-        data-activation-type="alwaysActivated"
-        data-activation-value=""
-        data-deactivation-type="neverDeactivate"
-        data-deactivation-value=""
-        data-form-name="LH Website Contact Page"
-        data-height="934"
-        data-layout-iframe-id="inline-tqsC5bedhSPSpbM9Hlta"
-        data-form-id="tqsC5bedhSPSpbM9Hlta"
-        data-cookie-consent="true"
-        data-cookie-consent-provider="auto"
-        title="LH Website Contact Page"
-      ></iframe>
-      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+      <form class="contact-form-grid" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="contact-form-row">
+          <div>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="07700 000000" required>
+          </div>
+        </div>
+        <div class="contact-form-row">
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div>
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" placeholder="BN8 5TE">
+          </div>
+        </div>
+        <div>
+          <label for="service">Type Of Enquiry</label>
+          <select id="service" name="service">
+            <option value="">&mdash; Select &mdash;</option>
+            {% for s in site.services %}<option value="{{ s.label }}">{{ s.label }}</option>{% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Describe the job or ask your question here&hellip;" required></textarea>
+        </div>
+        <button class="btn btn-outline-dark btn-pill-lg contact-form-submit" type="submit">Send Message &rarr;</button>
+        <p class="contact-form-note">No spam, no sharing. We'll only use your details to respond to this enquiry.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -123,3 +139,18 @@ permalink: /contact/index.html
   </div>
 </section>
 
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var service = params.get("service");
+  var postcode = params.get("postcode");
+  if (service) {
+    var serviceField = document.getElementById("service");
+    if (serviceField) serviceField.value = service;
+  }
+  if (postcode) {
+    var postcodeField = document.getElementById("postcode");
+    if (postcodeField) postcodeField.value = postcode;
+  }
+})();
+</script>
