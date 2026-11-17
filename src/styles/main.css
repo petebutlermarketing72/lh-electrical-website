@@ -978,8 +978,26 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
    proportions — object-fit:contain, anchored left — against a matching
    navy background. Any leftover space (there always is some, on the
    right) is filled by that identical navy, so the seam is invisible. */
-.hero-bleed-photo { position: absolute; inset: 0; z-index: 0; background: var(--navy); }
-.hero-bleed-photo img { width: 100%; height: 100%; object-fit: contain; object-position: left center; display: block; }
+.hero-bleed-photo {
+  position: absolute; inset: 0; z-index: 0; background: var(--navy);
+  /* Diagonal edge: photo covers most of the width at the top and slants in. */
+  clip-path: polygon(0 0, 66% 0, 38% 100%, 0 100%);
+}
+.hero-bleed-slide {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: left center; display: block;
+  opacity: 0; transition: opacity 1.4s ease-in-out;
+}
+.hero-bleed-slide.is-active { opacity: 1; }
+/* Light wash so the photo keeps its colour but the headline stays readable,
+   plus a darker band at the very top so the logo and menu read cleanly. */
+.hero-bleed-photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(8,12,60,0.7) 0, rgba(8,12,60,0) 160px),
+    linear-gradient(90deg, rgba(8,12,60,0.04) 0%, rgba(8,12,60,0.12) 17%, rgba(8,12,60,0.58) 30%, rgba(8,12,60,0.66) 100%);
+}
+@media (prefers-reduced-motion: reduce) { .hero-bleed-slide { transition: none; } }
 .svc-hero-freeform.is-photo-bleed { position: relative; z-index: 2; justify-content: flex-end; }
 @media (max-width: 900px) {
   /* Drop the photo entirely on mobile rather than a short cropped strip —
@@ -1037,6 +1055,24 @@ form.contact-form input:focus, form.contact-form textarea:focus { border-color: 
 .hero-icon-label {
   font-family: var(--font-head); font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
   font-size: 0.8rem; color: #fff;
+}
+
+/* Homepage only (desktop): the hero photo runs up behind the logo and menu.
+   The thin top bar stays solid. The header turns solid navy again once the
+   page scrolls so the menu is always readable. */
+@media (min-width: 901px) {
+  body:has(.hero-fold) .site-header { background: transparent; box-shadow: none; margin-bottom: calc(-1 * var(--nav-h, 80px)); transition: background 0.25s ease; }
+  body:has(.hero-fold) .site-header.is-scrolled { background: var(--navy); box-shadow: 0 4px 30px rgba(0,0,0,0.35); }
+  body:has(.hero-fold) .hero-fold { min-height: calc(100vh - var(--header-h, 120px) + var(--nav-h, 80px)); }
+  body:has(.hero-fold) .hero-fold .svc-hero { padding-top: calc(40px + var(--nav-h, 80px)); }
+}
+
+/* Homepage hero copy (desktop): wider block so the headline sits on two
+   lines, and a soft shadow keeps the text crisp over the photo. */
+@media (min-width: 901px) {
+  .hero-fold .svc-hero-copy { max-width: 760px; text-shadow: 0 0 3px rgba(5,8,40,0.5), 0 1px 14px rgba(5,8,40,0.6); }
+  .hero-fold .svc-hero-copy h1 .tint { display: block; }
+  .hero-fold .svc-hero-copy .svc-hero-intro { max-width: 54ch; font-size: 1.15rem; }
 }
 
 /* Hero + marquee "fold" — fills the first screen, hero content centred in the

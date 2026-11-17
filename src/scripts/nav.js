@@ -3,6 +3,8 @@
   if (headerEl) {
     var setHeaderHeightVar = function () {
       document.documentElement.style.setProperty("--header-h", headerEl.offsetHeight + "px");
+      var navRow = headerEl.querySelector(".header-inner");
+      if (navRow) document.documentElement.style.setProperty("--nav-h", navRow.offsetHeight + "px");
     };
     setHeaderHeightVar();
     window.addEventListener("resize", setHeaderHeightVar);

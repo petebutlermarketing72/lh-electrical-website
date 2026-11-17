@@ -14,6 +14,7 @@
   }
 
   rotate(".hero-illustration-slide", 4500);
+  rotate(".hero-bleed-slide", 6000);
   rotate(".hero-review-icon-slide", 3200);
   rotate(".hero-review-text-slide", 3200);
 })();

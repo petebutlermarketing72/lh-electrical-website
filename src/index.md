@@ -7,8 +7,10 @@ hideCtaBand: true
 
 <div class="hero-fold">
 <section class="svc-hero has-bleed-graphic">
-  <div class="hero-bleed-photo">
-    <img src="/images/hero/homepage-hero-consumer-unit.jpg" alt="Modern FuseBox consumer unit and surge protection device installed by LH Electrical">
+  <div class="hero-bleed-photo" aria-hidden="true">
+    <img class="hero-bleed-slide is-active" src="/images/hero/hero-slide-1-solar-installer.jpg" alt="" width="1920" height="1371" fetchpriority="high">
+    <img class="hero-bleed-slide" src="/images/hero/hero-slide-2-consumer-unit.jpg" alt="" width="1920" height="1097" loading="lazy">
+    <img class="hero-bleed-slide" src="/images/hero/hero-slide-3-solar-flat-roof.jpg" alt="" width="1920" height="1097" loading="lazy">
   </div>
   {% heroCircuit %}
   <div class="wrap svc-hero-freeform is-photo-bleed">
