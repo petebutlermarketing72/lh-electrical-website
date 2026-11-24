@@ -14,3 +14,8 @@
 # Old Lewes domestic page -> domestic services page
 /electrician-lewes/domestic    /electrical-services/domestic/   301
 /electrician-lewes/domestic/   /electrical-services/domestic/   301
+
+# Short link for customers: lhelectrical.co.uk/review -> Google review form for LH Electrical.
+# 302 (temporary) on purpose, so the destination can be changed later without browsers caching it.
+/review    https://g.page/r/CTFGrR--87pmEBM/review    302
+/review/   https://g.page/r/CTFGrR--87pmEBM/review    302
