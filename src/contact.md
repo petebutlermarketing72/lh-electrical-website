@@ -58,16 +58,6 @@ permalink: /contact/index.html
       </div>
       <div class="contact-card">
         <div class="contact-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        </div>
-        <div>
-          <h3>Address</h3>
-          <p>{{ site.address }}.</p>
-          <a class="contact-card-link" href="https://www.google.com/maps?q={{ site.address | url_encode }}" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>
-        </div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         </div>
         <div style="flex:1;">
